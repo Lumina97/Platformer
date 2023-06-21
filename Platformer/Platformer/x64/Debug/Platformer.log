@@ -1,5 +1,2 @@
-﻿  CollisionDetection.cpp
-D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Math.h(15,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Player.cpp
-  Generating Code...
+﻿  Player.cpp
   Platformer.vcxproj -> D:\Dev\C++\SFML_Games\Platformer\Platformer\x64\Debug\Platformer.exe

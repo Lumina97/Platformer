@@ -9,15 +9,15 @@
 
 std::vector<Physics::Collider*> CollisionDetection::colliders;
 
-bool CollisionDetection::IsColliding(Physics::Collider* collider)
+sf::FloatRect CollisionDetection::WillCollideInDirection(Physics::Collider* collider)
 {
-	bool isColliding = false;
+	sf::FloatRect collisionRect(-1,-1,-1,-1);
 	for (int i = 0; i < colliders.size(); i++)
 	{
 		if (CheckCollisions(collider, colliders[i]))
-			isColliding = true;
+			collisionRect = colliders[i]->GetBounds();
 	}
-	return isColliding;
+	return collisionRect;
 }
 
 void CollisionDetection::UpdateCollision()
@@ -53,6 +53,46 @@ void CollisionDetection::RemoveCollider(Physics::Collider* collider)
 	{
 		colliders.erase(id);
 	}
+}
+
+Physics::CollisionDirection CollisionDetection::GetOverlapAmount(const sf::FloatRect& collider, const sf::FloatRect& other, float& overlap)
+{
+	// Calculate the overlap between the player and obstacle
+	float xOverlap = std::min(collider.left + collider.width, other.left + other.width) -
+		std::max(collider.left, other.left);
+
+	float yOverlap = std::min(collider.top + collider.height, other.top + other.height) -
+		std::max(collider.top, other.top);
+
+
+	// Determine the smallest axis of overlap
+	if (xOverlap < yOverlap)
+	{
+		// Adjust player's position horizontally
+		if (collider.left < other.left) {
+			overlap = xOverlap;
+			return Physics::CollisionDirection::right;
+		}
+		else {
+			overlap = xOverlap;
+			return Physics::CollisionDirection::left;
+		}
+	}
+	else {
+		// Adjust player's position vertically
+		if (collider.top < other.top)
+		{
+			overlap = yOverlap;
+			return Physics::CollisionDirection::top;
+		}
+		else
+		{
+			overlap = yOverlap;
+			return Physics::CollisionDirection::bottom;
+		}
+	}
+
+	return Physics::CollisionDirection::none;
 }
 
 void CollisionDetection::ResolveCollision(Physics::Collider* collider, Physics::Collider* other)

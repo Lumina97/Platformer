@@ -9,13 +9,15 @@ class Player : public Actor
 public:
 	Player(sf::Vector2f position, sf::Vector2f size, std::string name)
 		: Actor(position, size, name) {
-		SetMovementSpeed(200.0f);
-		jumpForce = 500.0f;
+		SetMovementSpeed(350.0f);
+		jumpForce = 1500.0f;
+		dashSpeed = movementSpeed * 3;
+		dashTime = 0.35f;
+		dashCooldown = 2.0f;
 	}
 
 	// Inherited via Actor
 	virtual void UpdateActor() override;
-	virtual void OnCollision(Physics::CollisionDirection direction, float overlapAmount, Physics::Collider* other) override;
 	virtual sf::FloatRect GetNextBounds() override;
 	float GetMovementSpeed();
 	void SetMovementSpeed(float speed);
@@ -23,9 +25,9 @@ public:
 	bool GetWantsToJump();
 	void SetInputVector(sf::Vector2f input);
 	sf::Vector2f GetInputVector();
+	void Dash();
 
 private:	
-	bool IsGrounded();
 	void CalculateVerticalMovement();
 	void ApplyMovement();
 	Physics::Collider* GetCollider();
@@ -35,12 +37,20 @@ private:
 	float jumpForce;
 	float desiredMoveSpeed;
 	float verticalSpeed;
+	float dashSpeed;
 	bool wasGrounded;	
 	bool wantsToJump;
-	
+	bool isGrounded;
+	bool isDashing;
+	float dashTime;
+	float dashStartTime;
+	float dashCooldown;
+	float lastDashEnd;
+
 private:
 	Physics::CollisionDirection isCollision;
 	sf::Vector2f velocity;
+	sf::Vector2f dashDirection;
 	sf::Vector2f InputVector;	
 	Physics::Collider* collider;
 };

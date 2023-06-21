@@ -17,7 +17,7 @@ void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManag
 	
 	
 	player = compManager->CreateNewActor<Player>(
-			sf::Vector2f(GLOBAL::ScreenSize.x/2,GLOBAL::ScreenSize.y/2), sf::Vector2f(20, 60),
+			sf::Vector2f(GLOBAL::ScreenSize.x/2,GLOBAL::ScreenSize.y/2 + 10), sf::Vector2f(20, 60),
 			std::string("Player"),ComponentFlags::collision | ComponentFlags::rendering);
 
 

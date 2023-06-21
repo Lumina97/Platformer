@@ -3,6 +3,7 @@
 #define TIME
 
 inline float DeltaTime = 0;
+inline float currentTime = 0;
 
 #endif // !TIME_H
 
@@ -13,6 +14,6 @@ inline float DeltaTime = 0;
 #include "SFML/Graphics.hpp"
 
 inline sf::Vector2u ScreenSize;
-inline float gravity = 100.0f;
+inline float gravity = 0.97f;
 
 #endif // !GLOBAL

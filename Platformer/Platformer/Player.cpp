@@ -8,120 +8,103 @@ using namespace sf;
 void Player::UpdateActor()
 {
 	ApplyMovement();
-	isCollision = Physics::CollisionDirection::none;
 }
 
-void Player::OnCollision(Physics::CollisionDirection direction, float overlapAmount, Physics::Collider* other)
-{	
-	FloatRect bounds = other->GetBounds();
-	Vector2f pos = getPosition();
-	isCollision = direction;
-	if (overlapAmount == 0) return;
-
-	if (direction & Physics::CollisionDirection::left)
-	{
-		velocity.x = 0;
-		setPosition(pos.x + overlapAmount, pos.y);
-	}
-	else if (direction & Physics::CollisionDirection::right)
-	{
-		velocity.x = 0;		
-		setPosition(other->GetBounds().left - (size.x - getOrigin().x), pos.y);
-	}
-
-	else if (direction & Physics::CollisionDirection::top)
-	{
-		velocity.y = 0;
-		setPosition(pos.x, pos.y - overlapAmount);
-	}
-	else if (direction & Physics::CollisionDirection::bottom)
-	{
-		velocity.y = 0;
-		setPosition(pos.x, pos.y + overlapAmount);
-	}
-}
-
-void Player::SetMovementSpeed(float speed)
+void Player::Dash()
 {
-	movementSpeed = speed;
-}
+	if (isDashing || lastDashEnd + dashCooldown > TIME::currentTime) return;
 
-float Player::GetMovementSpeed()
-{
-	return movementSpeed;
-}
-
-void Player::SetWantsToJump(bool value)
-{
-	wantsToJump = value;
-}
-
-bool Player::GetWantsToJump()
-{
-	return wantsToJump;
-}
-
-void Player::SetInputVector(sf::Vector2f input)
-{
-	InputVector = input;
-	velocity = sf::Vector2f(0, 0);
-
-	if (isCollision & Physics::CollisionDirection::left && InputVector.x < 0)	
-		InputVector.x = 0;	
-	if (isCollision & Physics::CollisionDirection::right && InputVector.x > 0)	
-		InputVector.x = 0;
-	if (isCollision & Physics::CollisionDirection::top && InputVector.y < 0)	
-		InputVector.y = 0;	
-	if (isCollision & Physics::CollisionDirection::bottom && InputVector.y > 0)	
-		InputVector.y = 0;
-	
-
-	//CalculateVerticalMovement();
-	float speedx = GetInputVector().x * GetMovementSpeed();
-	float speedy = GetInputVector().y * GetMovementSpeed();
-
-	velocity = sf::Vector2f(speedx, speedy);
-	velocity *= TIME::DeltaTime;
-}
-
-sf::Vector2f Player::GetInputVector()
-{
-	return InputVector;
-}
-
-bool Player::IsGrounded()
-{
-	bool b = CollisionDetection::IsColliding(GetCollider());
-
-	return b;
+	std::cout << "Dash!\n";
+	dashStartTime = TIME::currentTime;
+	isDashing = true;
+	dashDirection = InputVector;
+	velocity = InputVector;
 }
 
 void Player::CalculateVerticalMovement()
 {
-	if (IsGrounded())
+	if (isGrounded)
 	{
 		if (GetWantsToJump())
 		{
-			verticalSpeed = jumpForce;
+			std::cout << "JUMP!\n";
+			verticalSpeed = -jumpForce;
 			SetWantsToJump(false);
 		}
 		else
 		{
-			verticalSpeed = GLOBAL::gravity;
+			verticalSpeed = GLOBAL::gravity / 3;
 		}
 	}
 	else
 	{
 		verticalSpeed += GLOBAL::gravity;
 	}
-
 }
 
 void Player::ApplyMovement()
 {
+	float currentTime = TIME::currentTime;
+	if (isDashing == false)
+	{
+		CalculateVerticalMovement();
+		float speedx = GetInputVector().x * GetMovementSpeed();
+
+		velocity = sf::Vector2f(speedx, verticalSpeed);
+		velocity *= TIME::DeltaTime;
+	}
+	else if (isDashing && dashStartTime + dashTime > currentTime)
+	{
+		std::cout << "still dashing!\n";
+		velocity = dashDirection;
+		velocity.y += GLOBAL::gravity / 4;
+		velocity *= dashSpeed *TIME::DeltaTime;
+	}
+	else if (isDashing && dashStartTime + dashTime < currentTime)
+	{
+		std::cout << "end dashing!\n";
+
+		lastDashEnd = currentTime;
+		isDashing = false;
+	}
+
+
+	sf::FloatRect collision = CollisionDetection::WillCollideInDirection(GetCollider());
+	if (collision.left != -1 && collision.top != -1)
+	{
+		float amount = 0;
+		sf::Vector2f pos = getPosition();
+		isCollision = CollisionDetection::GetOverlapAmount(GetNextBounds(), collision, amount);
+
+		if (isCollision & Physics::CollisionDirection::left && velocity.x < 0)
+		{
+			velocity.x = 0;
+			setPosition(collision.left + collision.width + getOrigin().x, pos.y);
+		}
+		if (isCollision & Physics::CollisionDirection::right && velocity.x > 0)
+		{
+			velocity.x = 0;
+			setPosition(collision.left - getOrigin().x, pos.y);
+		}
+		if (isCollision & Physics::CollisionDirection::top && velocity.y > 0)
+		{
+			isGrounded = true;
+			velocity.y = 0;
+			setPosition(pos.x, collision.top);
+		}
+		if (isCollision & Physics::CollisionDirection::bottom && velocity.y < 0)
+		{
+			velocity.y = 0;
+			setPosition(pos.x, collision.top + collision.height + getOrigin().y);
+		}
+	}
+	else
+		isGrounded = false;
+
 	move(velocity);
 }
 
+#pragma region Getter & Setters
 Physics::Collider* Player::GetCollider()
 {
 	if (collider == nullptr)
@@ -131,7 +114,6 @@ Physics::Collider* Player::GetCollider()
 
 	return collider;
 }
-
 sf::FloatRect Player::GetNextBounds()
 {
 	if (GetCollider())
@@ -147,3 +129,38 @@ sf::FloatRect Player::GetNextBounds()
 
 	return sf::FloatRect();
 }
+
+void Player::SetMovementSpeed(float speed)
+{
+	movementSpeed = speed;
+}
+float Player::GetMovementSpeed()
+{
+	return movementSpeed;
+}
+
+void Player::SetWantsToJump(bool value)
+{
+	if (isGrounded)
+	{
+		wantsToJump = value;
+		if (wantsToJump)
+			SetInputVector(sf::Vector2f(GetInputVector().x, 1));
+	}
+	else
+		wantsToJump = false;
+}
+bool Player::GetWantsToJump()
+{
+	return wantsToJump;
+}
+
+void Player::SetInputVector(sf::Vector2f input)
+{
+	InputVector = input;
+}
+sf::Vector2f Player::GetInputVector()
+{
+	return InputVector;
+}
+#pragma endregion

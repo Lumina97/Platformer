@@ -21,7 +21,12 @@ void PlayerInput::Update()
 	float y = 0;
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+	{
 		player->SetWantsToJump(true);
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift))
+		player->Dash();
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 		x = -1;

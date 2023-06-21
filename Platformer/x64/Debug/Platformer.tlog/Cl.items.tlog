@@ -1,0 +1,13 @@
+D:\Dev\SFML_Games\Platformer\Platformer\Actor.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\Actor.obj
+D:\Dev\SFML_Games\Platformer\Platformer\ActorRenderer.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\ActorRenderer.obj
+D:\Dev\SFML_Games\Platformer\Platformer\Collider.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\Collider.obj
+D:\Dev\SFML_Games\Platformer\Platformer\CollisionDetection.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\CollisionDetection.obj
+D:\Dev\SFML_Games\Platformer\Platformer\Component.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\Component.obj
+D:\Dev\SFML_Games\Platformer\Platformer\ComponentManager.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\ComponentManager.obj
+D:\Dev\SFML_Games\Platformer\Platformer\Engine.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\Engine.obj
+D:\Dev\SFML_Games\Platformer\Platformer\GameLoop.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\GameLoop.obj
+D:\Dev\SFML_Games\Platformer\Platformer\GUI.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\GUI.obj
+D:\Dev\SFML_Games\Platformer\Platformer\main.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\main.obj
+D:\Dev\SFML_Games\Platformer\Platformer\Player.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\Player.obj
+D:\Dev\SFML_Games\Platformer\Platformer\Renderer.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\Renderer.obj
+D:\Dev\SFML_Games\Platformer\Platformer\SoundEngine.cpp;D:\Dev\SFML_Games\Platformer\Platformer\x64\Debug\SoundEngine.obj

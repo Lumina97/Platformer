@@ -11,7 +11,7 @@ public:
 	void UpdateCollision();
 
 	void AddCollider(Physics::Collider* collider);
-	void RemoveCollider(Physics::Collider* collider);
+	static void RemoveCollider(Physics::Collider* collider);
 
 	static sf::FloatRect WillCollideInDirection(Physics::Collider* collider);
 	static Physics::CollisionDirection GetOverlapAmount(const sf::FloatRect& collider, const sf::FloatRect& other, float& overlap);

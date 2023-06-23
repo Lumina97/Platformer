@@ -11,14 +11,14 @@ bool Engine::Init()
 	videoMode.width *= 0.8f;
 
 	window.create(videoMode, "Pong!");
-	//window.setFramerateLimit(60);
 
 	GLOBAL::ScreenSize = window.getSize();
 	GLOBAL::WINDOW = &window;
-	compManager = new ComponentManager(&window);
-	soundEngine = new SoundEngine();
+	collisionDetection = new CollisionDetection();
+	compManager = new ComponentManager(&window, collisionDetection);
+	soundEngine = new SoundEngine();	
 	gameLoop = new GameLoop();
-	gameLoop->InitializeGameLoop(&window, compManager);
+	gameLoop->InitializeGameLoop(&window, compManager, collisionDetection);
 
 	if (window.isOpen())
 		return true;
@@ -30,14 +30,9 @@ void Engine::Run()
 {
 	//initialize varialbes to calculate deltatime
 	sf::Clock clock;
-	//sf::Clock elapsedClock;
 	sf::Time frameStart = clock.getElapsedTime();;
 	sf::Time frameEnd;
 	tgui::SFML_GRAPHICS::Gui* gui = gameLoop->GetGUI();
-
-
-	//sf::Time targetFrameTime = sf::seconds(1.0f / 10000.0f);
-
 
 	//soundEngine->PlayMusic();
 	while (window.isOpen())
@@ -76,12 +71,5 @@ void Engine::Run()
 		gameLoop->RunUpdateLoop();
 		window.display();
 		frameEnd = clock.getElapsedTime();
-
-
-		//sf::Time remainingTime = targetFrameTime - elapsedTime;
-		//if (remainingTime > sf::Time::Zero)
-		//{
-		//	sf::sleep(remainingTime);
-		//}
 	}
 }

@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Actor.h"
 #include "Globals.h"
+#include "Debug.h"
+#include "CollisionDetection.h"
 
 using namespace sf;
 
@@ -12,6 +14,12 @@ Physics::Collider::Collider(Vector2f position, Vector2f size,  Actor* parent)
 	setPosition(position);
 	this->parentActor = parent;
 	this->size = size;
+	this->type = ComponentType::collider;
+}
+
+Physics::Collider::~Collider()
+{
+	CollisionDetection::RemoveCollider(this);
 }
 
 FloatRect Physics::Collider::GetBounds()
@@ -21,8 +29,14 @@ FloatRect Physics::Collider::GetBounds()
 	Vector2f origin = getOrigin();
 	topLeft -= origin;
 
-
-
 	FloatRect bounds(topLeft.x, topLeft.y, size.x, size.y);
+
 	return bounds;
+}
+
+void Physics::Collider::UpdateComponent()
+{
+	Component::UpdateComponent();
+
+	//Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size);
 }

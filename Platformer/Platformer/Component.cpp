@@ -44,3 +44,8 @@ Actor* Component::GetParentActor()
 {
 	return parentActor;
 }
+
+ComponentType Component::GetComponentType()
+{
+	return type;
+}

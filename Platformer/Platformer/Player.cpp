@@ -13,11 +13,14 @@ void Player::UpdateActor()
 void Player::Dash()
 {
 	if (isDashing || lastDashEnd + dashCooldown > TIME::currentTime) return;
+	if (InputVector.x == 0 && InputVector.y == 0) return;
 
 	std::cout << "Dash!\n";
 	dashStartTime = TIME::currentTime;
 	isDashing = true;
 	dashDirection = InputVector;
+	dashDirection.y = velocity.y;
+
 	velocity = InputVector;
 }
 
@@ -62,7 +65,6 @@ void Player::ApplyMovement()
 	}
 	else if (isDashing && dashStartTime + dashTime > currentTime)
 	{
-		std::cout << "still dashing!\n";
 		velocity = dashDirection;
 		velocity.y += GLOBAL::gravity / 4;
 		velocity *= dashSpeed *TIME::DeltaTime;
@@ -70,6 +72,7 @@ void Player::ApplyMovement()
 	else if (isDashing && dashStartTime + dashTime < currentTime)
 	{
 		std::cout << "end dashing!\n";
+		verticalSpeed = velocity.y;
 
 		lastDashEnd = currentTime;
 		isDashing = false;

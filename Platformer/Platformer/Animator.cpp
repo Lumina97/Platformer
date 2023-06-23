@@ -1,24 +1,21 @@
 #include "Animator.h"
 #include <iostream>
 #include "Debug.h"
+#include "Globals.h"
 
-Animator::Animator(std::vector<Animation*> animations, sf::RenderWindow* window, Actor* parentActor)
+Animator::Animator( Actor* parentActor)
 {
-	this->animations = animations;
-	this->window = window;
 	this->parentActor = parentActor;
-	isFlipped = false;
-}
-
-Animator::Animator(sf::RenderWindow* window, Actor* parentActor)
-{
-	this->window = window;
-	this->parentActor = parentActor;
+	this->type = ComponentType::animator;
 	isFlipped = false;
 }
 
 Animator::~Animator()
 {
+	for (int i = 0; i < animations.size(); i++)
+	{
+		delete(animations[i]);
+	}
 	animations.clear();
 }
 
@@ -34,11 +31,11 @@ void Animator::UpdateComponent()
 		animations[currentAnimation]->UpdateAnimation();
 	}
 
-	if (window)
+	if (GLOBAL::WINDOW)
 	{
 		sf::Sprite sprite = *GetCurrentSprite();
-		sf::Vector2f origin(sprite.getGlobalBounds().width / 2, sprite.getGlobalBounds().height / 1.25);
 
+		sf::Vector2f origin(sprite.getGlobalBounds().width / 2, sprite.getGlobalBounds().height / 1.25f);
 		sprite.setOrigin(origin);
 		sprite.setPosition(getPosition());
 		sprite.setRotation(getRotation());
@@ -47,17 +44,16 @@ void Animator::UpdateComponent()
 		float scaleAmount = 2.0f;
 		sf::Vector2f scale = getScale() * scaleAmount;
 		if (isFlipped) scale.x *= -1.0f;
-		sprite.setScale(scale);
+		sprite.setScale(scale);		
 
-		sf::Vector2f size(sprite.getGlobalBounds().width, sprite.getGlobalBounds().height);
-		Debug::DrawDebugBox(sprite.getPosition(), origin,sprite.getRotation(),size,sf::Color::Transparent,sf::Color::White,1.0f, scaleAmount);
-		window->draw(sprite);
+		//sf::Vector2f size(sprite.getGlobalBounds().width, sprite.getGlobalBounds().height);
+		//Debug::DrawDebugBox(sprite.getPosition(), origin,sprite.getRotation(),size,sf::Color::Transparent,sf::Color::White,1.0f, scaleAmount);
+		GLOBAL::WINDOW->draw(sprite);
 	}
 }
 
 void Animator::AddAnimation(Animation* animation)
 {
-	if (animation == nullptr) return;
 	animations.push_back(animation);
 }
 
@@ -67,7 +63,7 @@ void Animator::SwitchAnimation(std::string name)
 	if (animations.empty()) return;
 	for (int i = 0; i < animations.size(); i++)
 	{
-		if (animations[i] != nullptr && animations[i]->GetName() == name)
+		if (animations[i]->GetName() == name)
 		{
 			if (currentAnimation == i) return;
 

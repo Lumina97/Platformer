@@ -6,6 +6,7 @@ class Animation
 {
 public:
 	Animation(std::string name, sf::Texture* spriteAtlas, sf::IntRect spriteSize, int length, int rows, int coloumns,int rowStart, int columnStart);
+	~Animation();
 	sf::Sprite* GetCurrentAnimationFrame();
 	void UpdateAnimation();
 	void RestartAnimation();

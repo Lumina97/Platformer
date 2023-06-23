@@ -7,8 +7,7 @@
 class Animator : public Component
 {
 public:
-	Animator(std::vector<Animation*> animations,sf::RenderWindow* window, Actor* parentActor);
-	Animator(sf::RenderWindow* window, Actor* parentActor);
+	Animator (Actor* parentActor);
 	~Animator();
 
 	virtual void UpdateComponent() override;
@@ -20,7 +19,6 @@ public:
 private:
 	int currentAnimation = 0;
 	std::vector<Animation*> animations {};
-	sf::RenderWindow* window;
 	const double animationFPSTarget = 5;
 	sf::Clock clock;
 	sf::Time totalElapsed;

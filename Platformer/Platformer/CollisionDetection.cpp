@@ -149,7 +149,12 @@ bool CollisionDetection::CheckCollisions(Physics::Collider* collider, Physics::C
 	if (collider == nullptr || other == nullptr) return false;
 
 	Actor* actor = collider->GetParentActor();	
-	sf::FloatRect colliderBounds = actor->GetNextBounds();;
+	sf::FloatRect colliderBounds;
+	if (actor != nullptr)
+		colliderBounds = actor->GetNextBounds();
+	else
+		colliderBounds = collider->GetBounds();
+
 	sf::FloatRect otherBounds = other->GetBounds();
 
 

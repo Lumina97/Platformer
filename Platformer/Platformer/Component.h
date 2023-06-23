@@ -6,17 +6,32 @@
 class Actor;
 
 
+enum ComponentType
+{
+	animator = 1,
+	actorRenderer = 2,
+	collider = 4
+};
+inline ComponentType operator|(ComponentType a, ComponentType b)
+{
+	return static_cast<ComponentType>(static_cast<int>(a) | static_cast<int>(b));
+}
+
 class Component : public sf::Transformable
 {
 public:
 	Component() {};
 	Component(Actor* actorToAttachTo);
+	~Component() {};
+
 	virtual void UpdateComponent();
 	bool GetHasMoved();
 	Actor* GetParentActor();
+	ComponentType GetComponentType();
+
 
 protected:
-
+	ComponentType type;
 	Actor* parentActor = nullptr;
 	bool hasMoved = false;
 

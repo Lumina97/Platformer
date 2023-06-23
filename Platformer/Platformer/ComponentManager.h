@@ -1,35 +1,21 @@
 #ifndef COMPONENT_MANAGER_H
 #define COMPONENT_MANAGER_H
 
-
-enum ComponentFlags
-{
-	collision = 1,
-	rendering = 2,
-	animator = 4
-};
-
-inline ComponentFlags operator|(ComponentFlags a, ComponentFlags b)
-{
-	return static_cast<ComponentFlags>(static_cast<int>(a) | static_cast<int>(b));
-}
-
-
 #include "Component.h"
-#include "Collider.h"
 #include "CollisionDetection.h"
-#include "ActorRenderer.h"
 #include "Actor.h"
 #include "SFML/Graphics.hpp"
 #include <string>
 #include "PlayerInput.h"
 #include "Animator.h"
+#include "ActorRenderer.h"
+#include "Collider.h"
 
 class ComponentManager
 {
 
 public:
-	ComponentManager(sf::RenderWindow* renderWindow);
+	ComponentManager(sf::RenderWindow* renderWindow, CollisionDetection* collisionDetection);
 
 public:
 	void SetPlayerInput(PlayerInput* input);
@@ -37,7 +23,7 @@ public:
 
 	template<typename T>
 	T* CreateNewActor(sf::Vector2f position, sf::Vector2f size,
-		std::string name, ComponentFlags componentFlags);
+		std::string name, ComponentType ComponentTypes);
 
 
 	template<typename T>
@@ -46,25 +32,28 @@ public:
 
 	void UpdateComponents();
 
+	static void Destroy(Actor* actor);
+	static void Destroy(Component* Component);
+
 
 private:
 
 	CollisionDetection* collisionDetection;
 	PlayerInput* input;
 
-	std::vector<Actor*> sceneActors;
-	std::vector<Animator*> animators;
-	std::vector<Component*> actorComponents;
+	static std::vector<Actor*> sceneActors;
+	static std::vector<Animator*> animators;
+	static std::vector<Component*> actorComponents;
 	sf::RenderWindow* window;
 };
 
 
 template<typename T>
-inline T* ComponentManager::CreateNewActor(sf::Vector2f position, sf::Vector2f size, std::string name, ComponentFlags componentFlags)
+inline T* ComponentManager::CreateNewActor(sf::Vector2f position, sf::Vector2f size, std::string name, ComponentType ComponentTypes)
 {
 	T* newActor = CreateNewActor<T>(position, size, name);
 
-	if (componentFlags & ComponentFlags::collision)
+	if (ComponentTypes & ComponentType::collider)
 	{
 		Physics::Collider* collider = new Physics::Collider(position, size, newActor);
 		newActor->AddComponent(collider);
@@ -74,19 +63,20 @@ inline T* ComponentManager::CreateNewActor(sf::Vector2f position, sf::Vector2f s
 			collisionDetection->AddCollider(collider);
 	}
 
-	if (componentFlags & ComponentFlags::rendering)
+	if (ComponentTypes & ComponentType::actorRenderer)
 	{
-		ActorRenderer* renderer = new ActorRenderer(size, window,newActor);
+		ActorRenderer* renderer = new ActorRenderer(newActor);
 		newActor->AddComponent(renderer);
 	
 		actorComponents.push_back(renderer);
 	}
 
-	if (componentFlags & ComponentFlags::animator)
+	if (ComponentTypes & ComponentType::animator)
 	{
-		Animator* anim = new Animator(window, newActor);
+		Animator* anim = new Animator(newActor);
 		newActor->AddComponent(anim);
 
+		actorComponents.push_back(anim);
 		animators.push_back(anim);
 	}
 

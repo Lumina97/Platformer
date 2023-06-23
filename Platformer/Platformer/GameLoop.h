@@ -13,7 +13,7 @@ class ComponentManager;
 class GameLoop
 {
 public:
-	void InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager);
+	void InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager, CollisionDetection* collisionDetection);
 	void RunUpdateLoop();
 
 
@@ -29,6 +29,9 @@ private:
 	ComponentManager* compManager;
 	GUI* mainGUI;
 	World* world;
+
+	sf::Texture* idleTex = new sf::Texture();
+	sf::Texture* runTex = new sf::Texture();
 
 	sf::RenderWindow* window;
 	std::vector<sf::Texture> Textures;

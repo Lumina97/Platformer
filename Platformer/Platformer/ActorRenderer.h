@@ -1,7 +1,7 @@
 #ifndef ACTOR_RENDERER_H
 #define ACTOR_RENDERER_H
 
-#define DEBUG 1	
+
 
 #include "SFML/Graphics.hpp"
 #include "Actor.h"
@@ -10,19 +10,19 @@
 class ActorRenderer: public Component
 {
 public:
-	ActorRenderer(std::string textureFilePath, sf::RenderWindow* window , Actor* parentActor);
-	ActorRenderer(sf::Vector2f size, sf::RenderWindow* window , Actor* parentActor);
-
+	ActorRenderer(Actor* parentActor);
+	~ActorRenderer();
 	virtual void UpdateComponent();
+	/// <summary>
+	/// Adds a sprite and takes ownership of it
+	/// </summary>
+	/// <param name="spriteToSet"></param>
+	void AddSprite(const sf::Sprite& spriteToSet);
 
 private:
 
 	sf::Texture spriteTexture;
-	sf::Sprite sprite;
-	std::string textureFilePath;
-	sf::RectangleShape shape;
-	sf::RectangleShape debug;
-	sf::RenderWindow* window = nullptr;
+	std::vector<sf::Sprite> sprites;
 };
 
 

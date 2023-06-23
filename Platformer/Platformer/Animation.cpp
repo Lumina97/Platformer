@@ -45,6 +45,17 @@ Animation::Animation(std::string name, sf::Texture* spriteAtlas, sf::IntRect spr
 	}
 }
 
+
+Animation::~Animation()
+{
+	for (int i = 0; i < sprites.size(); i++)
+	{
+		sprites[i]->setTexture(sf::Texture());
+		delete(sprites[i]);
+	}
+	sprites.clear();	
+}
+
 sf::Sprite* Animation::GetCurrentAnimationFrame()
 {
 	return sprites[currentFrame];

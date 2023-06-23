@@ -12,6 +12,7 @@ class Actor : public sf::Transformable
 public:
 	Actor() {};
 	Actor(sf::Vector2f position, sf::Vector2f size,std::string name);
+	~Actor();
 
 	virtual void OnCollision(Physics::CollisionDirection direction, float overlapAmount, Physics::Collider* other = nullptr) {};
 	virtual void UpdateActor() {};

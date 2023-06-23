@@ -1,11 +1,15 @@
 #include "ComponentManager.h"
 
 
-ComponentManager::ComponentManager(sf::RenderWindow* renderWindow)
+std::vector<Actor*> ComponentManager::sceneActors;
+std::vector<Animator*> ComponentManager::animators;
+std::vector<Component*> ComponentManager::actorComponents;
+
+
+ComponentManager::ComponentManager(sf::RenderWindow* renderWindow, CollisionDetection* collisionDetection)
 {
 	this->window = renderWindow;
-	collisionDetection = new CollisionDetection();
-
+	this->collisionDetection = collisionDetection;
 }
 
 void ComponentManager::SetPlayerInput(PlayerInput* input)
@@ -15,7 +19,6 @@ void ComponentManager::SetPlayerInput(PlayerInput* input)
 
 void ComponentManager::UpdateComponents()
 {
-
 	//player input
 	if (input != nullptr) input->Update();
 
@@ -51,5 +54,36 @@ void ComponentManager::UpdateComponents()
 			}
 		}
 	}
+}
 
+void ComponentManager::Destroy(Actor* actor)
+{
+	std::_Vector_iterator id = std::find(sceneActors.begin(), sceneActors.end(), actor);
+	if (id != sceneActors.end())
+	{
+		int position = std::distance(sceneActors.begin(), id);
+		delete(actor);
+		sceneActors.erase(id);
+	}
+}
+
+void ComponentManager::Destroy(Component* Component)
+{
+	std::_Vector_iterator id = std::find(actorComponents.begin(), actorComponents.end(), Component);
+	if (id != actorComponents.end())
+	{
+		int position = std::distance(actorComponents.begin(), id);
+		
+		if(Component->GetComponentType() & ComponentType::animator)
+		{		
+			std::_Vector_iterator animId = std::find(animators.begin(), animators.end(), Component);
+			if (animId != animators.end())
+			{
+				animators.erase(animId);
+			}
+		}
+
+		delete(Component);
+		actorComponents.erase(id);
+	}
 }

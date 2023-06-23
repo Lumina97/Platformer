@@ -26,7 +26,9 @@ namespace Physics
 
 	public:
 		Collider(sf::Vector2f position, sf::Vector2f size, Actor* parent);
+		~Collider();
 		sf::FloatRect GetBounds();
+		virtual void UpdateComponent() override;
 
 
 	private:

@@ -87,11 +87,11 @@
     <ClCompile Include="CollisionDetection.cpp">
       <Filter>Source Files\Engine\Components\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Animation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Debug.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files\Engine\Components\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,11 +149,11 @@
     <ClInclude Include="CollisionDetection.h">
       <Filter>Header Files\Engine\Components\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Debug.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files\Engine\Components\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

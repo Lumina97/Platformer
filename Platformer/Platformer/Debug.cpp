@@ -23,8 +23,8 @@ namespace Debug
 	}
 
 	void DrawDebugBox(sf::Vector2f position, sf::Vector2f origin, float rotationAngle, sf::Vector2f size,
-		sf::Color fillColor, sf::Color outlineColor ,
-		float outlineThickness, float scale )
+		sf::Color fillColor = sf::Color::Transparent, sf::Color outlineColor = sf::Color::White,
+		float outlineThickness = 0, float scale = 0)
 	{
 		if (GLOBAL::WINDOW == nullptr) return;
 

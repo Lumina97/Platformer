@@ -1,6 +1,7 @@
 #include "ActorRenderer.h"
 #include "Collider.h"
 #include "Player.h"
+#include "Animator.h"
 
 ActorRenderer::ActorRenderer(std::string textureFilePath, sf::RenderWindow* window, Actor* parentActor)
 {
@@ -32,21 +33,42 @@ void ActorRenderer::UpdateComponent()
 {
 	Component::UpdateComponent();
 
-#ifdef DEBUG = 1
+#ifdef DEBUG=1
 	Physics::Collider* col = parentActor->GetComponent < Physics::Collider>();
-	sf::FloatRect bounds = parentActor->GetNextBounds();
+	sf::FloatRect bounds = col->GetBounds();
 	sf::FloatRect current = col->GetBounds();
 
+	debug.setOrigin(getOrigin());
 	debug.setSize(sf::Vector2f(bounds.width, bounds.height));
-	debug.setPosition(bounds.left, bounds.top);
+	debug.setPosition(getPosition());
 
 	Player* player = dynamic_cast<Player*>(parentActor);
-	if(player != nullptr)
-		debug.setFillColor(sf::Color::Green);
+	if (player != nullptr)
+	{
+		debug.setFillColor(sf::Color::Transparent);
+
+		sf::RectangleShape spriteDebug;
+		Animator* anim = player->GetComponent<Animator>();
+		sf::Sprite sprite = *anim->GetCurrentSprite();
+
+		sf::Vector2f origin(sprite.getGlobalBounds().width / 2, sprite.getGlobalBounds().height);
+		spriteDebug.setScale(2.0f, 2.0f);
+		spriteDebug.setOrigin(origin);
+		spriteDebug.setPosition(getPosition());
+		sf::Vector2f size(sprite.getGlobalBounds().width, sprite.getGlobalBounds().height);
+		spriteDebug.setSize(size);
+		spriteDebug.setFillColor(sf::Color::Transparent);
+		spriteDebug.setOutlineColor(sf::Color::White);
+		spriteDebug.setOutlineThickness(0.5f);
+
+		window->draw(spriteDebug);
+
+
+	}
 	else 
 		debug.setFillColor(sf::Color::Red);
-	//debug.setOutlineThickness(2);
-	//debug.setOutlineColor(sf::Color::Green);
+	debug.setOutlineThickness(2);
+	debug.setOutlineColor(sf::Color::Green);
 
 #endif
 

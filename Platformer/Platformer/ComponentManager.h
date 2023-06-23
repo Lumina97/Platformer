@@ -5,7 +5,8 @@
 enum ComponentFlags
 {
 	collision = 1,
-	rendering = 2
+	rendering = 2,
+	animator = 4
 };
 
 inline ComponentFlags operator|(ComponentFlags a, ComponentFlags b)
@@ -22,6 +23,7 @@ inline ComponentFlags operator|(ComponentFlags a, ComponentFlags b)
 #include "SFML/Graphics.hpp"
 #include <string>
 #include "PlayerInput.h"
+#include "Animator.h"
 
 class ComponentManager
 {
@@ -51,9 +53,9 @@ private:
 	PlayerInput* input;
 
 	std::vector<Actor*> sceneActors;
+	std::vector<Animator*> animators;
 	std::vector<Component*> actorComponents;
 	sf::RenderWindow* window;
-
 };
 
 
@@ -71,6 +73,7 @@ inline T* ComponentManager::CreateNewActor(sf::Vector2f position, sf::Vector2f s
 		if(collisionDetection != nullptr)
 			collisionDetection->AddCollider(collider);
 	}
+
 	if (componentFlags & ComponentFlags::rendering)
 	{
 		ActorRenderer* renderer = new ActorRenderer(size, window,newActor);
@@ -79,6 +82,13 @@ inline T* ComponentManager::CreateNewActor(sf::Vector2f position, sf::Vector2f s
 		actorComponents.push_back(renderer);
 	}
 
+	if (componentFlags & ComponentFlags::animator)
+	{
+		Animator* anim = new Animator(window, newActor);
+		newActor->AddComponent(anim);
+
+		animators.push_back(anim);
+	}
 
 	return newActor;
 }

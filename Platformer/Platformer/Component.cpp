@@ -32,6 +32,7 @@ void Component::UpdateComponent()
 	setOrigin(parentActor->getOrigin());
 	setPosition(parentActor->getPosition());
 	setRotation(parentActor->getRotation());
+	setScale(parentActor->getScale());
 }
 
 bool Component::GetHasMoved()

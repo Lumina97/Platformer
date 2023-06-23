@@ -5,6 +5,7 @@ ComponentManager::ComponentManager(sf::RenderWindow* renderWindow)
 {
 	this->window = renderWindow;
 	collisionDetection = new CollisionDetection();
+
 }
 
 void ComponentManager::SetPlayerInput(PlayerInput* input)
@@ -14,9 +15,9 @@ void ComponentManager::SetPlayerInput(PlayerInput* input)
 
 void ComponentManager::UpdateComponents()
 {
+
 	//player input
 	if (input != nullptr) input->Update();
-
 
 	//collision
 	if (collisionDetection != nullptr) collisionDetection->UpdateCollision();
@@ -38,4 +39,17 @@ void ComponentManager::UpdateComponents()
 			actorComponents[i]->UpdateComponent();
 		}
 	}
+
+	//update animators
+	if (animators.empty() == false)
+	{
+		for (int i = 0; i < animators.size(); i++)
+		{
+			if (animators[i] != nullptr)
+			{
+				animators[i]->UpdateComponent();
+			}
+		}
+	}
+
 }

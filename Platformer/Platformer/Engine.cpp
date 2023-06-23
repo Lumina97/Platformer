@@ -14,6 +14,7 @@ bool Engine::Init()
 	//window.setFramerateLimit(60);
 
 	GLOBAL::ScreenSize = window.getSize();
+	GLOBAL::WINDOW = &window;
 	compManager = new ComponentManager(&window);
 	soundEngine = new SoundEngine();
 	gameLoop = new GameLoop();

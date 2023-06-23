@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Engine\Components\Physics">
       <UniqueIdentifier>{774eebfb-f9ea-4cf9-906f-7135e6969e63}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Engine\Components\Animation">
+      <UniqueIdentifier>{55ad75be-b678-4762-9c4b-2e53b3062ccf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Components\Animation">
+      <UniqueIdentifier>{707b0834-9b70-46e4-9a4a-418422fb1176}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -46,9 +52,6 @@
       <Filter>Source Files\Engine\Components\Physics</Filter>
     </ClCompile>
     <ClCompile Include="Actor.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="CollisionDetection.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
@@ -78,6 +81,18 @@
     <ClCompile Include="PlayerInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Source Files\Engine\Components\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionDetection.cpp">
+      <Filter>Source Files\Engine\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GUI.h">
@@ -90,9 +105,6 @@
       <Filter>Header Files\Engine\Components\Physics</Filter>
     </ClInclude>
     <ClInclude Include="Actor.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="CollisionDetection.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h">
@@ -131,5 +143,22 @@
     <ClInclude Include="PlayerInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Header Files\Engine\Components\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionDetection.h">
+      <Filter>Header Files\Engine\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\rogue spritesheet calciumtrice.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

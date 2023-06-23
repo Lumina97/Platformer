@@ -1,9 +1,12 @@
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Actor.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\Actor.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\ActorRenderer.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\ActorRenderer.obj
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Animation.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\Animation.obj
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Animator.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\Animator.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Collider.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\Collider.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\CollisionDetection.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\CollisionDetection.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Component.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\Component.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\ComponentManager.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\ComponentManager.obj
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Debug.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\Debug.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Engine.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\Engine.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\GameLoop.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\GameLoop.obj
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\GUI.cpp;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\x64\Debug\GUI.obj

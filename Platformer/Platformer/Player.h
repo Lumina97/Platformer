@@ -3,6 +3,7 @@
 
 #include "Actor.h"
 #include "Collider.h"
+#include "Animator.h"
 
 class Player : public Actor 
 {	
@@ -31,6 +32,7 @@ private:
 	void CalculateVerticalMovement();
 	void ApplyMovement();
 	Physics::Collider* GetCollider();
+	Animator* GetAnimator();
 
 private:
 	float movementSpeed;
@@ -53,5 +55,6 @@ private:
 	sf::Vector2f dashDirection;
 	sf::Vector2f InputVector;	
 	Physics::Collider* collider;
+	Animator* anim;
 };
 #endif // !PLAYER_H

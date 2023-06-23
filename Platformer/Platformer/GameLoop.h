@@ -18,6 +18,9 @@ public:
 
 
 	tgui::Gui* GetGUI();
+private:
+
+	bool InitializePlayer();
 
 private:
 	Player* player;
@@ -28,7 +31,7 @@ private:
 	World* world;
 
 	sf::RenderWindow* window;
-
+	std::vector<sf::Texture> Textures;
 };
 
 #endif // ! GAMELOOP_H

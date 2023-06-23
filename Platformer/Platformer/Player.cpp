@@ -43,12 +43,19 @@ void Player::CalculateVerticalMovement()
 }
 
 void Player::ApplyMovement()
-{
+{	
 	float currentTime = TIME::currentTime;
 	if (isDashing == false)
 	{
 		CalculateVerticalMovement();
 		float speedx = GetInputVector().x * GetMovementSpeed();
+
+		if (speedx != 0) GetAnimator()->SwitchAnimation("Run");
+		else GetAnimator()->SwitchAnimation("Idle");
+
+		//flip sprite
+		if (speedx < 0) GetAnimator()->Flip(true);
+		if (speedx > 0) GetAnimator()->Flip(false);
 
 		velocity = sf::Vector2f(speedx, verticalSpeed);
 		velocity *= TIME::DeltaTime;
@@ -113,6 +120,15 @@ Physics::Collider* Player::GetCollider()
 	}
 
 	return collider;
+}
+Animator* Player::GetAnimator()
+{
+	if (anim == nullptr)
+	{
+		anim = GetComponent<Animator>();
+	}
+
+	return anim;
 }
 sf::FloatRect Player::GetNextBounds()
 {

@@ -12,7 +12,7 @@ inline float VectorDot(Vector2f v1, Vector2f v2) { return  v1.x * v2.x + v1.y * 
 inline Vector2f Normalized(Vector2f vector)
 {
 	Vector2f result = vector;
-	float magnitude = std::sqrt(std::pow(vector.x, 2) + std::pow(vector.y, 2));
+	double magnitude = std::sqrt(std::pow(vector.x, 2) + std::pow(vector.y, 2));
 	if (magnitude != 0)
 	{
 		result = Vector2f(vector.x / magnitude, vector.y / magnitude);

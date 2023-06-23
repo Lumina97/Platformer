@@ -1,2 +1,7 @@
-﻿  Player.cpp
+﻿  Animator.cpp
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Animator.cpp(40,91): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
   Platformer.vcxproj -> D:\Dev\C++\SFML_Games\Platformer\Platformer\x64\Debug\Platformer.exe

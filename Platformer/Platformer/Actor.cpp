@@ -36,3 +36,8 @@ void Actor::RemoveComponent(Component* component)
 		ComponentManager::Destroy(components[position]);
 	}
 }
+
+sf::Vector2f Actor::GetSize()
+{
+	return size;
+}

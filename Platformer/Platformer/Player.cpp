@@ -2,11 +2,19 @@
 #include <iostream>
 #include "Globals.h"
 #include "CollisionDetection.h"
+#include "Debug.h"
+
 
 using namespace sf;
 
+Player::~Player()
+{
+	delete(combat);
+}
+
 void Player::UpdateActor()
 {
+	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size);
 	ApplyMovement();
 }
 
@@ -22,6 +30,14 @@ void Player::Dash()
 	dashDirection.y = velocity.y;
 
 	velocity = InputVector;
+}
+
+void Player::Attack()
+{
+	if (combat)
+	{
+		combat->Attack(velocity.x);
+	}
 }
 
 void Player::CalculateVerticalMovement()
@@ -57,8 +73,10 @@ void Player::ApplyMovement()
 		else GetAnimator()->SwitchAnimation("Idle");
 
 		//flip sprite
-		if (speedx < 0) GetAnimator()->Flip(true);
-		if (speedx > 0) GetAnimator()->Flip(false);
+		if (speedx < 0)isFlipped = true; 
+		if (speedx > 0)isFlipped = false;
+		GetAnimator()->Flip(isFlipped);
+
 
 		velocity = sf::Vector2f(speedx, verticalSpeed);
 		velocity *= TIME::DeltaTime;
@@ -79,12 +97,12 @@ void Player::ApplyMovement()
 	}
 
 
-	sf::FloatRect collision = CollisionDetection::WillCollideInDirection(GetCollider());
+	sf::FloatRect collision = Physics::CollisionDetection::WillCollideInDirection(GetCollider());
 	if (collision.left != -1 && collision.top != -1)
 	{
 		float amount = 0;
 		sf::Vector2f pos = getPosition();
-		isCollision = CollisionDetection::GetOverlapAmount(GetNextBounds(), collision, amount);
+		isCollision = Physics::CollisionDetection::GetOverlapAmount(GetNextBounds(), collision, amount);
 
 		if (isCollision & Physics::CollisionDirection::left && velocity.x < 0)
 		{

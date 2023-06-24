@@ -34,17 +34,16 @@ Animation::Animation(std::string name, sf::Texture* spriteAtlas, sf::IntRect spr
 
 		sprites.push_back(sprite);
 
-		if (++x >= columns)
+		if (++x - columnStart >= columns)
 		{
 			x = 0;
-			if (++y >= rows)
+			if (++y - rowStart >= rows)
 			{
 				y++;
 			}
 		}
 	}
 }
-
 
 Animation::~Animation()
 {
@@ -65,15 +64,24 @@ void Animation::UpdateAnimation()
 {	
 	currentFrame++;
 	if (currentFrame >= length)
+	{
+		hasFinishedPlaying = true;
 		currentFrame = 0;
+	}
 }
 
 void Animation::RestartAnimation()
 {
 	currentFrame = 0;
+	hasFinishedPlaying = false;
 }
 
 std::string Animation::GetName()
 {
 	return name;
+}
+
+bool Animation::GetFinishedPlaying()
+{
+	return hasFinishedPlaying;
 }

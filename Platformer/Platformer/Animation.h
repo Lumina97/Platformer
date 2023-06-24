@@ -11,6 +11,7 @@ public:
 	void UpdateAnimation();
 	void RestartAnimation();
 	std::string GetName();
+	bool GetFinishedPlaying();
 
 private:
 	std::string name;
@@ -23,6 +24,7 @@ private:
 	int rowStart;
 
 	int currentFrame;
+	bool hasFinishedPlaying;
 
 	std::vector<sf::Sprite*> sprites {};
 };

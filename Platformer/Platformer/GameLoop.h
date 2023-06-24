@@ -13,7 +13,7 @@ class ComponentManager;
 class GameLoop
 {
 public:
-	void InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager, CollisionDetection* collisionDetection);
+	void InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager, Physics::CollisionDetection* collisionDetection);
 	void RunUpdateLoop();
 
 
@@ -25,13 +25,14 @@ private:
 private:
 	Player* player;
 	PlayerInput* input;
-	CollisionDetection* collisionDetection;
+	Physics::CollisionDetection* collisionDetection;
 	ComponentManager* compManager;
 	GUI* mainGUI;
 	World* world;
 
 	sf::Texture* idleTex = new sf::Texture();
 	sf::Texture* runTex = new sf::Texture();
+	sf::Texture* attackTex = new sf::Texture();
 
 	sf::RenderWindow* window;
 	std::vector<sf::Texture> Textures;

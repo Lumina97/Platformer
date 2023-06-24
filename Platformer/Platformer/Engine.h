@@ -24,7 +24,7 @@ private:
 	RenderWindow window;
 
 	ComponentManager* compManager;
-	CollisionDetection* collisionDetection;
+	Physics::CollisionDetection* collisionDetection;
 	SoundEngine* soundEngine;
 	GameLoop* gameLoop;	
 };

@@ -93,6 +93,9 @@
     <ClCompile Include="Animation.cpp">
       <Filter>Source Files\Engine\Components\Animation</Filter>
     </ClCompile>
+    <ClCompile Include="Combat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GUI.h">
@@ -154,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="Animation.h">
       <Filter>Header Files\Engine\Components\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Combat.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

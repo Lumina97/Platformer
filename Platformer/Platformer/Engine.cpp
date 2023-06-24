@@ -14,7 +14,7 @@ bool Engine::Init()
 
 	GLOBAL::ScreenSize = window.getSize();
 	GLOBAL::WINDOW = &window;
-	collisionDetection = new CollisionDetection();
+	collisionDetection = new Physics::CollisionDetection();
 	compManager = new ComponentManager(&window, collisionDetection);
 	soundEngine = new SoundEngine();	
 	gameLoop = new GameLoop();

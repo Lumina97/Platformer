@@ -4,6 +4,7 @@
 #include "Actor.h"
 #include "Collider.h"
 #include "Animator.h"
+#include "Combat.h"
 
 class Player : public Actor 
 {	
@@ -15,7 +16,9 @@ public:
 		dashSpeed = movementSpeed * 3;
 		dashTime = 0.35f;
 		dashCooldown = 2.0f;
+		combat = new Combat(this);
 	}
+	~Player();
 
 	// Inherited via Actor
 	virtual void UpdateActor() override;
@@ -27,6 +30,7 @@ public:
 	void SetInputVector(sf::Vector2f input);
 	sf::Vector2f GetInputVector();
 	void Dash();
+	void Attack();
 
 private:	
 	void CalculateVerticalMovement();
@@ -48,7 +52,7 @@ private:
 	float dashStartTime;
 	float dashCooldown;
 	float lastDashEnd;
-
+	bool isFlipped;
 private:
 	Physics::CollisionDirection isCollision;
 	sf::Vector2f velocity;
@@ -56,5 +60,6 @@ private:
 	sf::Vector2f InputVector;	
 	Physics::Collider* collider;
 	Animator* anim;
+	Combat* combat;
 };
 #endif // !PLAYER_H

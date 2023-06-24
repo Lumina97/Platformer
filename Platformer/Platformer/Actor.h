@@ -18,12 +18,13 @@ public:
 	virtual void UpdateActor() {};
 	virtual sf::FloatRect GetNextBounds() { return sf::FloatRect(getPosition() - getOrigin(), size); };
 
-
 	template<typename T> 
 	T* GetComponent();
 
 	void AddComponent(Component* component);
 	void RemoveComponent(Component* component);
+
+	sf::Vector2f GetSize();
 
 protected:
 	sf::Vector2f size;

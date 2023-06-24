@@ -14,11 +14,13 @@ namespace Debug
 		if (GLOBAL::WINDOW == nullptr) return;
 
 		sf::RectangleShape shape;
-		shape.setSize(sf::Vector2f(size));
+		shape.setSize(size);
 		shape.setOrigin(origin);
 		shape.setPosition(position);
 		shape.setRotation(rotationAngle);
-
+		shape.setFillColor(sf::Color::Transparent);
+		shape.setOutlineColor(sf::Color::White);
+		shape.setOutlineThickness(1.0f);
 		GLOBAL::WINDOW->draw(shape);
 	}
 
@@ -37,8 +39,6 @@ namespace Debug
 		shape.setFillColor(fillColor);
 		shape.setOutlineColor(outlineColor);
 		shape.setOutlineThickness(outlineThickness);
-
-
 
 		GLOBAL::WINDOW->draw(shape);
 	}

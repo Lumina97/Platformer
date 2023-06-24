@@ -14,6 +14,12 @@ void PlayerInput::Update()
 		return;
 	}
 
+
+	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		player->Attack();
+
+
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl))
 		player->setPosition(GLOBAL::ScreenSize.x / 2, GLOBAL::ScreenSize.y / 2);
 

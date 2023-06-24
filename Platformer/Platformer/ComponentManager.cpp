@@ -6,7 +6,7 @@ std::vector<Animator*> ComponentManager::animators;
 std::vector<Component*> ComponentManager::actorComponents;
 
 
-ComponentManager::ComponentManager(sf::RenderWindow* renderWindow, CollisionDetection* collisionDetection)
+ComponentManager::ComponentManager(sf::RenderWindow* renderWindow, Physics::CollisionDetection* collisionDetection)
 {
 	this->window = renderWindow;
 	this->collisionDetection = collisionDetection;

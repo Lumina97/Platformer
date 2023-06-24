@@ -6,7 +6,7 @@
 #include "World.h"
 #include "Animation.h"
 
-void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager, CollisionDetection* collisionDetection)
+void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager, Physics::CollisionDetection* collisionDetection)
 {
 	this->window = renderWindow;
 
@@ -24,6 +24,7 @@ void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManag
 
 	idleTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png");
 	runTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png");
+	attackTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Attack-01/Attack-01-Sheet.png");
 }
 
 void GameLoop::RunUpdateLoop()
@@ -46,6 +47,8 @@ bool GameLoop::InitializePlayer()
 {
 	Animation* idle = new Animation("Idle", idleTex, sf::IntRect(0, 0, 64, 80), 4, 0, 4, 0, 0);
 	Animation* run = new Animation("Run", runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
+	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0);
+	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4);
 	
 
 	player = compManager->CreateNewActor<Player>(
@@ -57,6 +60,8 @@ bool GameLoop::InitializePlayer()
 	{
 		anim->AddAnimation(idle);
 		anim->AddAnimation(run);
+		anim->AddAnimation(attack1);
+		anim->AddAnimation(attack2);
 		anim->SwitchAnimation("Idle");
 	}
 	return false;

@@ -15,7 +15,7 @@ class ComponentManager
 {
 
 public:
-	ComponentManager(sf::RenderWindow* renderWindow, CollisionDetection* collisionDetection);
+	ComponentManager(sf::RenderWindow* renderWindow, Physics::CollisionDetection* collisionDetection);
 
 public:
 	void SetPlayerInput(PlayerInput* input);
@@ -38,7 +38,7 @@ public:
 
 private:
 
-	CollisionDetection* collisionDetection;
+	Physics::CollisionDetection* collisionDetection;
 	PlayerInput* input;
 
 	static std::vector<Actor*> sceneActors;

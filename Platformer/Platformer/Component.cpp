@@ -1,5 +1,6 @@
 #include "Component.h"
 #include "Actor.h"
+#include "Log.h"
 
 Component::Component(Actor* actorToAttachTo)
 {
@@ -12,7 +13,7 @@ Component::Component(Actor* actorToAttachTo)
 void Component::UpdateComponent()
 {
 	if (parentActor == nullptr) {
-		std::cout << "PARENT IS NULL!\n";
+		LOG_ERROR("PARENT IS NULL!");
 		return;
 	}
 

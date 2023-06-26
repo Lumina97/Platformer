@@ -3,6 +3,8 @@
 #include "Globals.h"
 #include <time.h>
 #include "Math.h"
+#include "Log.h"
+#include "Debug.h"
 
 bool Engine::Init()
 {
@@ -10,15 +12,23 @@ bool Engine::Init()
 	videoMode.height *= 0.8f;
 	videoMode.width *= 0.8f;
 
-	window.create(videoMode, "Pong!");
+	window.create(videoMode, "PLATFORMER!");
+
+	Camera.setCenter(sf::Vector2f(videoMode.width / 2, videoMode.height / 2));
+	Camera.setSize(sf::Vector2f(videoMode.width * 1.5, videoMode.height * 1.5));
+	window.setView(Camera);
 
 	GLOBAL::ScreenSize = window.getSize();
 	GLOBAL::WINDOW = &window;
+	GLOBAL::CAMERA = &Camera;
+
 	collisionDetection = new Physics::CollisionDetection();
 	compManager = new ComponentManager(&window, collisionDetection);
-	soundEngine = new SoundEngine();	
+	soundEngine = new SoundEngine();
 	gameLoop = new GameLoop();
 	gameLoop->InitializeGameLoop(&window, compManager, collisionDetection);
+	Log::Init();
+
 
 	if (window.isOpen())
 		return true;
@@ -37,7 +47,7 @@ void Engine::Run()
 	//soundEngine->PlayMusic();
 	while (window.isOpen())
 	{
-	//	sf::Time elapsedTime = elapsedClock.restart();
+		//	sf::Time elapsedTime = elapsedClock.restart();
 		sf::Time elapsed = clock.getElapsedTime();
 		float deltaTime = (frameEnd - frameStart).asSeconds();
 		TIME::DeltaTime = deltaTime;
@@ -68,6 +78,7 @@ void Engine::Run()
 
 		//window drawing
 		window.clear();
+		Debug::Update();
 		gameLoop->RunUpdateLoop();
 		window.display();
 		frameEnd = clock.getElapsedTime();

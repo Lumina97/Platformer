@@ -1,6 +1,7 @@
 #include "PlayerInput.h"
 #include "SFML/Graphics.hpp"
 #include "Globals.h"
+#include "Log.h"
 
 PlayerInput::PlayerInput(Player* controllingPlayer)
 {
@@ -10,15 +11,12 @@ PlayerInput::PlayerInput(Player* controllingPlayer)
 void PlayerInput::Update()
 {
 	if (player == nullptr) {
-		std::cout << "PLAYER NOT SET!\n";
+		LOG_ERROR("PLAYER NOT SET!");
 		return;
 	}
 
-
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		player->Attack();
-
-
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl))
 		player->setPosition(GLOBAL::ScreenSize.x / 2, GLOBAL::ScreenSize.y / 2);

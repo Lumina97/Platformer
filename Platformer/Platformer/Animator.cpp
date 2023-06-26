@@ -8,8 +8,10 @@ Animator::Animator(Actor* parentActor)
 	this->parentActor = parentActor;
 	this->type = ComponentType::animator;
 	isFlipped = false;
-	lastTransition = {};
 	animations = {};
+	animationQ = {};
+	currentAnimation = -1;
+	animationFPSTarget = 7;
 }
 
 Animator::~Animator()
@@ -53,10 +55,14 @@ void Animator::UpdateComponent()
 		GLOBAL::WINDOW->draw(sprite);
 
 		//check if animation was done playing and if an animation was Queued
-		if (lastTransition.fromAnimation != nullptr && lastTransition.fromAnimation->GetFinishedPlaying() == true)
+		if (currentPlaying != nullptr && (currentPlaying->GetFinishedPlaying() || currentPlaying->GetIsInterupable()))
 		{
-			SwitchAnimation(lastTransition.toAnimation->GetName());
-			lastTransition = {};
+			if (animationQ.size() > 0)
+			{
+				std::string name = animationQ[0]->GetName();
+				animationQ.erase(animationQ.begin());
+				SwitchAnimation(name);
+			}
 		}
 	}
 }
@@ -66,35 +72,28 @@ void Animator::AddAnimation(Animation* animation)
 	animations.push_back(animation);
 }
 
-void Animator::SwitchAnimation(std::string name, AnimationTransitions transition)
+void Animator::SwitchAnimation(std::string name)
 {
-	if (transition.setNewToAnimation)
-		lastTransition.toAnimation = transition.toAnimation;
-
-	if (lastTransition.fromAnimation == nullptr)
+	int index = GetAnimationByIndex(name);
+	if (index != currentAnimation && index >= 0 && index < animations.size())
 	{
-		lastTransition = transition;
-		int index = GetAnimationByIndex(name);
-		if (index != currentAnimation && index >= 0 && index < animations.size())
-		{
-			currentAnimation = index;
-			animations[index]->RestartAnimation();
-		}
+		currentAnimation = index;
+		currentPlaying = animations[index];
+		currentPlaying->RestartAnimation();
 	}
+}
 
-	bool fromAnimationNotNull = lastTransition.fromAnimation != nullptr;
-	bool finishedPlaying = fromAnimationNotNull && lastTransition.fromAnimation->GetFinishedPlaying();
-	bool canInterrupt = lastTransition.finishAnimationBeforeSwitching;
-	bool finishedPlayingOrCanInterrupt = (finishedPlaying || canInterrupt == false);
-
-	if (fromAnimationNotNull && finishedPlayingOrCanInterrupt)
+void Animator::AddAnimationToQ(Animation* animation)
+{
+	//dont add same animation again if its first in Q
+	if (animationQ.size() > 0)
+		if (animationQ[0] == animation) return;
+	
+	animationQ.push_back(animation);
+	if (animationQ.size() == 1)
 	{
-		int index = GetAnimationByIndex(name);
-		if (index != currentAnimation && index >= 0 && index < animations.size())
-		{
-			currentAnimation = index;
-			animations[index]->RestartAnimation();
-		}
+
+		SwitchAnimation(animation->GetName());
 	}
 }
 

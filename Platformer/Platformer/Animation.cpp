@@ -1,8 +1,8 @@
 #include "Animation.h"
 #include <iostream>
+#include "Log.h"
 
-
-Animation::Animation(std::string name, sf::Texture* spriteAtlas, sf::IntRect spriteSize, int length, int rows, int columns, int rowStart, int columnStart)
+Animation::Animation(std::string name, sf::Texture* spriteAtlas, sf::IntRect spriteSize, int length, int rows, int columns, int rowStart, int columnStart, bool interruptable)
 {
 	this->name = name;
 	this->spriteAtlas = spriteAtlas;
@@ -12,10 +12,11 @@ Animation::Animation(std::string name, sf::Texture* spriteAtlas, sf::IntRect spr
 	this->columns = columns;
 	this->columnStart = columnStart;
 	this->rowStart = rowStart;
+	this->interruptable = interruptable;
 
 
 	if (spriteAtlas == nullptr) {
-		std::cout << "Texture was nullptr\n";
+		 LOG_ERROR("Texture was nullptr");
 		return;
 	}
 
@@ -84,4 +85,9 @@ std::string Animation::GetName()
 bool Animation::GetFinishedPlaying()
 {
 	return hasFinishedPlaying;
+}
+
+bool Animation::GetIsInterupable()
+{
+	return interruptable;
 }

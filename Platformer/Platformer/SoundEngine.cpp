@@ -14,7 +14,6 @@ void SoundEngine::PlayMusic()
 
 void SoundEngine::PlayPongSound()
 {
-	std::cout << "PONG!\n";
 	sound.setVolume(100.0f);
 	sound.setBuffer(buffer);
 	sound.play();

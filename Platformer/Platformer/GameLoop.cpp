@@ -9,18 +9,18 @@
 void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager, Physics::CollisionDetection* collisionDetection)
 {
 	this->window = renderWindow;
+	this->compManager = componentManager;
+	this->collisionDetection = collisionDetection;
 
 	mainGUI = new GUI(window);
 	mainGUI->SetGameFinished(gameState::running);
 
-	compManager = componentManager;
-	this->collisionDetection = collisionDetection;
+	world = new World();
+	world->InitializeWorld(compManager);
+
 	InitializePlayer();
 	input = new PlayerInput(player);
 	compManager->SetPlayerInput(input);
-
-	world = new World();
-	world->InitializeWorld(compManager);
 
 	idleTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png");
 	runTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png");
@@ -29,6 +29,7 @@ void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManag
 
 void GameLoop::RunUpdateLoop()
 {
+	world->Update();
 	compManager->UpdateComponents();
 }
 
@@ -47,8 +48,8 @@ bool GameLoop::InitializePlayer()
 {
 	Animation* idle = new Animation("Idle", idleTex, sf::IntRect(0, 0, 64, 80), 4, 0, 4, 0, 0);
 	Animation* run = new Animation("Run", runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
-	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0);
-	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4);
+	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0,false);
+	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4,false);
 	
 
 	player = compManager->CreateNewActor<Player>(

@@ -4,14 +4,6 @@
 #include "Animation.h"
 #include "SFML/Graphics.hpp"
 
-struct AnimationTransitions
-{
-	Animation* fromAnimation;
-	Animation* toAnimation;
-	bool finishAnimationBeforeSwitching;
-	bool setNewToAnimation;
-};
-
 class Animator : public Component
 {
 public:
@@ -20,22 +12,23 @@ public:
 
 	virtual void UpdateComponent() override;
 	void AddAnimation(Animation* animation);
-	void SwitchAnimation(std::string name, AnimationTransitions transition = {} );
+	void SwitchAnimation(std::string name);
+	void AddAnimationToQ(Animation* animation);
 	void Flip(bool Flipped);
 	sf::Sprite* GetCurrentSprite();
 	Animation* GetAnimationByName(std::string name);
-
 
 private:
 	int GetAnimationByIndex(std::string name);
 
 private:
-	AnimationTransitions lastTransition;
+	std::vector<Animation*> animationQ;
+	Animation* currentPlaying;
 	std::vector<Animation*> animations {};
 	sf::Clock clock;
 	sf::Time totalElapsed;
 	int currentAnimation = 0;
-	const double animationFPSTarget = 5;
+	double animationFPSTarget;
 	bool isFlipped;
 };
 #endif // !ANIMATOR_H

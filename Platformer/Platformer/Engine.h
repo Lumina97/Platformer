@@ -22,7 +22,7 @@ public:
 private:
 	VideoMode videoMode;
 	RenderWindow window;
-
+	sf::View Camera;
 	ComponentManager* compManager;
 	Physics::CollisionDetection* collisionDetection;
 	SoundEngine* soundEngine;

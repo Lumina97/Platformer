@@ -3,7 +3,7 @@
 #include "Globals.h"
 #include "CollisionDetection.h"
 #include "Debug.h"
-
+#include "Log.h"
 
 using namespace sf;
 
@@ -23,7 +23,6 @@ void Player::Dash()
 	if (isDashing || lastDashEnd + dashCooldown > TIME::currentTime) return;
 	if (InputVector.x == 0 && InputVector.y == 0) return;
 
-	std::cout << "Dash!\n";
 	dashStartTime = TIME::currentTime;
 	isDashing = true;
 	dashDirection = InputVector;
@@ -36,7 +35,7 @@ void Player::Attack()
 {
 	if (combat)
 	{
-		combat->Attack(velocity.x);
+		combat->Attack(isFlipped ? 1 : -1);
 	}
 }
 
@@ -46,7 +45,6 @@ void Player::CalculateVerticalMovement()
 	{
 		if (GetWantsToJump())
 		{
-			std::cout << "JUMP!\n";
 			verticalSpeed = -jumpForce;
 			SetWantsToJump(false);
 		}
@@ -69,8 +67,8 @@ void Player::ApplyMovement()
 		CalculateVerticalMovement();
 		float speedx = GetInputVector().x * GetMovementSpeed();
 
-		if (speedx != 0) GetAnimator()->SwitchAnimation("Run");
-		else GetAnimator()->SwitchAnimation("Idle");
+		if (speedx != 0)  GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Run"));
+		else GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName( "Idle"));
 
 		//flip sprite
 		if (speedx < 0)isFlipped = true; 
@@ -89,13 +87,11 @@ void Player::ApplyMovement()
 	}
 	else if (isDashing && dashStartTime + dashTime < currentTime)
 	{
-		std::cout << "end dashing!\n";
 		verticalSpeed = velocity.y;
 
 		lastDashEnd = currentTime;
 		isDashing = false;
 	}
-
 
 	sf::FloatRect collision = Physics::CollisionDetection::WillCollideInDirection(GetCollider());
 	if (collision.left != -1 && collision.top != -1)
@@ -130,6 +126,11 @@ void Player::ApplyMovement()
 		isGrounded = false;
 
 	move(velocity);
+	GLOBAL::CAMERA->move(velocity);
+	sf::Vector2f camPos = getPosition();
+	camPos.y -= 250.0f;
+	GLOBAL::CAMERA->setCenter(camPos);
+	GLOBAL::WINDOW->setView(*GLOBAL::CAMERA);
 }
 
 #pragma region Getter & Setters

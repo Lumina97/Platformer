@@ -15,5 +15,6 @@ inline float currentTime = 0;
 inline sf::Vector2u ScreenSize;
 inline float gravity = 0.97f;
 inline sf::RenderWindow* WINDOW;
+inline sf::View* CAMERA;
 
 #endif // !GLOBAL

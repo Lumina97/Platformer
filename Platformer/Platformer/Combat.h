@@ -6,7 +6,7 @@
 
 class Animator;
 
-class Combat : public sf::Transformable
+class Combat
 {
 public:
 	Combat(Actor* Parent);

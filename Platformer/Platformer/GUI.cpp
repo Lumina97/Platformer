@@ -11,7 +11,6 @@ GUI::GUI(sf::RenderWindow* window)
 
 	InitializeFinishedGameLabel();
 	InitializePlayerScoreLabel();
-
 }
 
 void GUI::RenderGUI()

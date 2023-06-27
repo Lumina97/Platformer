@@ -15,7 +15,7 @@ bool Engine::Init()
 	window.create(videoMode, "PLATFORMER!");
 
 	Camera.setCenter(sf::Vector2f(videoMode.width / 2, videoMode.height / 2));
-	Camera.setSize(sf::Vector2f(videoMode.width * 1.5, videoMode.height * 1.5));
+	Camera.setSize(sf::Vector2f(videoMode.width * 1.5f, videoMode.height * 1.5f));
 	window.setView(Camera);
 
 	GLOBAL::ScreenSize = window.getSize();
@@ -26,7 +26,7 @@ bool Engine::Init()
 	compManager = new ComponentManager(&window, collisionDetection);
 	soundEngine = new SoundEngine();
 	gameLoop = new GameLoop();
-	gameLoop->InitializeGameLoop(&window, compManager, collisionDetection);
+	gameLoop->InitializeGameLoop(compManager);
 	Log::Init();
 
 
@@ -42,7 +42,6 @@ void Engine::Run()
 	sf::Clock clock;
 	sf::Time frameStart = clock.getElapsedTime();;
 	sf::Time frameEnd;
-	tgui::SFML_GRAPHICS::Gui* gui = gameLoop->GetGUI();
 
 	//soundEngine->PlayMusic();
 	while (window.isOpen())
@@ -58,8 +57,6 @@ void Engine::Run()
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			gui->handleEvent(event);
-
 			switch (event.type)
 			{
 			case sf::Event::Closed:
@@ -73,13 +70,17 @@ void Engine::Run()
 				}
 				break;
 			}
-		}
 
+			if (GLOBAL::MAINGUI != nullptr)
+				GLOBAL::MAINGUI->handleEvent(event);
+		}
 
 		//window drawing
 		window.clear();
 		gameLoop->RunUpdateLoop();
 		Debug::Update();
+		if (GLOBAL::MAINGUI != nullptr)
+			GLOBAL::MAINGUI->draw();
 		window.display();
 		frameEnd = clock.getElapsedTime();
 	}

@@ -2,17 +2,17 @@
 #define PLAYERINPUT_H
 
 
-#include "Player.h"
+#include "Entity.h"
 class PlayerInput
 {
 
 public :
-	PlayerInput(Player* controllingPlayer);
+	PlayerInput(Entity* controllingPlayer);
 	void Update();
 
 
 private:
-	Player* player;
+	Entity* player;
 
 };
 #endif // !PLAYERINPUT_H

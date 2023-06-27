@@ -145,17 +145,19 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="ComponentManager.cpp" />
     <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="GameGUI.cpp" />
     <ClCompile Include="GameLoop.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="Health.cpp" />
     <ClCompile Include="IDamagable.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="PlayerInput.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
@@ -170,19 +172,21 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentManager.h" />
     <ClInclude Include="Debug.h" />
-    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="GameGUI.h" />
     <ClInclude Include="GameLoop.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="GUI.h" />
     <ClInclude Include="Health.h" />
     <ClInclude Include="IDamagable.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Math.h" />
-    <ClInclude Include="Player.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="PlayerInput.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="SoundEngine.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>

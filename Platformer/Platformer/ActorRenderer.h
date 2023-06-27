@@ -1,8 +1,6 @@
 #ifndef ACTOR_RENDERER_H
 #define ACTOR_RENDERER_H
 
-
-
 #include "SFML/Graphics.hpp"
 #include "Actor.h"
 #include "Component.h"
@@ -17,12 +15,12 @@ public:
 	/// Adds a sprite and takes ownership of it
 	/// </summary>
 	/// <param name="spriteToSet"></param>
-	void AddSprite(const sf::Sprite& spriteToSet);
+	void AddSprite(sf::Sprite* spriteToSet);
 
 private:
 
 	sf::Texture spriteTexture;
-	std::vector<sf::Sprite> sprites;
+	std::vector<sf::Sprite*> sprites;
 };
 
 

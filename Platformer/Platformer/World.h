@@ -7,7 +7,7 @@
 class World
 {
 public:
-
+	~World();
 	void InitializeWorld(ComponentManager* compManager);
 	void Update();
 
@@ -19,14 +19,12 @@ private:
 private:
 	ComponentManager* componentManager;
 	std::vector<Actor*> worldObjects;
-	std::vector<sf::Texture*> Textures;
-	std::vector<sf::Sprite*> tiles;
-
+	std::vector<sf::Texture> Textures;
 
 private:
 
-	sf::Texture* groundTileTexture;
-	sf::Texture* backgroundTexture;
+	sf::Texture groundTileTexture;
+	sf::Texture backgroundTexture;
 	sf::Sprite* background;
 	int platformIndex;
 };

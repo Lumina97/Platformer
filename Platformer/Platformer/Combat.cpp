@@ -3,8 +3,7 @@
 #include "Debug.h"
 #include "Animator.h"
 #include "Log.h"
-#include "Player.h"
-#include "Enemy.h"
+#include "Entity.h"
 
 Combat::Combat(Actor* Parent)
 {
@@ -64,14 +63,8 @@ void Combat::Attack(int attackDirection)
 			return;
 		}
 
-		Enemy* enemy = dynamic_cast<Enemy*>(hits[i]->GetParentActor());
-		if (enemy != nullptr)
-			enemy->TakeDamage(damage);
-		else
-		{
-			Player* player = dynamic_cast<Player*>(hits[i]->GetParentActor());
-			if (player != nullptr)
-				player->TakeDamage(damage);
-		}
+		Entity* entity = dynamic_cast<Entity*>(hits[i]->GetParentActor());
+		if (entity != nullptr)
+			entity->TakeDamage(damage);		
 	}
 }

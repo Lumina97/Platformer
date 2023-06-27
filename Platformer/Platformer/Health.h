@@ -16,6 +16,8 @@ public:
 	// Inherited via IDamagable
 	virtual void TakeDamage(float damage, bool knockback) override;
 	bool GetIsDead();
+	float GetCurrentHealth();
+	void ResetHealth();
 
 private:
 	float maxHealth;

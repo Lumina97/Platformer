@@ -5,14 +5,22 @@
 #include "Log.h"
 using namespace sf;
 
+World::~World()
+{	
+	delete(background);
+	for (size_t i = 0; i < worldObjects.size(); i++)
+	{
+		componentManager->Destroy(worldObjects[i]);
+	}
+}
+
 void World::InitializeWorld(ComponentManager* compManager)
 {
 	componentManager = compManager;
-	backgroundTexture = new sf::Texture();
-	groundTileTexture = new sf::Texture();
 	platformIndex = 0;
-	groundTileTexture->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png");
+	groundTileTexture.loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png");
 
+	InitializeBackGround();
 	InitializeGround();
 }
 
@@ -29,28 +37,31 @@ void World::InitializeGround()
 	Vector2f position = Vector2f(GLOBAL::ScreenSize.x / 2, GLOBAL::ScreenSize.y);
 	Vector2f size = Vector2f(2000, 80);
 
-	InitializeBackGround();
 	CreatePlatform(position, 2000);
 
-	position.y -= 300;
-	position.x -= 300;
+	position.y -= 200;
+	position.x -= 600;
 	CreatePlatform(position, 570);
 
-	position.y -= 300;
-	position.x += 600;
+	position.y -= 200;
+	position.x += 500;
 	CreatePlatform(position, 570);
+
+	position.y += 200;
+	position.x += 900;
+	CreatePlatform(position, 280);
 }
 
 void World::InitializeBackGround()
 {
-	if (!backgroundTexture->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Background/Background.png"))
+	if (!backgroundTexture.loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Background/Background.png"))
 	{
 		ENGINE_LOG_ERROR("Error loading texture from file!");
 		return;
 	}
 
 	background = new sf::Sprite();
-	background->setTexture(*backgroundTexture);
+	background->setTexture(backgroundTexture);
 	background->setPosition(GLOBAL::CAMERA->getCenter().x - GLOBAL::CAMERA->getSize().x / 2.f,
 		GLOBAL::CAMERA->getCenter().y - GLOBAL::CAMERA->getSize().y / 2.f);
 
@@ -76,14 +87,13 @@ void World::CreatePlatform(sf::Vector2f position, float length)
 	for (int i = 0; i < iterations; i++)
 	{
 		sf::Sprite* groundTile = new sf::Sprite();
-		groundTile->setTexture(*groundTileTexture);
+		groundTile->setTexture(groundTileTexture);
 		groundTile->setTextureRect(sf::IntRect(spriteSizeX, 10, spriteSizeX, 70));
 		sf::Vector2f pos = platform->getPosition() - platform->getOrigin();
 		pos.x += i * spriteSizeX;
 		groundTile->setPosition(pos);
 
-
-		renderer->AddSprite(*groundTile);
+		renderer->AddSprite(groundTile);
 	}
 	worldObjects.push_back(platform);
 	platformIndex++;

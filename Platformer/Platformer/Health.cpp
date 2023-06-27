@@ -6,6 +6,7 @@ Health::Health(float amount, std::function<void(void)> onDeathFunction)
 	this->maxHealth = amount;
 	this->onDeath = onDeathFunction;
 	this->isDead = false;
+	this->currentHealth = maxHealth;
 }
 
 Health::~Health(){}
@@ -18,8 +19,8 @@ void Health::TakeDamage(float damage, bool knockback)
 	}
 
 	LOG_INFO("TOOK DAMAGE! {0}", damage);
-	maxHealth -= damage;
-	if (maxHealth <= 0 )
+	currentHealth -= damage;
+	if (currentHealth <= 0 )
 	{
 		isDead = true;
 		if(onDeath != nullptr) onDeath();
@@ -30,4 +31,14 @@ void Health::TakeDamage(float damage, bool knockback)
 bool Health::GetIsDead()
 {
 	return isDead;
+}
+
+float Health::GetCurrentHealth()
+{
+	return currentHealth;
+}
+
+void Health::ResetHealth()
+{
+	currentHealth = maxHealth;
 }

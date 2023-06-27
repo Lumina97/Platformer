@@ -1,45 +1,24 @@
 #ifndef  GAMELOOP_H
 #define GAMELOOP_H
 
-#include "GUI.h"
-#include "CollisionDetection.h"
-#include "SFML/Graphics.hpp"
-#include "PlayerInput.h"
-
-class World;
-class Player;
-class Enemy;
-class ComponentManager;
+#include "Scene.h"
+#include <vector>
+#include "ComponentManager.h"
 
 class GameLoop
 {
 public:
-	void InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManager* componentManager, Physics::CollisionDetection* collisionDetection);
+	void InitializeGameLoop(ComponentManager* componentManager);
 	void RunUpdateLoop();
 
+	static void ReloadCurrentSene();
 
-	tgui::Gui* GetGUI();
-private:
-
-	void InitializePlayer();
-	void InitializeEnemy();
+	~GameLoop();
 
 private:
-	Player* player;
-	Enemy* enemy;
-	PlayerInput* input;
-	Physics::CollisionDetection* collisionDetection;
-	ComponentManager* compManager;
-	GUI* mainGUI;
-	World* world;
-
-	sf::Texture* idleTex = new sf::Texture();
-	sf::Texture* runTex = new sf::Texture();
-	sf::Texture* attackTex = new sf::Texture();
-	sf::Texture* deathTex = new sf::Texture();
-
-	sf::RenderWindow* window;
-	std::vector<sf::Texture> Textures;
+	ComponentManager* compManager;	
+	std::vector<Scene*> scenes;
+	static Scene* CurrentScene;
 };
 
 #endif // ! GAMELOOP_H

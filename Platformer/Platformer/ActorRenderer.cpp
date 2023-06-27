@@ -1,6 +1,5 @@
 #include "ActorRenderer.h"
 #include "Collider.h"
-#include "Player.h"
 #include "Animator.h"
 #include "Globals.h"
 
@@ -18,8 +17,7 @@ ActorRenderer::~ActorRenderer()
 	//clear all sprite texture resources
 	for (int i = 0; i < sprites.size(); i++)
 	{
-		sprites[i].setTexture(sf::Texture());
-		sprites[i] = sf::Sprite();
+		delete(sprites[i]);
 	}
 	sprites.clear();
 }
@@ -31,12 +29,12 @@ void ActorRenderer::UpdateComponent()
 	{
 		for (int i = 0; i < sprites.size(); i++)
 		{
-			GLOBAL::WINDOW->draw(sprites[i]);
+			GLOBAL::WINDOW->draw(*sprites[i]);
 		}
 	}
 }
 
-void ActorRenderer::AddSprite(const sf::Sprite& spriteToSet)
+void ActorRenderer::AddSprite(sf::Sprite* spriteToSet)
 {
 	sprites.push_back(spriteToSet);
 }

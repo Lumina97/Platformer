@@ -61,7 +61,6 @@ void ComponentManager::Destroy(Actor* actor)
 	std::_Vector_iterator id = std::find(sceneActors.begin(), sceneActors.end(), actor);
 	if (id != sceneActors.end())
 	{
-		int position = std::distance(sceneActors.begin(), id);
 		delete(actor);
 		sceneActors.erase(id);
 	}
@@ -71,9 +70,7 @@ void ComponentManager::Destroy(Component* Component)
 {
 	std::_Vector_iterator id = std::find(actorComponents.begin(), actorComponents.end(), Component);
 	if (id != actorComponents.end())
-	{
-		int position = std::distance(actorComponents.begin(), id);
-		
+	{		
 		if(Component->GetComponentType() & ComponentType::animator)
 		{		
 			std::_Vector_iterator animId = std::find(animators.begin(), animators.end(), Component);

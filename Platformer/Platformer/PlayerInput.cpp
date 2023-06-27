@@ -3,7 +3,7 @@
 #include "Globals.h"
 #include "Log.h"
 
-PlayerInput::PlayerInput(Player* controllingPlayer)
+PlayerInput::PlayerInput(Entity* controllingPlayer)
 {
 	player = controllingPlayer;
 }
@@ -41,5 +41,17 @@ void PlayerInput::Update()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 		y = 1;
 
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::K))
+	{
+		player->TakeDamage(10);
+	}
+
 	player->SetInputVector(sf::Vector2f(x,y));
+
+	GLOBAL::CAMERA->move(player->GetVelocity());
+	sf::Vector2f camPos = player->getPosition();
+	camPos.y -= 250.0f;
+	GLOBAL::CAMERA->setCenter(camPos);
+	GLOBAL::WINDOW->setView(*GLOBAL::CAMERA);
 }

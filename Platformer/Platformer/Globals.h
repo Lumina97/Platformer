@@ -11,10 +11,13 @@ inline float currentTime = 0;
 #define GLOBAL
 
 #include "SFML/Graphics.hpp"
+#include "TGUI/TGUI.hpp"
+#include <TGUI/Backend/SFML-Graphics.hpp>
 
 inline sf::Vector2u ScreenSize;
 inline float gravity = 0.97f;
 inline sf::RenderWindow* WINDOW;
 inline sf::View* CAMERA;
+inline tgui::Gui* MAINGUI;
 
 #endif // !GLOBAL

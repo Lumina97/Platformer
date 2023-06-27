@@ -16,6 +16,7 @@ namespace Physics
 
 		static sf::FloatRect WillCollideInDirection(Collider* collider);
 		static Physics::CollisionDirection GetOverlapAmount(const sf::FloatRect& collider, const sf::FloatRect& other, float& overlap);
+		static std::vector<Collider*> BoxCastAll(sf::Vector2f position, float rotation, sf::Vector2f size);
 		static Collider* BoxCast(sf::Vector2f position, float rotation, sf::Vector2f size);
 
 

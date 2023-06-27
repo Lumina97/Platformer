@@ -188,22 +188,58 @@ namespace Physics
 	}
 
 
-	Collider* CollisionDetection::BoxCast(sf::Vector2f position,float rotation, sf::Vector2f size)
+	std::vector<Collider*> CollisionDetection::BoxCastAll(sf::Vector2f position, float rotation, sf::Vector2f size)
 	{
 		sf::FloatRect testCollision;
 		testCollision.width = size.x;
 		testCollision.height = size.y;
-		testCollision.left = position.x - size.x/2;
-		testCollision.top= position.y - size.y/2;
+		testCollision.left = position.x - size.x / 2;
+		testCollision.top = position.y - size.y / 2;
+
+		std::vector<Collider*> collisions;
 
 		for (int c = 0; c < colliders.size(); c++)
 		{
-			if (colliders[c] != nullptr && colliders[c]->GetHasMoved())
+			for (int i = 0; i < colliders.size(); i++)
 			{
-				for (int i = 0; i < colliders.size(); i++)
+				if (i == c) continue;
+
+				if (testCollision.intersects(colliders[i]->GetBounds()))
 				{
-					if (CheckCollisions(testCollision, colliders[i]))
-						return colliders[i];
+					if (collisions.size() > 0)
+					{
+						std::_Vector_iterator id  = std::find(collisions.begin(), collisions.end(), colliders[i]);
+						if (id == collisions.end())
+							collisions.push_back(colliders[i]);
+					}
+					else
+						collisions.push_back(colliders[i]);
+				}
+			}
+		}
+		return collisions;
+	}
+
+	Collider* CollisionDetection::BoxCast(sf::Vector2f position, float rotation, sf::Vector2f size)
+	{
+		sf::FloatRect testCollision;
+		testCollision.width = size.x;
+		testCollision.height = size.y;
+		testCollision.left = position.x - size.x / 2;
+		testCollision.top = position.y - size.y / 2;
+
+		std::vector<Collider*> collisions;
+
+		for (int c = 0; c < colliders.size(); c++)
+		{
+			for (int i = 0; i < colliders.size(); i++)
+			{
+				if (i == c) continue;
+
+				if (testCollision.intersects(colliders[i]->GetBounds()))
+				{
+					return colliders[i];
+					
 				}
 			}
 		}

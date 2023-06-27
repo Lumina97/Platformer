@@ -47,6 +47,4 @@ inline T* Actor::GetComponent()
 
 	return nullptr;
 }
-
-
 #endif // !ACTOR_H

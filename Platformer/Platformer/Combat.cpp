@@ -3,6 +3,8 @@
 #include "Debug.h"
 #include "Animator.h"
 #include "Log.h"
+#include "Player.h"
+#include "Enemy.h"
 
 Combat::Combat(Actor* Parent)
 {
@@ -12,6 +14,7 @@ Combat::Combat(Actor* Parent)
 	anim = parent->GetComponent<Animator>();
 	attackCoolDown = 0.65f;
 	lastAttack = TIME::currentTime - attackCoolDown;
+	damage = 5;
 }
 
 
@@ -38,8 +41,11 @@ void Combat::PlayAttackAnimation()
 void Combat::Attack(int attackDirection)
 {
 	if (lastAttack + attackCoolDown > TIME::currentTime) return;
-	
+
 	lastAttack = TIME::currentTime;
+
+	AttackSequence++;
+	PlayAttackAnimation();
 
 	float top = parent->getPosition().y - parent->GetSize().y / 2 - attackSize.y / 2;
 	float left = parent->getPosition().x;
@@ -48,10 +54,24 @@ void Combat::Attack(int attackDirection)
 
 	sf::Vector2f attackStart(left, top);
 
-	Physics::CollisionDetection::BoxCast(attackStart, parent->getRotation(), attackSize);
-	Debug::DrawDebugBox(attackStart, sf::Vector2f(0,0), parent->getRotation(), attackSize,attackCoolDown,sf::Color::Transparent,sf::Color::White,1,1);
+	std::vector<Physics::Collider*> hits = Physics::CollisionDetection::BoxCastAll(attackStart, parent->getRotation(), attackSize);
+	Debug::DrawDebugBox(attackStart, sf::Vector2f(0, 0), parent->getRotation(), attackSize, 2, sf::Color::Transparent, sf::Color::Red, 2, 1);
 
+	for (int i = 0; i < hits.size(); i++)
+	{
+		if (hits[i]->GetParentActor() == parent) {
+			LOG_INFO("HIT SELF!");
+			return;
+		}
 
-	AttackSequence++;
-	PlayAttackAnimation();
+		Enemy* enemy = dynamic_cast<Enemy*>(hits[i]->GetParentActor());
+		if (enemy != nullptr)
+			enemy->TakeDamage(damage);
+		else
+		{
+			Player* player = dynamic_cast<Player*>(hits[i]->GetParentActor());
+			if (player != nullptr)
+				player->TakeDamage(damage);
+		}
+	}
 }

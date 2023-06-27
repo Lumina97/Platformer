@@ -15,6 +15,7 @@ void World::InitializeWorld(ComponentManager* compManager)
 
 void World::Update()
 {
+	if (background == nullptr) return;
 	background->setPosition(GLOBAL::CAMERA->getCenter().x - GLOBAL::CAMERA->getSize().x / 2.f,
 		GLOBAL::CAMERA->getCenter().y - GLOBAL::CAMERA->getSize().y / 2.f);
 	GLOBAL::WINDOW->draw(*background);
@@ -31,8 +32,6 @@ void World::InitializeGround()
 
 	groundTileTexture->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png");
 
-	Debug::DrawDebugBox(position, ground->getOrigin(), 0.0f, size, 10, sf::Color::Transparent, sf::Color::Green, 1, 1);
-
 	float spriteSizeX = 26;
 	int iterations = size.x / spriteSizeX;
 	iterations++;
@@ -43,7 +42,7 @@ void World::InitializeGround()
 		groundTile->setTextureRect(sf::IntRect(spriteSizeX, 10, spriteSizeX, 70));
 		sf::Vector2f position = ground->getPosition() - ground->getOrigin();
 		position.x += i * spriteSizeX;
-		groundTile->setPosition(position);
+		groundTile->setPosition(position);	
 
 		Textures.push_back(groundTileTexture);
 		ground->GetComponent<ActorRenderer>()->AddSprite(*groundTile);

@@ -38,5 +38,5 @@ void Physics::Collider::UpdateComponent()
 {
 	Component::UpdateComponent();
 
-	//Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size);
+	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size,sf::Color::Transparent,sf::Color::Black,1,1);
 }

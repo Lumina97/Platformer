@@ -1,6 +1,7 @@
 #include "GameLoop.h"
 #include <string>
 #include "Player.h"
+#include "Enemy.h"
 #include "ComponentManager.h"
 #include "Globals.h"
 #include "World.h"
@@ -17,8 +18,8 @@ void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManag
 
 	world = new World();
 	world->InitializeWorld(compManager);
-
 	InitializePlayer();
+	InitializeEnemy();
 	input = new PlayerInput(player);
 	compManager->SetPlayerInput(input);
 
@@ -44,13 +45,13 @@ tgui::Gui* GameLoop::GetGUI()
 	return nullptr;
 }
 
-bool GameLoop::InitializePlayer()
+void GameLoop::InitializePlayer()
 {
 	Animation* idle = new Animation("Idle", idleTex, sf::IntRect(0, 0, 64, 80), 4, 0, 4, 0, 0);
 	Animation* run = new Animation("Run", runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
-	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0,false);
-	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4,false);
-	
+	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0, false);
+	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4, false);
+
 
 	player = compManager->CreateNewActor<Player>(
 		sf::Vector2f((float)(GLOBAL::ScreenSize.x / 2), (float)(GLOBAL::ScreenSize.y / 2)), sf::Vector2f(40, 100),
@@ -65,5 +66,27 @@ bool GameLoop::InitializePlayer()
 		anim->AddAnimation(attack2);
 		anim->SwitchAnimation("Idle");
 	}
-	return false;
+}
+
+void GameLoop::InitializeEnemy()
+{
+	Animation* idle = new Animation("Idle", idleTex, sf::IntRect(0, 0, 64, 80), 4, 0, 4, 0, 0);
+	Animation* run = new Animation("Run", runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
+	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0, false);
+	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4, false);
+
+
+	enemy = compManager->CreateNewActor<Enemy>(
+		sf::Vector2f((float)(200.0f), (float)(600.0f)), sf::Vector2f(40, 100),
+		std::string("Enemy"), ComponentType::collider | ComponentType::animator);
+
+	Animator* anim = enemy->GetComponent<Animator>();
+	if (anim)
+	{
+		anim->AddAnimation(idle);
+		anim->AddAnimation(run);
+		anim->AddAnimation(attack1);
+		anim->AddAnimation(attack2);
+		anim->SwitchAnimation("Idle");
+	}
 }

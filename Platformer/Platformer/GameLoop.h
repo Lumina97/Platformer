@@ -8,6 +8,7 @@
 
 class World;
 class Player;
+class Enemy;
 class ComponentManager;
 
 class GameLoop
@@ -20,10 +21,12 @@ public:
 	tgui::Gui* GetGUI();
 private:
 
-	bool InitializePlayer();
+	void InitializePlayer();
+	void InitializeEnemy();
 
 private:
 	Player* player;
+	Enemy* enemy;
 	PlayerInput* input;
 	Physics::CollisionDetection* collisionDetection;
 	ComponentManager* compManager;

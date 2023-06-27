@@ -28,6 +28,7 @@ private:
 
 	float attackCoolDown;
 	float lastAttack;
+	float damage;
 };
 
 #endif // ! COMBAT_H

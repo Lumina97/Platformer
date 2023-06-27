@@ -78,8 +78,8 @@ void Engine::Run()
 
 		//window drawing
 		window.clear();
-		Debug::Update();
 		gameLoop->RunUpdateLoop();
+		Debug::Update();
 		window.display();
 		frameEnd = clock.getElapsedTime();
 	}

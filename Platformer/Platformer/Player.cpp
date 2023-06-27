@@ -10,10 +10,14 @@ using namespace sf;
 Player::~Player()
 {
 	delete(combat);
+	delete(health);
 }
 
 void Player::UpdateActor()
 {
+	Vector2f pos = getPosition();
+	Vector2f origin = getOrigin();
+
 	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size);
 	ApplyMovement();
 }
@@ -37,6 +41,22 @@ void Player::Attack()
 	{
 		combat->Attack(isFlipped ? 1 : -1);
 	}
+}
+
+void Player::TakeDamage(float amount)
+{
+	if (health == nullptr)
+	{
+		LOG_WARN("No health component attached! - Player - TakeDamage");
+		return;
+	}
+	LOG_INFO("PLAYER TOOK DAMAGE! {0}", amount);
+	health->TakeDamage(amount, false);
+}
+
+void Player::OnDeath()
+{
+	LOG_INFO("DED");
 }
 
 void Player::CalculateVerticalMovement()

@@ -5,6 +5,7 @@
 #include "Collider.h"
 #include "Animator.h"
 #include "Combat.h"
+#include "Health.h"
 
 class Player : public Actor 
 {	
@@ -17,6 +18,7 @@ public:
 		dashTime = 0.35f;
 		dashCooldown = 2.0f;
 		combat = new Combat(this);
+		health = new Health(10, std::bind(&Player::OnDeath, this));
 	}
 	~Player();
 
@@ -31,6 +33,8 @@ public:
 	sf::Vector2f GetInputVector();
 	void Dash();
 	void Attack();
+	void TakeDamage(float amount);
+	void OnDeath();
 
 private:	
 	void CalculateVerticalMovement();
@@ -53,6 +57,7 @@ private:
 	float dashCooldown;
 	float lastDashEnd;
 	bool isFlipped;
+
 private:
 	Physics::CollisionDirection isCollision;
 	sf::Vector2f velocity;
@@ -61,5 +66,6 @@ private:
 	Physics::Collider* collider;
 	Animator* anim;
 	Combat* combat;
+	Health* health;
 };
 #endif // !PLAYER_H

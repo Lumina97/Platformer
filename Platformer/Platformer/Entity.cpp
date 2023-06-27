@@ -268,7 +268,6 @@ sf::Vector2f Entity::GetVelocity()
 void Entity::SetGUI(GameGUI* gui)
 {
 	this->gui = gui;
-	GLOBAL::MAINGUI = this->gui->GetGUI();
 	this->gui->ChangeHealth(health->GetCurrentHealth());
 }
 #pragma endregion

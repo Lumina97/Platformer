@@ -10,14 +10,15 @@ class GameLoop
 public:
 	void InitializeGameLoop(ComponentManager* componentManager);
 	void RunUpdateLoop();
+	static void PlayGame();
 
 	static void ReloadCurrentSene();
 
 	~GameLoop();
 
 private:
-	ComponentManager* compManager;	
-	std::vector<Scene*> scenes;
+	static ComponentManager* compManager;
+	static std::vector<Scene*> scenes;
 	static Scene* CurrentScene;
 };
 

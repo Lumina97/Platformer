@@ -6,6 +6,7 @@
 GameGUI::GameGUI()
 {
 	gui = new tgui::Gui(*GLOBAL::WINDOW);
+	GLOBAL::SetGUI(gui);
 	try
 	{
 		gui->loadWidgetsFromFile("./Resources/GUI/GameGui.txt");

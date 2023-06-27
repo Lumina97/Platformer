@@ -57,6 +57,8 @@ void Engine::Run()
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
+			GLOBAL::MAINGUI->handleEvent(event);
+
 			switch (event.type)
 			{
 			case sf::Event::Closed:
@@ -64,15 +66,10 @@ void Engine::Run()
 				break;
 
 			case sf::Event::KeyPressed:
-				if (event.key.code == Keyboard::Escape)
-				{
-					window.close();
-				}
+				if (event.key.code == Keyboard::Escape)				
+					window.close();				
 				break;
 			}
-
-			if (GLOBAL::MAINGUI != nullptr)
-				GLOBAL::MAINGUI->handleEvent(event);
 		}
 
 		//window drawing
@@ -83,5 +80,13 @@ void Engine::Run()
 			GLOBAL::MAINGUI->draw();
 		window.display();
 		frameEnd = clock.getElapsedTime();
+		
+		//need to wait for event polling to end before we can delete the old gui
+		tgui::Gui* oldgui = GLOBAL::oldGui;
+		if (oldgui != nullptr)
+		{
+			delete(GLOBAL::oldGui);
+			GLOBAL::oldGui = nullptr;
+		}
 	}
 }

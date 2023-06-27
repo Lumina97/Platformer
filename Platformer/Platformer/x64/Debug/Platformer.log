@@ -1,3 +1,1 @@
-﻿  GameGUI.cpp
-D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\GameGUI.cpp(56,28): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-  Platformer.vcxproj -> D:\Dev\C++\SFML_Games\Platformer\Platformer\x64\Debug\Platformer.exe
+﻿  Platformer.vcxproj -> D:\Dev\C++\SFML_Games\Platformer\Platformer\x64\Debug\Platformer.exe

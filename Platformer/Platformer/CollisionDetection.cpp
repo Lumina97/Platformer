@@ -193,8 +193,8 @@ namespace Physics
 		sf::FloatRect testCollision;
 		testCollision.width = size.x;
 		testCollision.height = size.y;
-		testCollision.left = position.x - size.x / 2;
-		testCollision.top = position.y - size.y / 2;
+		testCollision.left = position.x;
+		testCollision.top = position.y;
 
 		std::vector<Collider*> collisions;
 

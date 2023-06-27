@@ -65,7 +65,7 @@ void GameScene::InitializePlayer()
 	Animation* dead = new Animation("Dead", &deathTex, sf::IntRect(0, 0, 80, 60), 1, 0, 1, 0, 7, false);
 
 	player = compManager->CreateNewActor<Entity>(
-		sf::Vector2f((float)(GLOBAL::ScreenSize.x / 2), (float)(GLOBAL::ScreenSize.y / 2)), sf::Vector2f(40, 100),
+		sf::Vector2f((float)(GLOBAL::ScreenSize.x / 2), (float)(GLOBAL::ScreenSize.y / 2 + 200.0f)), sf::Vector2f(40, 100),
 		std::string("Player"), ComponentType::collider | ComponentType::animator);
 
 	if (gui == nullptr)

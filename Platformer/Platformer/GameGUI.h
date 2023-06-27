@@ -20,7 +20,6 @@ private:
 	tgui::Label::Ptr scoreLabel;
 	tgui::ProgressBar::Ptr HealthBar;
 
-
 	tgui::Button::Ptr b_restart;
 	tgui::Button::Ptr b_exit;
 	tgui::Group::Ptr GameOverGrp;

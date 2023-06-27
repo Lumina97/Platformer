@@ -19,5 +19,11 @@ inline float gravity = 0.97f;
 inline sf::RenderWindow* WINDOW;
 inline sf::View* CAMERA;
 inline tgui::Gui* MAINGUI;
+inline tgui::Gui* oldGui;
+inline void SetGUI(tgui::Gui* newGui)
+{
+	oldGui = GLOBAL::MAINGUI;
+	GLOBAL::MAINGUI = newGui;
+}
 
 #endif // !GLOBAL

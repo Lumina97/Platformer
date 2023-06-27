@@ -37,19 +37,19 @@ void World::InitializeGround()
 	Vector2f position = Vector2f(GLOBAL::ScreenSize.x / 2, GLOBAL::ScreenSize.y);
 	Vector2f size = Vector2f(2000, 80);
 
-	CreatePlatform(position, 2000);
+	CreatePlatform(position, 3000);
 
-	position.y -= 200;
-	position.x -= 600;
-	CreatePlatform(position, 570);
-
-	position.y -= 200;
-	position.x += 500;
-	CreatePlatform(position, 570);
-
-	position.y += 200;
-	position.x += 900;
-	CreatePlatform(position, 280);
+	//position.y -= 200;
+	//position.x -= 600;
+	//CreatePlatform(position, 570);
+	//
+	//position.y -= 200;
+	//position.x += 500;
+	//CreatePlatform(position, 570);
+	//
+	//position.y += 200;
+	//position.x += 900;
+	//CreatePlatform(position, 280);
 }
 
 void World::InitializeBackGround()

@@ -12,13 +12,7 @@ class Player : public Actor
 public:
 	Player(sf::Vector2f position, sf::Vector2f size, std::string name)
 		: Actor(position, size, name) {
-		SetMovementSpeed(350.0f);
-		jumpForce = 1500.0f;
-		dashSpeed = movementSpeed * 3;
-		dashTime = 0.35f;
-		dashCooldown = 2.0f;
-		combat = new Combat(this);
-		health = new Health(10, std::bind(&Player::OnDeath, this));
+		Init();
 	}
 	~Player();
 
@@ -39,8 +33,10 @@ public:
 private:	
 	void CalculateVerticalMovement();
 	void ApplyMovement();
+	void Init();
 	Physics::Collider* GetCollider();
 	Animator* GetAnimator();
+
 
 private:
 	float movementSpeed;

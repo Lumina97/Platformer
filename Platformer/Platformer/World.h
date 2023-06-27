@@ -14,6 +14,7 @@ public:
 private:
 	void InitializeGround();
 	void InitializeBackGround();
+	void CreatePlatform(sf::Vector2f position, float length);
 
 private:
 	ComponentManager* componentManager;
@@ -27,6 +28,7 @@ private:
 	sf::Texture* groundTileTexture;
 	sf::Texture* backgroundTexture;
 	sf::Sprite* background;
+	int platformIndex;
 };
 
 #endif // !WORLD_H

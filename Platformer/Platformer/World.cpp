@@ -10,6 +10,9 @@ void World::InitializeWorld(ComponentManager* compManager)
 	componentManager = compManager;
 	backgroundTexture = new sf::Texture();
 	groundTileTexture = new sf::Texture();
+	platformIndex = 0;
+	groundTileTexture->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png");
+
 	InitializeGround();
 }
 
@@ -26,28 +29,16 @@ void World::InitializeGround()
 	Vector2f position = Vector2f(GLOBAL::ScreenSize.x / 2, GLOBAL::ScreenSize.y);
 	Vector2f size = Vector2f(2000, 80);
 
-	Actor* ground = componentManager->CreateNewActor<Actor>(position, size, "GroundTile", ComponentType::collider | ComponentType::actorRenderer);
-	ground->setOrigin(Vector2f(size.x / 2, size.y));
 	InitializeBackGround();
+	CreatePlatform(position, 2000);
 
-	groundTileTexture->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png");
+	position.y -= 300;
+	position.x -= 300;
+	CreatePlatform(position, 570);
 
-	float spriteSizeX = 26;
-	int iterations = size.x / spriteSizeX;
-	iterations++;
-	for (int i = 0; i < iterations; i++)
-	{
-		sf::Sprite* groundTile = new sf::Sprite();
-		groundTile->setTexture(*groundTileTexture);
-		groundTile->setTextureRect(sf::IntRect(spriteSizeX, 10, spriteSizeX, 70));
-		sf::Vector2f position = ground->getPosition() - ground->getOrigin();
-		position.x += i * spriteSizeX;
-		groundTile->setPosition(position);	
-
-		Textures.push_back(groundTileTexture);
-		ground->GetComponent<ActorRenderer>()->AddSprite(*groundTile);
-	}
-	worldObjects.push_back(ground);
+	position.y -= 300;
+	position.x += 600;
+	CreatePlatform(position, 570);
 }
 
 void World::InitializeBackGround()
@@ -65,4 +56,35 @@ void World::InitializeBackGround()
 
 	background->setScale(GLOBAL::CAMERA->getSize().x / background->getLocalBounds().width,
 		GLOBAL::CAMERA->getSize().y / background->getLocalBounds().height);
+}
+
+void World::CreatePlatform(sf::Vector2f position, float length)
+{
+	Vector2f size = Vector2f(length, 80);
+	std::string name = "platform" + std::to_string(platformIndex);
+
+	Actor* platform = componentManager->CreateNewActor<Actor>(position, size, name,
+		ComponentType::collider | ComponentType::actorRenderer);
+
+	platform->setOrigin(Vector2f(size.x / 2, size.y));
+
+	ActorRenderer* renderer = platform->GetComponent<ActorRenderer>();	
+
+	float spriteSizeX = 26;
+	int iterations = size.x / spriteSizeX;
+	iterations++;
+	for (int i = 0; i < iterations; i++)
+	{
+		sf::Sprite* groundTile = new sf::Sprite();
+		groundTile->setTexture(*groundTileTexture);
+		groundTile->setTextureRect(sf::IntRect(spriteSizeX, 10, spriteSizeX, 70));
+		sf::Vector2f pos = platform->getPosition() - platform->getOrigin();
+		pos.x += i * spriteSizeX;
+		groundTile->setPosition(pos);
+
+
+		renderer->AddSprite(*groundTile);
+	}
+	worldObjects.push_back(platform);
+	platformIndex++;
 }

@@ -15,10 +15,19 @@ Player::~Player()
 
 void Player::UpdateActor()
 {
+	if (getPosition().y > GLOBAL::ScreenSize.y * 1.5f &&
+		(health != nullptr && health->GetIsDead() == false)) {
+		TakeDamage(9999);
+	}
+
+	if (health != nullptr && health->GetIsDead()) return;
+
 	Vector2f pos = getPosition();
 	Vector2f origin = getOrigin();
 
 	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size);
+
+	
 	ApplyMovement();
 }
 
@@ -57,6 +66,8 @@ void Player::TakeDamage(float amount)
 void Player::OnDeath()
 {
 	LOG_INFO("DED");
+	GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Death"));
+	GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Dead"));
 }
 
 void Player::CalculateVerticalMovement()
@@ -81,6 +92,7 @@ void Player::CalculateVerticalMovement()
 
 void Player::ApplyMovement()
 {	
+
 	float currentTime = TIME::currentTime;
 	if (isDashing == false)
 	{
@@ -134,16 +146,20 @@ void Player::ApplyMovement()
 		{
 			isGrounded = true;
 			velocity.y = 0;
+			verticalSpeed = velocity.y;
 			setPosition(pos.x, collision.top);
 		}
 		if (isCollision & Physics::CollisionDirection::bottom && velocity.y < 0)
 		{
 			velocity.y = 0;
+			verticalSpeed = velocity.y;
 			setPosition(pos.x, collision.top + collision.height + getOrigin().y);
 		}
 	}
 	else
 		isGrounded = false;
+
+
 
 	move(velocity);
 	GLOBAL::CAMERA->move(velocity);
@@ -151,6 +167,17 @@ void Player::ApplyMovement()
 	camPos.y -= 250.0f;
 	GLOBAL::CAMERA->setCenter(camPos);
 	GLOBAL::WINDOW->setView(*GLOBAL::CAMERA);
+}
+
+void Player::Init()
+{
+	SetMovementSpeed(350.0f);
+	jumpForce = 1000.0f;
+	dashSpeed = movementSpeed * 3;
+	dashTime = 0.35f;
+	dashCooldown = 2.0f;
+	combat = new Combat(this);
+	health = new Health(10, std::bind(&Player::OnDeath, this));
 }
 
 #pragma region Getter & Setters

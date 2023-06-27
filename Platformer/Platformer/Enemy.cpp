@@ -14,6 +14,13 @@ Enemy::~Enemy()
 
 void Enemy::UpdateActor()
 {
+	if (getPosition().y > GLOBAL::ScreenSize.y * 1.5f &&
+		(health != nullptr && health->GetIsDead() == false)) {
+		TakeDamage(9999);
+	}
+	
+	if (health != nullptr && health->GetIsDead()) return;
+
 	Vector2f pos = getPosition();
 	Vector2f origin = getOrigin();
 	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size);
@@ -54,6 +61,8 @@ void Enemy::TakeDamage(float amount)
 void Enemy::OnDeath()
 {
 	LOG_INFO("DED");
+	GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Death"));
+	GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Dead"));
 }
 
 void Enemy::CalculateVerticalMovement()

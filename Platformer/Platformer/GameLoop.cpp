@@ -26,6 +26,8 @@ void GameLoop::InitializeGameLoop(sf::RenderWindow* renderWindow, ComponentManag
 	idleTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png");
 	runTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png");
 	attackTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Attack-01/Attack-01-Sheet.png");
+	deathTex->loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Dead/Dead-Sheet.png");
+
 }
 
 void GameLoop::RunUpdateLoop()
@@ -51,6 +53,8 @@ void GameLoop::InitializePlayer()
 	Animation* run = new Animation("Run", runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
 	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0, false);
 	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4, false);
+	Animation* death = new Animation("Death", deathTex, sf::IntRect(0, 0, 80, 60), 8, 0, 8, 0, 0, false);
+	Animation* dead = new Animation("Dead", deathTex, sf::IntRect(0, 0, 80, 60), 1, 0, 1, 0,7, false);
 
 
 	player = compManager->CreateNewActor<Player>(
@@ -64,6 +68,8 @@ void GameLoop::InitializePlayer()
 		anim->AddAnimation(run);
 		anim->AddAnimation(attack1);
 		anim->AddAnimation(attack2);
+		anim->AddAnimation(death);
+		anim->AddAnimation(dead);
 		anim->SwitchAnimation("Idle");
 	}
 }
@@ -74,7 +80,8 @@ void GameLoop::InitializeEnemy()
 	Animation* run = new Animation("Run", runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
 	Animation* attack1 = new Animation("Attack1", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0, false);
 	Animation* attack2 = new Animation("Attack2", attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4, false);
-
+	Animation* death = new Animation("Death", deathTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0, false);
+	Animation* dead = new Animation("Dead", deathTex, sf::IntRect(0, 0, 80, 80), 1, 0, 1, 0, 7, false);
 
 	enemy = compManager->CreateNewActor<Enemy>(
 		sf::Vector2f((float)(200.0f), (float)(600.0f)), sf::Vector2f(40, 100),
@@ -87,6 +94,8 @@ void GameLoop::InitializeEnemy()
 		anim->AddAnimation(run);
 		anim->AddAnimation(attack1);
 		anim->AddAnimation(attack2);
+		anim->AddAnimation(death);
+		anim->AddAnimation(dead);
 		anim->SwitchAnimation("Idle");
 	}
 }

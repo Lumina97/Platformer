@@ -36,6 +36,7 @@ private:
 	sf::Texture* idleTex = new sf::Texture();
 	sf::Texture* runTex = new sf::Texture();
 	sf::Texture* attackTex = new sf::Texture();
+	sf::Texture* deathTex = new sf::Texture();
 
 	sf::RenderWindow* window;
 	std::vector<sf::Texture> Textures;

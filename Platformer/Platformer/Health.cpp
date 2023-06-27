@@ -8,10 +8,7 @@ Health::Health(float amount, std::function<void(void)> onDeathFunction)
 	this->isDead = false;
 }
 
-Health::~Health()
-{
-
-}
+Health::~Health(){}
 
 void Health::TakeDamage(float damage, bool knockback)
 {

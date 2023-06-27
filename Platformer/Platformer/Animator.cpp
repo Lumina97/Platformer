@@ -37,6 +37,7 @@ void Animator::UpdateComponent()
 
 	if (GLOBAL::WINDOW)
 	{
+
 		sf::Sprite sprite = *GetCurrentSprite();
 
 		sf::Vector2f origin(sprite.getGlobalBounds().width / 2, sprite.getGlobalBounds().height / 1.25f);
@@ -72,6 +73,10 @@ void Animator::AddAnimation(Animation* animation)
 	animations.push_back(animation);
 }
 
+/// <summary>
+/// Switches Animation immediately
+/// </summary>
+/// <param name="name"></param>
 void Animator::SwitchAnimation(std::string name)
 {
 	int index = GetAnimationByIndex(name);
@@ -83,6 +88,10 @@ void Animator::SwitchAnimation(std::string name)
 	}
 }
 
+/// <summary>
+/// Adds animation to Q to play after current is finished playing
+/// </summary>
+/// <param name="animation"></param>
 void Animator::AddAnimationToQ(Animation* animation)
 {
 	//dont add same animation again if its first in Q
@@ -92,7 +101,6 @@ void Animator::AddAnimationToQ(Animation* animation)
 	animationQ.push_back(animation);
 	if (animationQ.size() == 1)
 	{
-
 		SwitchAnimation(animation->GetName());
 	}
 }

@@ -10,14 +10,12 @@ public:
 	void ChangeHealth(float newValue);
 	void SetGameOverScreen(bool enabled);
 	void SetGameElementsScreenVisible(bool visible);
-	void SetScore(const char* value);
 
 
 private:
 	static void ExitGame();
 private:
 	tgui::Gui* gui;
-	tgui::Label::Ptr scoreLabel;
 	tgui::ProgressBar::Ptr HealthBar;
 
 	tgui::Button::Ptr b_restart;

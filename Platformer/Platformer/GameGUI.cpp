@@ -17,12 +17,6 @@ GameGUI::GameGUI()
 		GameOverGrp.get()->setSize(GLOBAL::ScreenSize.x, GLOBAL::ScreenSize.y);
 		SetGameOverScreen(false);
 
-		scoreLabel = gui->get<tgui::Label>("Score");
-		scoreLabel.get()->setText("0");
-		scoreLabel.get()->setPosition(GLOBAL::ScreenSize.x / 2 - scoreLabel.get()->getSize().x / 2,
-			GLOBAL::ScreenSize.y * 0.2f);
-
-
 		HealthBar = gui->get<tgui::ProgressBar>("Health");
 		HealthBar.get()->setPosition(GLOBAL::ScreenSize.x / 2 - HealthBar.get()->getSize().x / 2,
 			GLOBAL::ScreenSize.y * 0.8f);
@@ -77,16 +71,7 @@ void GameGUI::SetGameElementsScreenVisible(bool visible)
 	GameElementsGrp.get()->setVisible(visible);
 }
 
-void GameGUI::SetScore(const char* value)
-{
-	if (scoreLabel == nullptr)
-	{
-		LOG_WARN("Could not set score. Label was not set!");
-		return;
-	}
 
-	scoreLabel.get()->setText(value);
-}
 
 void GameGUI::ExitGame()
 {

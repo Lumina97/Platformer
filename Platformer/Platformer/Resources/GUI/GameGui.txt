@@ -105,41 +105,7 @@ Group.GameElements {
     Renderer = &1;
     Size = (800, 599);
     Visible = false;
-
-    Label.Score {
-        AutoSize = true;
-        HorizontalAlignment = Center;
-        Position = (330, 70);
-        Size = (96, 41);
-        Text = Label;
-        TextSize = 32;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #373737;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
+  
 
     ProgressBar.Health {
         Maximum = 10;

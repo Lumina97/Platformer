@@ -6,6 +6,7 @@
 #include "World.h"
 #include "Animator.h"
 #include "GameGUI.h"
+#include "EnemyAI.h"
 
 void GameScene::InitializeScene(ComponentManager* compManager)
 {
@@ -32,6 +33,7 @@ void GameScene::UnloadScene()
 	ComponentManager::Destroy(enemy);
 	delete(world);
 	delete(input);
+	delete(ai);
 }
 
 void GameScene::UpdateScene()
@@ -40,6 +42,7 @@ void GameScene::UpdateScene()
 
 	world->Update();
 	compManager->UpdateComponents();
+	ai->Update();
 }
 
 void GameScene::ReloadScene()
@@ -98,7 +101,7 @@ void GameScene::InitializeEnemy()
 	enemy = compManager->CreateNewActor<Entity>(
 		sf::Vector2f((float)(200.0f), (float)(600.0f)), sf::Vector2f(40, 100),
 		std::string("Enemy"), ComponentType::collider | ComponentType::animator);
-
+	ai = new EnemyAI(enemy, player);
 	Animator* anim = enemy->GetComponent<Animator>();
 	if (anim)
 	{

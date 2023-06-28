@@ -7,7 +7,7 @@
 class World;
 class Entity;
 class ComponentManager;
-
+class EnemyAI;
 
 class GameScene :
 	public Scene
@@ -28,6 +28,7 @@ private:
 private:
 	Entity* player;
 	Entity* enemy;
+	EnemyAI* ai;
 	PlayerInput* input;
 	ComponentManager* compManager;
 	World* world;

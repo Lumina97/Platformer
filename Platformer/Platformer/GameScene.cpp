@@ -20,7 +20,7 @@ void GameScene::InitializeScene(ComponentManager* compManager)
 	world = new World();
 	world->InitializeWorld(compManager);
 	InitializePlayer();
-	InitializeEnemy();
+	//InitializeEnemy();
 	input = new PlayerInput(player);
 	compManager->SetPlayerInput(input);
 	isSceneLoaded = true;
@@ -42,7 +42,7 @@ void GameScene::UpdateScene()
 
 	world->Update();
 	compManager->UpdateComponents();
-	ai->Update();
+	if( ai != nullptr) ai->Update();
 }
 
 void GameScene::ReloadScene()

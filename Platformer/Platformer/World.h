@@ -14,7 +14,7 @@ public:
 private:
 	void InitializeGround();
 	void InitializeBackGround();
-	void CreatePlatform(sf::Vector2f position, float length);
+	void CreatePlatform(sf::Vector2f position, float length, float height = 1.0f);
 
 private:
 	ComponentManager* componentManager;

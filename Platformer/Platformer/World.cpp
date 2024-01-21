@@ -38,18 +38,6 @@ void World::InitializeGround()
 	Vector2f size = Vector2f(2000, 80);
 
 	CreatePlatform(position, 3000);
-
-	//position.y -= 200;
-	//position.x -= 600;
-	//CreatePlatform(position, 570);
-	//
-	//position.y -= 200;
-	//position.x += 500;
-	//CreatePlatform(position, 570);
-	//
-	//position.y += 200;
-	//position.x += 900;
-	//CreatePlatform(position, 280);
 }
 
 void World::InitializeBackGround()
@@ -69,9 +57,9 @@ void World::InitializeBackGround()
 		GLOBAL::CAMERA->getSize().y / background->getLocalBounds().height);
 }
 
-void World::CreatePlatform(sf::Vector2f position, float length)
+void World::CreatePlatform(sf::Vector2f position, float length, float height)
 {
-	Vector2f size = Vector2f(length, 80);
+	Vector2f size = Vector2f(length, height);
 	std::string name = "platform" + std::to_string(platformIndex);
 
 	Actor* platform = componentManager->CreateNewActor<Actor>(position, size, name,

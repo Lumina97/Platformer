@@ -1,0 +1,14 @@
+﻿  Editor.cpp
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(11,22): warning C4244: '*=': conversion from 'float' to 'unsigned int', possible loss of data
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(12,21): warning C4244: '*=': conversion from 'float' to 'unsigned int', possible loss of data
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(16,70): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(16,48): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  MapEditor.vcxproj -> D:\Dev\C++\SFML_Games\Platformer\Platformer\x64\Debug\MapEditor.exe

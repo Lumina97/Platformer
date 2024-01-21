@@ -10,7 +10,7 @@ using namespace sf;
 void Entity::Init()
 {
 	SetMovementSpeed(350.0f);
-	jumpForce = 800.0f;
+	jumpForce = 1500.0f;
 	dashSpeed = movementSpeed * 3;
 	dashTime = 0.35f;
 	dashCooldown = 2.0f;
@@ -39,7 +39,7 @@ void Entity::UpdateActor()
 	Vector2f origin = getOrigin();
 
 	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size);
-	
+
 	ApplyMovement();
 }
 
@@ -74,20 +74,21 @@ void Entity::TakeDamage(float amount)
 		return;
 	}
 
-	if (lastDamageTaken + TakeDamageCooldown > TIME::currentTime)	
+	if (lastDamageTaken + TakeDamageCooldown > TIME::currentTime)
 		return;
 
 
 	lastDamageTaken = TIME::currentTime;
 	health->TakeDamage(amount, false);
-	if(gui) gui->ChangeHealth(health->GetCurrentHealth());
+	if (gui) gui->ChangeHealth(health->GetCurrentHealth());
 }
 
 void Entity::OnDeath()
 {
-	LOG_INFO("DED");
+	LOG_INFO("DEAD");
 	GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Death"));
 	GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Dead"));
+	GetCollider()->SetActive(false);
 
 	if (gui) gui->SetGameOverScreen(true);
 	if (gui) gui->SetGameElementsScreenVisible(false);
@@ -102,6 +103,7 @@ void Entity::CalculateVerticalMovement()
 		{
 			verticalSpeed = -jumpForce;
 			SetWantsToJump(false);
+			isGrounded = false;
 		}
 		else
 		{
@@ -117,12 +119,15 @@ void Entity::CalculateVerticalMovement()
 
 void Entity::CheckNextMoveCollisions()
 {
-	sf::FloatRect collision = Physics::CollisionDetection::WillCollideInDirection(GetCollider());
-	if (collision.left != -1 && collision.top != -1)
+	std::vector<sf::FloatRect> collisions = Physics::CollisionDetection::WillCollideInDirection(GetCollider());
+	if (collisions.size() == 0)
+		isGrounded = false;
+
+	for (int i = 0; i < collisions.size(); i++)
 	{
-		float amount = 0;
+		sf::FloatRect collision = collisions[i];
 		sf::Vector2f pos = getPosition();
-		isCollision = Physics::CollisionDetection::GetOverlapAmount(GetNextBounds(), collision, amount);
+		isCollision = Physics::CollisionDetection::GetOverlapAmount(GetNextBounds(), collision);
 
 		if (isCollision & Physics::CollisionDirection::left && velocity.x < 0)
 		{
@@ -148,12 +153,11 @@ void Entity::CheckNextMoveCollisions()
 			setPosition(pos.x, collision.top + collision.height + getOrigin().y);
 		}
 	}
-	else
-		isGrounded = false;
+	LOG_INFO(isGrounded);
 }
 
 void Entity::ApplyMovement()
-{	
+{
 
 	float currentTime = TIME::currentTime;
 	if (isDashing == false)
@@ -162,10 +166,10 @@ void Entity::ApplyMovement()
 		float speedx = GetInputVector().x * GetMovementSpeed();
 
 		if (speedx != 0)  GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Run"));
-		else GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName( "Idle"));
+		else GetAnimator()->AddAnimationToQ(GetAnimator()->GetAnimationByName("Idle"));
 
 		//flip sprite
-		if (speedx < 0)isFlipped = true; 
+		if (speedx < 0)isFlipped = true;
 		if (speedx > 0)isFlipped = false;
 		GetAnimator()->Flip(isFlipped);
 
@@ -177,7 +181,7 @@ void Entity::ApplyMovement()
 	{
 		velocity = dashDirection;
 		velocity.y += GLOBAL::gravity / 4;
-		velocity *= dashSpeed *TIME::DeltaTime;
+		velocity *= dashSpeed * TIME::DeltaTime;
 	}
 	else if (isDashing && dashStartTime + dashTime < currentTime)
 	{
@@ -188,7 +192,7 @@ void Entity::ApplyMovement()
 	}
 	CheckNextMoveCollisions();
 
-	move(velocity);	
+	move(velocity);
 }
 
 

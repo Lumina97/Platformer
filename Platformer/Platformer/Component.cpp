@@ -50,3 +50,14 @@ ComponentType Component::GetComponentType()
 {
 	return type;
 }
+
+void Component::SetActive(bool isActive)
+{
+	LOG_INFO("Disabled Collider!");
+	activeState = isActive;
+}
+
+bool Component::GetIsActive()
+{
+	return activeState;
+}

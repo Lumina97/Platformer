@@ -1,6 +1,7 @@
 #include "EnemyAI.h"
 #include "Log.h"
 #include "Globals.h"
+#include "Entity.h"
 
 EnemyAI::EnemyAI(Entity* Enemy, Entity* player)
 {

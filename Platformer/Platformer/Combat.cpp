@@ -4,6 +4,10 @@
 #include "Animator.h"
 #include "Log.h"
 #include "Entity.h"
+#include "Actor.h"
+#include "Collider.h"
+#include "Globals.h"
+
 
 Combat::Combat(Actor* Parent)
 {

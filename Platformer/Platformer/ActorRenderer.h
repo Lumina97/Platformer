@@ -2,8 +2,9 @@
 #define ACTOR_RENDERER_H
 
 #include "SFML/Graphics.hpp"
-#include "Actor.h"
 #include "Component.h"
+
+class Actor;
 
 class ActorRenderer: public Component
 {

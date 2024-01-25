@@ -2,6 +2,8 @@
 #include "Engine.h"
 #include "Globals.h"
 #include "ComponentManager.h"
+#include "Component.h"
+#include "Collider.h"
 
 Actor::Actor(sf::Vector2f position, sf::Vector2f size, std::string name)
 {

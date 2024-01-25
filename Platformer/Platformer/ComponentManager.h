@@ -6,10 +6,11 @@
 #include "Actor.h"
 #include "SFML/Graphics.hpp"
 #include <string>
-#include "PlayerInput.h"
 #include "Animator.h"
 #include "ActorRenderer.h"
 #include "Collider.h"
+
+class PlayerInput; 
 
 class ComponentManager
 {

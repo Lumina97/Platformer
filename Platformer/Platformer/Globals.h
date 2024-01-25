@@ -1,6 +1,9 @@
 #ifndef TIME
 #define TIME
 
+#include "SFML/System.hpp"
+
+inline sf::Time SFDeltaTime;
 inline float DeltaTime = 0;
 inline float currentTime = 0;
 

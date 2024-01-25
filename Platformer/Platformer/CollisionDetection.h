@@ -1,11 +1,18 @@
 #ifndef COLLISIONDETECTION_H
 #define COLLISIONDETECTION_H
 
+#pragma once
+
 #include <vector>
-#include "Collider.h"
 #include "SFML/graphics.hpp"
+
+
+
 namespace Physics
 {
+	class Collider;
+	enum  CollisionDirection : char;
+
 	class CollisionDetection
 	{
 	public:
@@ -29,8 +36,6 @@ namespace Physics
 
 	private:
 		static std::vector<Physics::Collider*> colliders;
-
-
 	};
 }
 

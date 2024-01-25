@@ -4,13 +4,19 @@
 #include "CollisionDetection.h"
 #include "Debug.h"
 #include "Log.h"
+#include "Actor.h"
+#include "Collider.h"
+#include "Animator.h"
+#include "Combat.h"
+#include "GameGUI.h"
+#include "Health.h"
 
 using namespace sf;
 
 void Entity::Init()
 {
-	SetMovementSpeed(350.0f);
-	jumpForce = 1500.0f;
+	SetMovementSpeed(300.0f);
+	jumpForce = 800.0f;
 	dashSpeed = movementSpeed * 3;
 	dashTime = 0.35f;
 	dashCooldown = 2.0f;
@@ -153,7 +159,6 @@ void Entity::CheckNextMoveCollisions()
 			setPosition(pos.x, collision.top + collision.height + getOrigin().y);
 		}
 	}
-	LOG_INFO(isGrounded);
 }
 
 void Entity::ApplyMovement()

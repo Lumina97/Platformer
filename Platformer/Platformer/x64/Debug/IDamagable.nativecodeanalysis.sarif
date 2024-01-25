@@ -1,0 +1,43 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.36.32532.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/idamagable.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "51ddda6a2fda184c0c97e38a29b7ff2131f2f54af58d830c35e17a0dcc503f81"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/idamagable.h"
+          },
+          "hashes": {
+            "sha-256": "296d951cac11d92efe8ce51faefcda8594f174f99db92a7b1bc6454789eb4875"
+          }
+        }
+      ]
+    }
+  ]
+}

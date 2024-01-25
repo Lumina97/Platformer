@@ -1,5 +1,7 @@
 #pragma once
-#include "Entity.h"
+
+class Entity;
+
 class EnemyAI
 {
 public:

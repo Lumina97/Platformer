@@ -5,8 +5,11 @@
 #include "Globals.h"
 #include "World.h"
 #include "Animator.h"
+#include "Animation.h"
 #include "GameGUI.h"
 #include "EnemyAI.h"
+#include "PlayerInput.h"
+
 
 void GameScene::InitializeScene(ComponentManager* compManager)
 {
@@ -20,7 +23,7 @@ void GameScene::InitializeScene(ComponentManager* compManager)
 	world = new World();
 	world->InitializeWorld(compManager);
 	InitializePlayer();
-	//InitializeEnemy();
+	InitializeEnemy();
 	input = new PlayerInput(player);
 	compManager->SetPlayerInput(input);
 	isSceneLoaded = true;

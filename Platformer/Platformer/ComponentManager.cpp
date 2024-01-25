@@ -1,4 +1,5 @@
 #include "ComponentManager.h"
+#include "PlayerInput.h"
 
 
 std::vector<Actor*> ComponentManager::sceneActors;

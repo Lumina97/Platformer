@@ -3,9 +3,14 @@
 
 
 #include "SFML/Graphics.hpp"
-#include "SoundEngine.h"
-#include "GameLoop.h"
-#include "ComponentManager.h"
+
+class SoundEngine;
+class GameLoop;
+class ComponentManager;
+
+namespace Physics {
+	class CollisionDetection;
+}
 
 using namespace sf;
 

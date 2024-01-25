@@ -1,10 +1,10 @@
 #ifndef  COMBAT_H
 #define COMBAT_H
 
-#include "Actor.h"
 #include "SFML/Graphics.hpp"
 
 class Animator;
+class Actor;
 
 class Combat
 {

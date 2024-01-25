@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>Component.h</FILENAME>
+      <LINE>22</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Component::type' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@@QEAA@XZ</DECORATED>
+    <FUNCLINE>22</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Component::type</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>MapLayer.h</FILENAME>
+      <LINE>210</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'MapLayer::AnimationState::flipFlags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>MapLayer::AnimationState::{ctor}</FUNCTION>
+    <DECORATED>??0AnimationState@MapLayer@@QEAA@XZ</DECORATED>
+    <FUNCLINE>210</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>MapLayer::AnimationState::flipFlags</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>MapLayer.h</FILENAME>
+      <LINE>532</LINE>
+      <COLUMN>32</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>MapLayer::getChunkAndTransform</FUNCTION>
+    <DECORATED>?getChunkAndTransform@MapLayer@@AEAAAEAV?$unique_ptr@VChunk@MapLayer@@U?$default_delete@VChunk@MapLayer@@@std@@@std@@HHAEAV?$Vector2@I@sf@@@Z</DECORATED>
+    <FUNCLINE>526</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>MapLayer.h</FILENAME>
+      <LINE>624</LINE>
+      <COLUMN>58</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>MapLayer::updateVisibility</FUNCTION>
+    <DECORATED>?updateVisibility@MapLayer@@AEBAXAEBVView@sf@@@Z</DECORATED>
+    <FUNCLINE>609</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>MapLayer.h</FILENAME>
+      <LINE>624</LINE>
+      <COLUMN>36</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>MapLayer::updateVisibility</FUNCTION>
+    <DECORATED>?updateVisibility@MapLayer@@AEBAXAEBVView@sf@@@Z</DECORATED>
+    <FUNCLINE>609</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>TestScene.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TestScene::window' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TestScene::{ctor}</FUNCTION>
+    <DECORATED>??0TestScene@@QEAA@XZ</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TestScene::window</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

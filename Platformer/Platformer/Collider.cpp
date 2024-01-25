@@ -37,5 +37,5 @@ FloatRect Physics::Collider::GetBounds()
 void Physics::Collider::UpdateComponent()
 {
 	Component::UpdateComponent(); 
-	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size,sf::Color::Transparent,sf::Color::Black,1.5f,1);
+	Debug::DrawDebugBox(getPosition(), getOrigin(), getRotation(), size,sf::Color::Transparent,sf::Color::White,1.5f,1);
 }

@@ -1,0 +1,4336 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Component::type' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Component.h"
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 2,
+                  "endLine": 22,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Component::{ctor}",
+                  "decoratedName": "??0Component@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Component::type"
+          }
+        },
+        {
+          "ruleId": "C6285",
+          "message": {
+            "text": "(<non-zero constant> || <non-zero constant>) is always a non-zero constant.  Did you intend to use the bitwise-and operator?"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/core.h"
+                },
+                "region": {
+                  "startLine": 418,
+                  "startColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::is_utf8",
+                  "decoratedName": "?is_utf8@detail@v9@fmt@@YA_NXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1554,
+                  "startColumn": 9,
+                  "endLine": 1554,
+                  "endColumn": 51
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::get_cached_power",
+                  "decoratedName": "?get_cached_power@detail@v9@fmt@@YA?AU?$basic_fp@_K@123@HAEAH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1554,
+                  "startColumn": 9,
+                  "endLine": 1554,
+                  "endColumn": 28
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::get_cached_power",
+                  "decoratedName": "?get_cached_power@detail@v9@fmt@@YA?AU?$basic_fp@_K@123@HAEAH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26450",
+          "message": {
+            "text": "Arithmetic overflow: '*' operation causes overflow at compile time. Use a wider type to store the operands (io.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format-inl.h"
+                },
+                "region": {
+                  "startLine": 1154,
+                  "startColumn": 31,
+                  "endLine": 1154,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::dragonbox::remove_trailing_zeros",
+                  "decoratedName": "?remove_trailing_zeros@dragonbox@detail@v9@fmt@@YAHAEAI@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26450",
+          "message": {
+            "text": "Arithmetic overflow: '*' operation causes overflow at compile time. Use a wider type to store the operands (io.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format-inl.h"
+                },
+                "region": {
+                  "startLine": 1186,
+                  "startColumn": 33,
+                  "endLine": 1186,
+                  "endColumn": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::dragonbox::remove_trailing_zeros",
+                  "decoratedName": "?remove_trailing_zeros@dragonbox@detail@v9@fmt@@YAHAEA_K@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26450",
+          "message": {
+            "text": "Arithmetic overflow: '*' operation causes overflow at compile time. Use a wider type to store the operands (io.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format-inl.h"
+                },
+                "region": {
+                  "startLine": 1207,
+                  "startColumn": 31,
+                  "endLine": 1207,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::dragonbox::remove_trailing_zeros",
+                  "decoratedName": "?remove_trailing_zeros@dragonbox@detail@v9@fmt@@YAHAEA_K@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26800",
+          "message": {
+            "text": "Use of a moved from object: ''user_chars'' (lifetime.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                },
+                "region": {
+                  "startLine": 1431,
+                  "startColumn": 9,
+                  "endLine": 1431,
+                  "endColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "spdlog::pattern_formatter::compile_pattern_",
+                  "decoratedName": "?compile_pattern_@pattern_formatter@spdlog@@AEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1390,
+                            "startColumn": 39
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1392,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1392,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1393,
+                            "startColumn": 51
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1393,
+                            "startColumn": 51
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1394,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1395,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1395,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1395,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1395,
+                            "startColumn": 40
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition 'result.!='. 'true' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1397,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1397,
+                            "startColumn": 17
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '(int )(result.*) == 37'. 'true' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1399,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1399,
+                            "startColumn": 17
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition 'result.._N'. 'true' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1401,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1401,
+                            "startColumn": 48
+                          }
+                        },
+                        "message": {
+                          "text": "Object 'user_chars' is moved."
+                        }
+                      },
+                      "kinds": [
+                        "Custom"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1401,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1401,
+                            "startColumn": 48
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1404,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1404,
+                            "startColumn": 50
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1404,
+                            "startColumn": 50
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1404,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1404,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1406,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1406,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition 'result.!='. 'false' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1419,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+                          },
+                          "region": {
+                            "startLine": 1431,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Combat::attackSequenceCooldown' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Combat.cpp"
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 9,
+                  "endLine": 12,
+                  "endColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Combat::{ctor}",
+                  "decoratedName": "??0Combat@@QEAA@PEAVActor@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Combat::attackSequenceCooldown"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Combat::attackSequenceStart' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Combat.cpp"
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 9,
+                  "endLine": 12,
+                  "endColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Combat::{ctor}",
+                  "decoratedName": "??0Combat@@QEAA@PEAVActor@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Combat::attackSequenceStart"
+          }
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::num_bits<unsigned __int64>' is constexpr, mark variable 'shift' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2768,
+                  "startColumn": 15,
+                  "endLine": 2768,
+                  "endColumn": 47
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::bigint::multiply",
+                  "decoratedName": "??$multiply@Vuint128_fallback@detail@v9@fmt@@$0A@@bigint@detail@v9@fmt@@AEAAXVuint128_fallback@123@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/core.h"
+                },
+                "region": {
+                  "startLine": 2353,
+                  "startColumn": 42,
+                  "endLine": 2353,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::parse_nonnegative_int",
+                  "decoratedName": "??$parse_nonnegative_int@D@detail@v9@fmt@@YAHAEAPEBDPEBDH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26437",
+          "message": {
+            "text": "Do not slice (es.63)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/core.h"
+                },
+                "region": {
+                  "startLine": 721,
+                  "startColumn": 58,
+                  "endLine": 721,
+                  "endColumn": 66
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::basic_format_parse_context<char,fmt::v9::detail::error_handler>::error_handler",
+                  "decoratedName": "?error_handler@?$basic_format_parse_context@DUerror_handler@detail@v9@fmt@@@v9@fmt@@QEBA?AU0detail@23@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::exponent_mask<float>' is constexpr, mark variable 'mask' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 3252,
+                  "startColumn": 8,
+                  "endLine": 3252,
+                  "endColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write",
+                  "decoratedName": "??$write@DVappender@v9@fmt@@M$0A@@detail@v9@fmt@@YA?AVappender@12@V312@M@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::exponent_mask<double>' is constexpr, mark variable 'mask' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 3252,
+                  "startColumn": 8,
+                  "endLine": 3252,
+                  "endColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write",
+                  "decoratedName": "??$write@DVappender@v9@fmt@@N$0A@@detail@v9@fmt@@YA?AVappender@12@V312@N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::exponent_mask<double>' is constexpr, mark variable 'mask' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 3252,
+                  "startColumn": 8,
+                  "endLine": 3252,
+                  "endColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write",
+                  "decoratedName": "??$write@DVappender@v9@fmt@@O$0A@@detail@v9@fmt@@YA?AVappender@12@V312@O@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::num_significand_bits<float>' is constexpr, mark variable 'significand_mask' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format-inl.h"
+                },
+                "region": {
+                  "startLine": 1281,
+                  "startColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::dragonbox::to_decimal",
+                  "decoratedName": "??$to_decimal@M@dragonbox@detail@v9@fmt@@YA?AU?$decimal_fp@M@0123@M@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::num_significand_bits<double>' is constexpr, mark variable 'significand_mask' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format-inl.h"
+                },
+                "region": {
+                  "startLine": 1281,
+                  "startColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::dragonbox::to_decimal",
+                  "decoratedName": "??$to_decimal@N@dragonbox@detail@v9@fmt@@YA?AU?$decimal_fp@N@0123@N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 3128,
+                  "startColumn": 20,
+                  "endLine": 3128,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::format_float",
+                  "decoratedName": "??$format_float@N@detail@v9@fmt@@YAHNHUfloat_specs@012@AEAV?$buffer@D@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 3128,
+                  "startColumn": 20,
+                  "endLine": 3128,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::format_float",
+                  "decoratedName": "??$format_float@N@detail@v9@fmt@@YAHNHUfloat_specs@012@AEAV?$buffer@D@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2369,
+                  "startColumn": 17,
+                  "endLine": 2369,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2437,
+                  "startColumn": 13,
+                  "endLine": 2437,
+                  "endColumn": 57
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2369,
+                  "startColumn": 17,
+                  "endLine": 2369,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2437,
+                  "startColumn": 13,
+                  "endLine": 2437,
+                  "endColumn": 57
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@M@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@M@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2369,
+                  "startColumn": 17,
+                  "endLine": 2369,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2437,
+                  "startColumn": 13,
+                  "endLine": 2437,
+                  "endColumn": 57
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$fallback_digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2369,
+                  "startColumn": 17,
+                  "endLine": 2369,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2437,
+                  "startColumn": 13,
+                  "endLine": 2437,
+                  "endColumn": 57
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@U?$decimal_fp@N@dragonbox@detail@23@DV?$digit_grouping@D@623@@detail@v9@fmt@@YA?AVappender@12@V312@AEBU?$decimal_fp@N@dragonbox@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::num_significand_bits<double>' is constexpr, mark variable 'offset' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1449,
+                  "startColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::normalize",
+                  "decoratedName": "??$normalize@$0A@_K@detail@v9@fmt@@YA?AU?$basic_fp@_K@012@U3012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::num_significand_bits<float>' is constexpr, mark variable 'num_float_significand_bits' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1409,
+                  "startColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::basic_fp<fmt::v9::detail::uint128_fallback>::assign",
+                  "decoratedName": "??$assign@M$0A@@?$basic_fp@Vuint128_fallback@detail@v9@fmt@@@detail@v9@fmt@@QEAA_NM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::num_significand_bits<double>' is constexpr, mark variable 'num_float_significand_bits' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1409,
+                  "startColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::basic_fp<fmt::v9::detail::uint128_fallback>::assign",
+                  "decoratedName": "??$assign@N$0A@@?$basic_fp@Vuint128_fallback@detail@v9@fmt@@@detail@v9@fmt@@QEAA_NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2369,
+                  "startColumn": 17,
+                  "endLine": 2369,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$fallback_digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2437,
+                  "startColumn": 13,
+                  "endLine": 2437,
+                  "endColumn": 57
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$fallback_digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$fallback_digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$fallback_digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2369,
+                  "startColumn": 17,
+                  "endLine": 2369,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2437,
+                  "startColumn": 13,
+                  "endLine": 2437,
+                  "endColumn": 57
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2454,
+                  "startColumn": 11,
+                  "endLine": 2454,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::do_write_float",
+                  "decoratedName": "??$do_write_float@Vappender@v9@fmt@@Ubig_decimal_fp@detail@23@DV?$digit_grouping@D@523@@detail@v9@fmt@@YA?AVappender@12@V312@AEBUbig_decimal_fp@012@AEBU?$basic_format_specs@D@12@Ufloat_specs@012@Vlocale_ref@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'fmt::v9::detail::thousands_sep_result<char>::thousands_sep' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1163,
+                  "startColumn": 1,
+                  "endLine": 1163,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::thousands_sep_result<char>::{ctor}",
+                  "decoratedName": "??0?$thousands_sep_result@D@detail@v9@fmt@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "fmt::v9::detail::thousands_sep_result<char>::thousands_sep"
+          }
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_1>@?4???$write_int@DVappender@v9@fmt@@I@detail@23@YA?AV123@V123@U?$write_int_arg@I@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_1>@?4???$write_int@DVappender@v9@fmt@@I@012@YA?AV312@0U?$write_int_arg@I@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_2>@?8???$write_int@DVappender@v9@fmt@@I@detail@23@YA?AV123@V123@U?$write_int_arg@I@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_2>@?8???$write_int@DVappender@v9@fmt@@I@012@YA?AV312@0U?$write_int_arg@I@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_3>@?M@???$write_int@DVappender@v9@fmt@@I@detail@23@YA?AV123@V123@U?$write_int_arg@I@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_3>@?M@???$write_int@DVappender@v9@fmt@@I@012@YA?AV312@0U?$write_int_arg@I@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_4>@?P@???$write_int@DVappender@v9@fmt@@I@detail@23@YA?AV123@V123@U?$write_int_arg@I@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_4>@?P@???$write_int@DVappender@v9@fmt@@I@012@YA?AV312@0U?$write_int_arg@I@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_1>@?4???$write_int@DVappender@v9@fmt@@_K@detail@23@YA?AV123@V123@U?$write_int_arg@_K@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_1>@?4???$write_int@DVappender@v9@fmt@@_K@012@YA?AV312@0U?$write_int_arg@_K@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_2>@?8???$write_int@DVappender@v9@fmt@@_K@detail@23@YA?AV123@V123@U?$write_int_arg@_K@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_2>@?8???$write_int@DVappender@v9@fmt@@_K@012@YA?AV312@0U?$write_int_arg@_K@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_3>@?M@???$write_int@DVappender@v9@fmt@@_K@detail@23@YA?AV123@V123@U?$write_int_arg@_K@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_3>@?M@???$write_int@DVappender@v9@fmt@@_K@012@YA?AV312@0U?$write_int_arg@_K@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1914,
+                  "startColumn": 28,
+                  "endLine": 1914,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int",
+                  "decoratedName": "??$write_int@Vappender@v9@fmt@@DV<lambda_4>@?P@???$write_int@DVappender@v9@fmt@@_K@detail@23@YA?AV123@V123@U?$write_int_arg@_K@523@AEBU?$basic_format_specs@D@23@Vlocale_ref@523@@Z@@detail@v9@fmt@@YA?AVappender@12@V312@HIAEBU?$basic_format_specs@D@12@V<lambda_4>@?P@???$write_int@DVappender@v9@fmt@@_K@012@YA?AV312@0U?$write_int_arg@_K@012@1Vlocale_ref@012@@Z@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'fmt::v9::detail::num_significand_bits<double>' is constexpr, mark variable 'num_float_significand_bits' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1409,
+                  "startColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::basic_fp<unsigned __int64>::assign",
+                  "decoratedName": "??$assign@N$0A@@?$basic_fp@_K@detail@v9@fmt@@QEAA_NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1889,
+                  "startColumn": 15,
+                  "endLine": 1889,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int_data<char>::{ctor}",
+                  "decoratedName": "??0?$write_int_data@D@detail@v9@fmt@@QEAA@HIAEBU?$basic_format_specs@D@23@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 1897,
+                  "startColumn": 15,
+                  "endLine": 1897,
+                  "endColumn": 48
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_int_data<char>::{ctor}",
+                  "decoratedName": "??0?$write_int_data@D@detail@v9@fmt@@QEAA@HIAEBU?$basic_format_specs@D@23@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2300,
+                  "startColumn": 10,
+                  "endLine": 2300,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_significand",
+                  "decoratedName": "??$write_significand@DI$0A@@detail@v9@fmt@@YAPEADPEADIHHD@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+                },
+                "region": {
+                  "startLine": 2300,
+                  "startColumn": 10,
+                  "endLine": 2300,
+                  "endColumn": 29
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "fmt::v9::detail::write_significand",
+                  "decoratedName": "??$write_significand@D_K$0A@@detail@v9@fmt@@YAPEADPEAD_KHHD@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.36.32532.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Component.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "3d19965104d1ef837329b197ee461920e8863cbd19603f359d120b62d2e9b897"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/core.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "fdf711210a99a9023fb7321f7bd25787b5e98a68acaa6b0db2c2552dbf6169ba"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "039b4d0752cba1de32383c1725478cfc3f5ee04792ff8251fdfc1eb7e083cfbe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/fmt/bundled/format-inl.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "fd02c4b2d84f3f53327070f169e9265a3ceab76b939d63bc9531f8b50483bd4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Vendor/spdlog/include/spdlog/pattern_formatter-inl.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "8b0058a8374838c85f3c3d3eacdc60801d7eb19a23e8364ad6b1c1ae2868fc93"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Dev/C++/SFML_Games/Platformer/Platformer/Platformer/Combat.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "b48025e18c125bf5218468e71b0f2eb0b721990488f7ff4b0ccc16fdc5eba5b3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/combat.h"
+          },
+          "hashes": {
+            "sha-256": "e2f70b6d82fab836966bc5c7f3a0a6aca793e91e40c6b474295916b1eb920a3a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics.hpp"
+          },
+          "hashes": {
+            "sha-256": "44677d2386d6a22349d9a8b7220510c248d0b3bb7a57ab5aaf26ea60f4f87a1d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window.hpp"
+          },
+          "hashes": {
+            "sha-256": "b5eab95dc2ab527ffcc8506d8379d539f99e80f02cd3a5e68282839746847852"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system.hpp"
+          },
+          "hashes": {
+            "sha-256": "e63ba5dd95c943b4ff29d1c3828bae8b27e413490ac2288fbf69c733e396b563"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/config.hpp"
+          },
+          "hashes": {
+            "sha-256": "135ec10d4ccd3f67f1297817033c8f31234f14b48ddd30a186ae096017005054"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/clock.hpp"
+          },
+          "hashes": {
+            "sha-256": "aba460d753be301fad2ebbd58e48fd8f2b9206eb294c7d21093feea0ff247c49"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/export.hpp"
+          },
+          "hashes": {
+            "sha-256": "29f4b24362266ece3e357c07f94850cd54c8aec336283920084b822f59c6ef30"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/time.hpp"
+          },
+          "hashes": {
+            "sha-256": "9f64578e480a83a80818ccc67c17b77f02051791387297c38b41b109731bcae5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/err.hpp"
+          },
+          "hashes": {
+            "sha-256": "db1eda0332028078e05c51da878a849beafa0d37aa049420fec3b77e2508e8fa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/fileinputstream.hpp"
+          },
+          "hashes": {
+            "sha-256": "1ffa369e8b49072f3708d7b456cc349d808284a05d098349d0c3b9f81ef4944d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/inputstream.hpp"
+          },
+          "hashes": {
+            "sha-256": "ae2e43302126c3617b5137bab77c0b4d890124b7512b5d396d5910d61ae6870d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/noncopyable.hpp"
+          },
+          "hashes": {
+            "sha-256": "5906dbc090de4f2e5fd996954edf932a57aaee7b0125598a5b22c4a3cb391d4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/lock.hpp"
+          },
+          "hashes": {
+            "sha-256": "b9aafff734a9113eeb5b9303174184284a367922892b71edc4c81de910e4cb78"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/memoryinputstream.hpp"
+          },
+          "hashes": {
+            "sha-256": "53315704e53f44e681de5ddee3c5861bc8d9d278a098c817b1c568684fd5b957"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/mutex.hpp"
+          },
+          "hashes": {
+            "sha-256": "3416ce909df11481da926cc82a192b6c5731fae3245e86172d9d1d5a42133538"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/sleep.hpp"
+          },
+          "hashes": {
+            "sha-256": "b1e7719a0b3a153bfdc8b433c2dd75fc0d6a93b343cc8d6199c6c65ee8a4efe3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/string.hpp"
+          },
+          "hashes": {
+            "sha-256": "1a319faaae3b8905d8b1131ed52003369e40abf30f8fef3fbf070ce26706c40f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/utf.hpp"
+          },
+          "hashes": {
+            "sha-256": "61bee3705f6a4285146df13c6300328b202d0a46047f8bbb814c5b9e35e1110a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/utf.inl"
+          },
+          "hashes": {
+            "sha-256": "34c6aecff1ed342cb6f00922fd7c574c8dfd8cb9c748fc237a4a0679917b422c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/string.inl"
+          },
+          "hashes": {
+            "sha-256": "df8e045d588a3e41a29d34e2130a4c632a5b1da424b724436f6e3f0cec006e42"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/thread.hpp"
+          },
+          "hashes": {
+            "sha-256": "b3ca5356370f60e6f9146b76876a8d81ec124641848b3713ecf74a7323dc336c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/thread.inl"
+          },
+          "hashes": {
+            "sha-256": "515af83880545bad4eb4eaa1a086c9e6d0d9d3bd16f080005ddd20aba96994b0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/threadlocal.hpp"
+          },
+          "hashes": {
+            "sha-256": "d6b96ea6b2fc886768095ee404881d0ebc562faea20ee80196fa2701f0dc6bab"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/threadlocalptr.hpp"
+          },
+          "hashes": {
+            "sha-256": "a73ac43b53c0127c33b013603bbd9f1ee683e14b1f785cbecb705161d5c9bf53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/threadlocalptr.inl"
+          },
+          "hashes": {
+            "sha-256": "849baf1c633786a237c5e8bb1cb01f7bc9080376f7d763c0b86c453c920ca4e2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/vector2.hpp"
+          },
+          "hashes": {
+            "sha-256": "ee0a5555039716313423927b70056310ac17344acf108c78d6520f0a5ab152c1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/vector2.inl"
+          },
+          "hashes": {
+            "sha-256": "30063f189ccc7cfe136e140c4a820e4f43880a05b4b2a0dce3fe68cd546a3db7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/vector3.hpp"
+          },
+          "hashes": {
+            "sha-256": "6c4c82c33df997c9066224b6246d4fb1d97596b9fb4eaff07e8586db8296a192"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/system/vector3.inl"
+          },
+          "hashes": {
+            "sha-256": "7f8b1a6deaf62e9392ca860da5ec0642add970b9747a57705130137580a51679"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/clipboard.hpp"
+          },
+          "hashes": {
+            "sha-256": "515dc46cd564d538f8bfc3bafa146bccd31a8579a1b680c9196863f20b227215"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/export.hpp"
+          },
+          "hashes": {
+            "sha-256": "b8801ae931986586f1bda51d9864bf8039f446180dbce5bda32e693ed677afa9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/context.hpp"
+          },
+          "hashes": {
+            "sha-256": "e15ad90eb00051d088ad6d8d58a62dfbd804323c3d2ce76b38624a75d85e8774"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/glresource.hpp"
+          },
+          "hashes": {
+            "sha-256": "04633219d7cc8dae6aef209712f9e08106827abfaae9ca70dc2c8bd24e50d978"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/contextsettings.hpp"
+          },
+          "hashes": {
+            "sha-256": "96c1259c74ca746ea3faddae0772c97afdd548cb2ce7d5782d494db324d4a3ea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/cursor.hpp"
+          },
+          "hashes": {
+            "sha-256": "7bee5762d43bd5ade0a0fc7a5bc3c75c449aba4525cdaf77d734677224b524dc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/event.hpp"
+          },
+          "hashes": {
+            "sha-256": "13f6b8b5af6ca82c6d854ca659183de6cfbe1f52881899ad01a83012868fb943"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/joystick.hpp"
+          },
+          "hashes": {
+            "sha-256": "544b7fc88a007e5138dc8093e79561b995090eba31888ea30aa1def21f62e82e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/keyboard.hpp"
+          },
+          "hashes": {
+            "sha-256": "cc37f18c6d44933a9680a507128a549ef1d0867eabd7f04633f9496a195b224a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/mouse.hpp"
+          },
+          "hashes": {
+            "sha-256": "6b002d4e0f5b864527105f01ee6548796231c4e9d22ea5b87c2557d40baa585f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/sensor.hpp"
+          },
+          "hashes": {
+            "sha-256": "7d9643ce04b8a089c7568eca0b9a2b1bb39ad4860c45e4a2d38c81262c1c2d37"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/touch.hpp"
+          },
+          "hashes": {
+            "sha-256": "3af516260954d022055d295dd7772083ac8fac792fa0f0d345a78212fc8ad9be"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/videomode.hpp"
+          },
+          "hashes": {
+            "sha-256": "0f71bedf97c6fd1d0eda7fa221b4e0d021fcf35454e406d54bb3ecaa990fd0bb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/window.hpp"
+          },
+          "hashes": {
+            "sha-256": "ea92298760713e7658a19987ecd7d054c25f58f339ff44042674cdc93bc13b15"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/windowhandle.hpp"
+          },
+          "hashes": {
+            "sha-256": "f470587807787544e04b17d0576a5f72c7fe48b1f540c5715652893e4072617e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/window/windowstyle.hpp"
+          },
+          "hashes": {
+            "sha-256": "1b60dae4296ad83111c7f96deb2f15742cd17094006c38cdb4afc7e54a54d332"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/blendmode.hpp"
+          },
+          "hashes": {
+            "sha-256": "06eca2f8eeb23c4f279fefdc880a0f3d517512889a2c36a9a2c782b62fab741d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/export.hpp"
+          },
+          "hashes": {
+            "sha-256": "0e4c11951c92e6961af2d309957c8e3bae22c25db94817757a86369751d88b8c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/circleshape.hpp"
+          },
+          "hashes": {
+            "sha-256": "8c5a918d303f6937c644d24098a5e74b8a54a435d2c83e2a76fc159b645aba38"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/shape.hpp"
+          },
+          "hashes": {
+            "sha-256": "f2563a4a383f6e8348989b31fc6b9bd3aca36ea2376ce5266fefa1da77693a07"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/drawable.hpp"
+          },
+          "hashes": {
+            "sha-256": "006cfd4cf69912c6bee741e58d8ea755d3e8d6ac2c013716c3887b87f7a9f63e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/renderstates.hpp"
+          },
+          "hashes": {
+            "sha-256": "0bbd5b8efaf7a8ca383442dedb3312931803cd0a47def4e87d2bb88e792d63ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/transform.hpp"
+          },
+          "hashes": {
+            "sha-256": "afc0a996335c022bdfbcc0748d7eb12c1bb9af65a846e053d93b896152d022e9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/rect.hpp"
+          },
+          "hashes": {
+            "sha-256": "a99ae9f580d0f7d6995cf7a47dca5c515cf8a97e18c336630a3449cb844eb5a4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/rect.inl"
+          },
+          "hashes": {
+            "sha-256": "3dbb562fb065065a7fadf3427d4d747d4fc61ef01933ccef6df133934ac450af"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/transformable.hpp"
+          },
+          "hashes": {
+            "sha-256": "f9064008e9e83f20fbbe4f37c4f0d236ddb47a6b6facdadd0a40b325b9d9eb6d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/vertexarray.hpp"
+          },
+          "hashes": {
+            "sha-256": "fd1255c9570ffdbb90f695d15e95c62f630ba342217564970b243af832e15792"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/vertex.hpp"
+          },
+          "hashes": {
+            "sha-256": "e3759dda5633031f2484af0bca9b9c11d45dea7ae1154634240c680a51b76f7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/color.hpp"
+          },
+          "hashes": {
+            "sha-256": "61e26a68cf133c65172ca988bf7646c9a436dfdd6447de1c6f3d82729af4a5bd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/primitivetype.hpp"
+          },
+          "hashes": {
+            "sha-256": "cddd3bea3a5110ee2fcca8aed005104fb16a861e6391279ad2101d4f6c546b8f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/convexshape.hpp"
+          },
+          "hashes": {
+            "sha-256": "c10a6da1bce95ae820cbbc50e77ac8f158fa50e2725679ad3bb76abc284e717f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/font.hpp"
+          },
+          "hashes": {
+            "sha-256": "941e0fdd4362e8163c3f4c678b32a9c9defd4835736dee632cf8c3b80f25e1fd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/glyph.hpp"
+          },
+          "hashes": {
+            "sha-256": "a250d0062f8d49e0f37b259c71a55131b8974dfe849bf66899ce39b576af23e2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/texture.hpp"
+          },
+          "hashes": {
+            "sha-256": "e24acb2c0cb6208fd40ef1bb2ec3605f03707682f28afd7ef553829754a9e41b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/image.hpp"
+          },
+          "hashes": {
+            "sha-256": "fd75becf9808b974a6bc5c72a8331252568965fddfe0a37e15d96cba6bed2749"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/rectangleshape.hpp"
+          },
+          "hashes": {
+            "sha-256": "db091d5d41f3c05121dd535245355589f5e4ed864dfeb9f980abeeacba69029c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/rendertarget.hpp"
+          },
+          "hashes": {
+            "sha-256": "3d84f827d475de7609fcd73264bc0a2cc6f4e8595a0b9a7765611c13e6d6828a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/view.hpp"
+          },
+          "hashes": {
+            "sha-256": "7b5177fba902b01bfb684c1782d95e88a7dadbd4dd3c67667ac62eb2a90818e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/rendertexture.hpp"
+          },
+          "hashes": {
+            "sha-256": "b017c2b4a7d26348307a7dc3a2398273daa7825d44fd7920e02083c0e143d069"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/renderwindow.hpp"
+          },
+          "hashes": {
+            "sha-256": "fac75b8e9b3842792600e5b5104546e3df74993487f4c6b7196e147b95c95f96"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/shader.hpp"
+          },
+          "hashes": {
+            "sha-256": "73169a7ce2164033d1a8f7de0c351b9c5ad718f702d672d36e3e19b285e6157b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/glsl.hpp"
+          },
+          "hashes": {
+            "sha-256": "3dddd2bc640d7004b8a6ceb5b4571a136337043c6c9e7bcadc067a2906364558"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/glsl.inl"
+          },
+          "hashes": {
+            "sha-256": "f4f9a88f4308cc2cfd09c2bc6f9a0308d79179fc470cc18adbd86e877b0df3b7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/sprite.hpp"
+          },
+          "hashes": {
+            "sha-256": "56d49cb378de0f2f3748ce8afd47d8c4411571efd712f0ce09098fa4280b0b97"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/text.hpp"
+          },
+          "hashes": {
+            "sha-256": "b20f5110cd29946616bab66dc3c599ce19bf018d7a45b35bb8040179063702f0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/sfml-2.5.1/include/sfml/graphics/vertexbuffer.hpp"
+          },
+          "hashes": {
+            "sha-256": "5359698a27aef55018f645888925a66131611868413738bf431afb04a59cc54b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/collisiondetection.h"
+          },
+          "hashes": {
+            "sha-256": "fee9657b398e98d050281443089b6835ef70135aab83d69d4387ccf882409a5a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/debug.h"
+          },
+          "hashes": {
+            "sha-256": "d5451ffd6b9d9e59e041babe40516648812d1f07f3514f60faaec7938c7ee1ce"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/animator.h"
+          },
+          "hashes": {
+            "sha-256": "a4237b09cc067234f7349def8431e5fef97ad80c6e2980b04ef499eb1c958756"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/log.h"
+          },
+          "hashes": {
+            "sha-256": "20165731213a01b1a319f6cc012367884f3e5662ea0e4f71a2d58927684b0588"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/spdlog.h"
+          },
+          "hashes": {
+            "sha-256": "7dd47f7a7e89ef5acc7f66fac31b01fedc607c8bbe23afc1fcae34522c859be5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/common.h"
+          },
+          "hashes": {
+            "sha-256": "825db1e0fd237f1e121af41b50277cd5b2f6e16b9af2198781bdcf6db7c3b200"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/tweakme.h"
+          },
+          "hashes": {
+            "sha-256": "8a81f72b6d1241a00698b7064ec7c6ab23d3f7ca0fee88b6c580875c9fa928d2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/null_mutex.h"
+          },
+          "hashes": {
+            "sha-256": "3a0ce0136ccea84d964797b4e2b3266fc4738d52478d7726e61127b27d0ac667"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/fmt/fmt.h"
+          },
+          "hashes": {
+            "sha-256": "b369d6458bf14ca403d1092499ec53f48753506a15940e52a1033e7a50410335"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/common-inl.h"
+          },
+          "hashes": {
+            "sha-256": "3aba1b8291cb4c56476a13e4e6c184a45e87879717e58142bea0c07ed9ee2980"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/registry.h"
+          },
+          "hashes": {
+            "sha-256": "af69f366f386dffc37c6fae0b3a8eb7efaad77711044173ca4dc2539e6b0172b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/periodic_worker.h"
+          },
+          "hashes": {
+            "sha-256": "8afcc8cb7ab3aa405e9d338f49278be15123bc0d57be3e591bc725149be26997"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/periodic_worker-inl.h"
+          },
+          "hashes": {
+            "sha-256": "dcfe9dd29b0df9ea0818875ecf18e44bf2637dc6448b266f42322bebaf769111"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/registry-inl.h"
+          },
+          "hashes": {
+            "sha-256": "feff6aef44b156b8956c5603de9565ecbfe1dccd8696e39d8ca9dd792ea4c79f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/logger.h"
+          },
+          "hashes": {
+            "sha-256": "2c0741f2c97e911a619e2c57f473c7d03f2c534166189b981df71dd5b08c8b49"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/log_msg.h"
+          },
+          "hashes": {
+            "sha-256": "9afbecc6619ad48f74f3f8a2bedac5c1c2833ca3e5f60bdc2a357c6bed64c2c3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/log_msg-inl.h"
+          },
+          "hashes": {
+            "sha-256": "3775f6fad94db6c42e26d70c80127b8f4084fc5a55a0cbe620ce12d020e52ad0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/os.h"
+          },
+          "hashes": {
+            "sha-256": "2d95137ebea3d1ed6598409a33df999617b826bc2b3e3522594285c8576eea24"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/os-inl.h"
+          },
+          "hashes": {
+            "sha-256": "e26610a9b6da32c31c274dc8e41739b1ea2b0be531569aa524efccdd31b1d216"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/windows_include.h"
+          },
+          "hashes": {
+            "sha-256": "40d033c32abc93ae75443cbed6c903a6b6fa97c55ee5d198584f7a48a25c8eb0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/backtracer.h"
+          },
+          "hashes": {
+            "sha-256": "83831c993db0f3c275b6c7849999d508f339a940f5a69a391f398b73a811c1d5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/log_msg_buffer.h"
+          },
+          "hashes": {
+            "sha-256": "0fb824a161a7a78e9209033dadbf4245e542152e6d5b553820e209da1c56731a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/log_msg_buffer-inl.h"
+          },
+          "hashes": {
+            "sha-256": "75a1ef3e399f431b04bfd1a96c62977b7acf7eb57ec1f790cb21c792bbbf7f3d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/circular_q.h"
+          },
+          "hashes": {
+            "sha-256": "aec46b0c488ab5b87126e1c6f573482d5baaf3e26b2711347a7583922f801449"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/backtracer-inl.h"
+          },
+          "hashes": {
+            "sha-256": "04397d7f90769e8b0b6109352f2abb9d888c5fcb6fb4189a93c1e354c48279a6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/logger-inl.h"
+          },
+          "hashes": {
+            "sha-256": "84423cf67865ed32b68c70478810cacee9b0398ef2bd9aa9522e3343e6181981"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/sinks/sink.h"
+          },
+          "hashes": {
+            "sha-256": "dfaf735b02ae0618fd93e24d0a476cef08b94722ba271d3d4938d7ce761ae65d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/formatter.h"
+          },
+          "hashes": {
+            "sha-256": "4a82465434113c33c603e5518c472712dce8deea21418261b1a19c323ed4935a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/sinks/sink-inl.h"
+          },
+          "hashes": {
+            "sha-256": "39be3433aaed3a35315ee92e4998d5465ac15b0d088a64383b9aad3620361850"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/pattern_formatter.h"
+          },
+          "hashes": {
+            "sha-256": "3f8391d78ed0c24dafbafe424fc57c4318c44acaf694608d4b1e620316c2dad4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/fmt_helper.h"
+          },
+          "hashes": {
+            "sha-256": "73ec9df32d5adf4ac198495ec11f1487036c9db1c9b125f613bdc0f32621a1f5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/sinks/wincolor_sink.h"
+          },
+          "hashes": {
+            "sha-256": "1b0754cfef68beccd82653a710383345ac44024c0554a04d7e1f4d9007bcf233"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/console_globals.h"
+          },
+          "hashes": {
+            "sha-256": "f40e0e383d07e5022544218097ee3f1383149360c5f5bb93c3b097698e8eb0f5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/sinks/wincolor_sink-inl.h"
+          },
+          "hashes": {
+            "sha-256": "de7c0a4310745c6ab58b12aaeebc9f924a8174646d7f90e7971b0c5d74df5243"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/version.h"
+          },
+          "hashes": {
+            "sha-256": "b23035101c47bd36d61e35a04d490a158bb50f166bb368ea7c90c180942652d1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/details/synchronous_factory.h"
+          },
+          "hashes": {
+            "sha-256": "9534cf9def02d1ce66ab457c95800c9aabccc8c82f68bc17da51e7d40ba5bf4b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/spdlog/include/spdlog/spdlog-inl.h"
+          },
+          "hashes": {
+            "sha-256": "d0fe8da06ed0ec6cdd6785af49c1d82dc6bb21dbc5dc076f9421f87f50c4d347"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/entity.h"
+          },
+          "hashes": {
+            "sha-256": "9a614ec1056a793a88c02942843c01e437c78903fac40fe371b98803d0f1efb1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/actor.h"
+          },
+          "hashes": {
+            "sha-256": "26fbdc40082699baee1ee5c11b5d8cfd6a5a6033e2103a4b59103acd5663d3eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/collider.h"
+          },
+          "hashes": {
+            "sha-256": "29ab122215a1f1b88efd6a6f445898a16f08a47d9f00ae7f0b00c35c497f6c4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/globals.h"
+          },
+          "hashes": {
+            "sha-256": "e3b7758b23498fc02cf7a5b8dc65b9d14cb065cb3ccbb1086cfcace48295e688"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/tgui.hpp"
+          },
+          "hashes": {
+            "sha-256": "6e8900fd0bc14e9edc131922f47de50c51b0937e2114dde1e275eb4b47e1d9e2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/core.hpp"
+          },
+          "hashes": {
+            "sha-256": "2662b456688567cc003848577fa7a4647b9d008c4a5399f71462ac6b825d76b5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/animation.hpp"
+          },
+          "hashes": {
+            "sha-256": "caca96a68488fc3d54e11dc20cda012b94a508a974c55b8ab1222934028c77ad"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/layout.hpp"
+          },
+          "hashes": {
+            "sha-256": "5b06e276e284962aa13e9f8aec84c56ec3be179ee81c97fd20f48be84d73a90b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/config.hpp"
+          },
+          "hashes": {
+            "sha-256": "4e1368156176b366976c6d69347bced36b950d4b77a8bb258520edd5ea008a68"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/vector2.hpp"
+          },
+          "hashes": {
+            "sha-256": "6addd25cda6759aa6c67fb190bc23e92cb5851e139da1fbfd5f4ec7659f0c44b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/string.hpp"
+          },
+          "hashes": {
+            "sha-256": "e30f8fb43ba6fccb82eb400ed06b50a7419a92a19233626f1c2524ccd14ae68b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/stringview.hpp"
+          },
+          "hashes": {
+            "sha-256": "a91b791a97a907514f46f5c0525471db75b4983f5287d7350309035dd55e0eff"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/utf.hpp"
+          },
+          "hashes": {
+            "sha-256": "3341d0514fe85228d1aada2904ebcaaf046d82db0803661637f49ca1110a9844"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/duration.hpp"
+          },
+          "hashes": {
+            "sha-256": "b9203d4c0dd1b38b083a5315a04a27b88363536099bf707a4b2c838498b7523b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/cursor.hpp"
+          },
+          "hashes": {
+            "sha-256": "205a21675acf6b2a01012fe3ba882740673dd10ebdd0e4a9803e590e09ed3c06"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/timer.hpp"
+          },
+          "hashes": {
+            "sha-256": "4485354b08133a4c48842d579eb5b20f91cc59d5c5765160b6efe6f543d82fef"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/optional.hpp"
+          },
+          "hashes": {
+            "sha-256": "0732892bd058135a7fc839d756267f1656d320ac212f42420864774e46f9939b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widget.hpp"
+          },
+          "hashes": {
+            "sha-256": "647a5f382863c50b041e5f87068f280750a9bbb69063bb7e1c38d764f8d439fe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/signal.hpp"
+          },
+          "hashes": {
+            "sha-256": "8d6e22fd24917d2cb0e9750823edbf5d9da7eddd94f7a1257fb38d5904378e41"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/global.hpp"
+          },
+          "hashes": {
+            "sha-256": "84068fa1753cd7f98736d72e1180e43e0b34bae00649840af0dfd45ff5a310a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/exception.hpp"
+          },
+          "hashes": {
+            "sha-256": "7fd2cfc2940a07891850b0261128b49fd638e6b7040c43dabef71dc91fa73e3b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/font.hpp"
+          },
+          "hashes": {
+            "sha-256": "aa3373829a773a8ee93fc41377121c1793e708072718179077ed2f42f342c747"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/rect.hpp"
+          },
+          "hashes": {
+            "sha-256": "758c8beecb58c22e113d8eb4cbf91dd56359c0b0f79247c5ee8ef65575865948"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/filesystem.hpp"
+          },
+          "hashes": {
+            "sha-256": "5ec9a65625cda213a568dfc4265108992af06a7c902554734026a3960d55cdb8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/color.hpp"
+          },
+          "hashes": {
+            "sha-256": "d7a2bc825e56af6458750928d7e2524b73a80118a86a8fc55d1b486f67c5f08a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/vertex.hpp"
+          },
+          "hashes": {
+            "sha-256": "3c958c6bc9b9fce2a5e37d44e4ee713c8af04dbaf514de1839dc3e73f25e91ef"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/sprite.hpp"
+          },
+          "hashes": {
+            "sha-256": "5743bcaa45ca6219bae148687645f815f53b3793bb66b34fad1a520ff676f8fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/texture.hpp"
+          },
+          "hashes": {
+            "sha-256": "d60ed1b32ffab5239149e03ec681bc30494064bf7aa2b667df95eab1050c6b3e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/texturedata.hpp"
+          },
+          "hashes": {
+            "sha-256": "79e4de733f570a1771c7ac34e7d45eba56b790766b2498c60fead38fed49ac6a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/svgimage.hpp"
+          },
+          "hashes": {
+            "sha-256": "01e1267b6c7d6e017c1e6cdceea29adce5b71db811890b2fce127875723cc6a2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/backendtexture.hpp"
+          },
+          "hashes": {
+            "sha-256": "735db01bda7ad29d036bfca45d8d09f603c922297bf7779fe851981b9def38a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderstates.hpp"
+          },
+          "hashes": {
+            "sha-256": "6457dde55aaa3a021008cd64982d58df5817357b77f66255b1dcac11499deb4c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/transform.hpp"
+          },
+          "hashes": {
+            "sha-256": "28e45f8bef3a54107fa22274a1b8a3a8ccab5eb623a7dbaaf021158fa1ae880e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/event.hpp"
+          },
+          "hashes": {
+            "sha-256": "47f61ffcd7138fa5974dd3a1c49a6062f9954feb212a8f2338d7a3031db90000"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/any.hpp"
+          },
+          "hashes": {
+            "sha-256": "c5b1b94895385cf9e8efea2237eda1d8af42ae89a76e8686a8a8f98edf9f2e20"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/backendrendertarget.hpp"
+          },
+          "hashes": {
+            "sha-256": "a8faa73cd88845850be65da09e220c3524ff26718485ccafc234d213ecf2da9c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/text.hpp"
+          },
+          "hashes": {
+            "sha-256": "ddf7f837a7610f155ae33c35dbe3b197028dbb05e04d2a0107cabc2b1acaef0a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/textstyle.hpp"
+          },
+          "hashes": {
+            "sha-256": "db88e02aff4ed2034ec32f33b7c4483d0318c3829a1439c9f9649e1bde75f42d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/outline.hpp"
+          },
+          "hashes": {
+            "sha-256": "3b207fa0293055185ba9a1b312712ded843abb5e7afbe2dd68103df08aea04ff"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/absoluteorrelativevalue.hpp"
+          },
+          "hashes": {
+            "sha-256": "6cc12cc05d643dabc3b1e725237713f60ee744d4596cbf0ccb1e9d1b6a798d8a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/loading/theme.hpp"
+          },
+          "hashes": {
+            "sha-256": "030498028a02f64d2ba25783e684939502d8e2e31a83b435f2591807e821f96e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/loading/themeloader.hpp"
+          },
+          "hashes": {
+            "sha-256": "fcc4a9f9dfce8e376decfeb75d566b4db32ce68fa18ea202a5af0b0a149647dd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/loading/dataio.hpp"
+          },
+          "hashes": {
+            "sha-256": "e74a38a725d99908612b239e5eb4fb119fd2d4eee7cc2e14c2f604413c06e762"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/widgetrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "e56af9e544c138b4ea87cb906cf5357d29edb481b39252258bac12558f44fb10"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/objectconverter.hpp"
+          },
+          "hashes": {
+            "sha-256": "a25050f041ed62e510b138f091379d458a93c144c0e33663385aced085687148"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/variant.hpp"
+          },
+          "hashes": {
+            "sha-256": "b476572111186baf54fb42817fc366cbf6eeb798f4f8e91d25318e0f4ed43449"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/loading/serializer.hpp"
+          },
+          "hashes": {
+            "sha-256": "b35390151411c1d77824c0a2924bd69f40d97fc69fb58c4d3b26b045197ef0e9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/loading/deserializer.hpp"
+          },
+          "hashes": {
+            "sha-256": "79442904489039aaff6d2498cd80577fa7859592feac942c3697c7bac4322193"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/smartptr/copiedptr.hpp"
+          },
+          "hashes": {
+            "sha-256": "ddddc743a6eae61a6803ece4288fd37752e5830802199fbf65f364a5f8d34141"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/smartptr/clonersanddeleters.hpp"
+          },
+          "hashes": {
+            "sha-256": "e329ca39f9eaf0fdb35e1cb9e1cf054ee0f6086085188b7a0c563a0cab7192ad"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/meta/templates.hpp"
+          },
+          "hashes": {
+            "sha-256": "613eee5f5819a84384c708353757f444ca4d3b8d59f56bd31270adf605754200"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/config.hpp"
+          },
+          "hashes": {
+            "sha-256": "be36448a640d178000fc74adabeaee2d35511d4210c665104e43905986b45527"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/smartptr/detail/ptrowner.hpp"
+          },
+          "hashes": {
+            "sha-256": "0626561b05d9c14f30bb021a277d69b5ee0f609c328b0c7a6af52724b03f3bda"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/tools/noncopyable.hpp"
+          },
+          "hashes": {
+            "sha-256": "08291fc12b05e1ea6bf35235230137680f117339cd8db9d6088a949a5611651c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/tools/safebool.hpp"
+          },
+          "hashes": {
+            "sha-256": "aa2110eda1d24bb1d5e0a4aa585b3169137b5455321730cd6bf314da1cbbbb85"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/tools/swap.hpp"
+          },
+          "hashes": {
+            "sha-256": "eb5c4346c173dd12f63877b4e0d0aa1d180504762127f42c9eda19fb4c0fc592"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/extlibs/aurora/tools/downcast.hpp"
+          },
+          "hashes": {
+            "sha-256": "96bee13df90cc3724da201959ac2e3db1e9175c7c6ff8eca99babdb933711612"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/tooltip.hpp"
+          },
+          "hashes": {
+            "sha-256": "9d658faeb1f3a8eac1f20393719ceeb4358e5472af96c7dab0cdd943b33552fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/container.hpp"
+          },
+          "hashes": {
+            "sha-256": "139a902635c4accbd3d0fb02eee0c717eb9328a6442a2c81d0310666a6d03a87"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/subwidgetcontainer.hpp"
+          },
+          "hashes": {
+            "sha-256": "59ffb4775708bf05df295269f6ca607a89c660dbae9e174462712c7682b76615"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/group.hpp"
+          },
+          "hashes": {
+            "sha-256": "f8a63c4c5de8f66238001569c803afcfc0037591dc51ba1a0e4491d9576fb668"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/grouprenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "cd48e0ae93fdfc124bb1cc5cf408205f3b0aae2c8c926e82046a48e27d172952"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/copiedsharedptr.hpp"
+          },
+          "hashes": {
+            "sha-256": "b62e5848d333642a6bbb046adc3d77431cae966331a1981567889b1150f7cebe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/window/backend.hpp"
+          },
+          "hashes": {
+            "sha-256": "cb402023d416e977d7dd7c96ce528ec63cecea4ace25a31e641cf8b43e928c47"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/font/backendfont.hpp"
+          },
+          "hashes": {
+            "sha-256": "8faa14e1c3ad38527b189364e3ca6238a79696796e394b077f06d171a7a69c5c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/font/backendfontfactory.hpp"
+          },
+          "hashes": {
+            "sha-256": "5274370aa657adf6f469ea89a9414ec87806700fa54ac9893bc97dc046757f6a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/backendtext.hpp"
+          },
+          "hashes": {
+            "sha-256": "381f7060e027068571f167dcc8426d2695ddc9737fe71f8171bf2dbaad872bd7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/backendrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "cd11371622a96217802fa4d9770cea20bc5fbb678ea765843576a0f5f22296ba"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/window/backendgui.hpp"
+          },
+          "hashes": {
+            "sha-256": "e7080a5b92c0fd0a70935306941aa893376ef458cc768847d171ad80c19e948c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/relfloatrect.hpp"
+          },
+          "hashes": {
+            "sha-256": "984a4fd9081ea718873f1437372a4efe96cf9db247a5c2194dabc96f8f802176"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/twofingerscrolldetect.hpp"
+          },
+          "hashes": {
+            "sha-256": "355b9306595748f6782d2612ee48c75f8b0a9bc9d807d54ebac538245d722f53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/loading/widgetfactory.hpp"
+          },
+          "hashes": {
+            "sha-256": "e47be8899ea1cd952c9a8f96e8e4a6f81174f369ced0305d554bd810c3ee8d20"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/allwidgets.hpp"
+          },
+          "hashes": {
+            "sha-256": "7d1c9f535db2e8208eccd5be353cca071bfb50bca2e102b89223e6218d15cf97"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/bitmapbutton.hpp"
+          },
+          "hashes": {
+            "sha-256": "cda0c9e8459064ad4813a2c986536dcd3af51c6ecb05f99bfa8d37f381564821"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/button.hpp"
+          },
+          "hashes": {
+            "sha-256": "704f977fe964a2c722e5d41a22897c1f18c2ae5aeb3a2ada27d7a243e34e5018"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/buttonbase.hpp"
+          },
+          "hashes": {
+            "sha-256": "14573088c5a1639f89fff13d45e54d49a88ad50574bec214c3d2b8f420475c12"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/buttonrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "bb39c2a22301c382b11ff3f812b8b9240b9d329ba18c1003335ce1530df51c15"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/clickablewidget.hpp"
+          },
+          "hashes": {
+            "sha-256": "074b00f00ac53928aae0feefe2ad44f16eb9b6f87cb068c222b489141017a0e3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/components.hpp"
+          },
+          "hashes": {
+            "sha-256": "7fbf3c350dd0edaa8a92ece4912b676ad3b29936e533afc05e00bb787f50d1fa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/chatbox.hpp"
+          },
+          "hashes": {
+            "sha-256": "1d8c0b8f8a35c468d47b9bb7ae3afc40984e7508012f1829dc432c26d21917ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/scrollbar.hpp"
+          },
+          "hashes": {
+            "sha-256": "f707c0237c5b9e5c9a1a9c3321f3e88b5d745f4d45d876b9ef36ab3de0d4975f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/scrollbarrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "769b844098b8ff7a2d6168ad618d7e4cb054402739d07f409c9bace98675dffc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/chatboxrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "119d53956da2dc81ce3268a2e431d8cb0c082b8523c4384bc73f795ad868b9a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/checkbox.hpp"
+          },
+          "hashes": {
+            "sha-256": "f87e3f4ac71b31082653ffea4c1c211135f55c248d8d89428ac4449a8e98594d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/checkboxrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "6ffd1e1d8377b2dd72dc84d957f2800fcf5ea57cdd40e2ef320087e4dfeae801"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/radiobuttonrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "1ea000cddbc82b78591c540d18be714e036bf471bc7c68239240391ea9c961c5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/radiobutton.hpp"
+          },
+          "hashes": {
+            "sha-256": "e031dbd5c0008de3c70d3d7ec66b4f9c034585d051e62054d656b31695d6b736"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/childwindow.hpp"
+          },
+          "hashes": {
+            "sha-256": "de161e12b9fa4d9bd21624571bb531d9047c11ea37a48272c27737fbe614dbd0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/childwindowrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "bf5e1e7fd188387d7e3b73cb740cf5f5296bceb2bed9d9bf4a2225b7f4230d4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/colorpicker.hpp"
+          },
+          "hashes": {
+            "sha-256": "2c325cb4e77fc8e6dd4ad8ff0ed2c1c26b499055cee6da8cd166671fc5d71a33"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/slider.hpp"
+          },
+          "hashes": {
+            "sha-256": "27ddb0180f5d8dea668fc3ae9365af69eb3267aa708e84d3e6be2ff2f8234619"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/sliderrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "d68be64749aa326c2e24b88defae06103b8ffd89b9d6407660581cec6533b49b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/panel.hpp"
+          },
+          "hashes": {
+            "sha-256": "1a593457b07b36e3b0c11b388773130ebedec2d9e32c579a2bdcc4084e20897f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/panelrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "1a7c9411a9b2d061d5f3a38194ced16b877f701419b062dd05431ad4e3491d79"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/colorpickerrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "1b9f5baa32a4c7df0612c04ccb87754dc09d41aab5ffc8c11079268ce4f349c8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/combobox.hpp"
+          },
+          "hashes": {
+            "sha-256": "25767a5f32f7c5300f5fa69b47b2892228d2a0fdf54937ff75d26574d3e63cf2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/listbox.hpp"
+          },
+          "hashes": {
+            "sha-256": "c16b8afc48354538b35f7f6bfd2be1b5df78930b17448c9424b0c201a7fcad1e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/listboxrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "9bee2567db1c7e83c1e6e06d42ec1f7484e46df4f93059a5b104654307b6c4f3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/comboboxrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "440db3ad7f576d7a6978d3beae7184c534cae3b04bcb62cac0dde5099c60d22a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/editbox.hpp"
+          },
+          "hashes": {
+            "sha-256": "1d42bcd7485671351c2c99395fd4f796a5f3238994b2e9f243ad3cd4e59c32cb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/editboxrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "607c56247b5c3d8d94d56fdb59363cbdf1f67369e08a6b4d243d3a11541053b5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/filedialog.hpp"
+          },
+          "hashes": {
+            "sha-256": "97dc97a90989b6db7d3503bd59d84175debb8c8660c8fed4f4c5d664094f9a0f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/label.hpp"
+          },
+          "hashes": {
+            "sha-256": "ace14ee2c282ec7abc96b40b25e3ed95274363e927745019c7323dff32ed465d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/labelrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "c89e3b372adc4c216a97eabbab56ba3203ec89d818621a26aab6303a0715a2a2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/listview.hpp"
+          },
+          "hashes": {
+            "sha-256": "844fe810ae9d516044fd254478a3ff1130a0adb72708b62f7a671bf28cc3d94c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/listviewrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "2c20c6a530aaf0c4ea6dbd44a2b86e0f89283c4ef368ae91e3e3fd32865ea2d3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/filedialogrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "ff0724cc178dfbe883f0500bd773aaa38cff6dc35296f076dbe531e684647704"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/grid.hpp"
+          },
+          "hashes": {
+            "sha-256": "d754d8201eec738c215cd83043e79d355f0e6e71dd3648e783c015254281296f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/horizontallayout.hpp"
+          },
+          "hashes": {
+            "sha-256": "7dae288ee14b56854fff5495f7c0e658b918838c7d1aa90309397de83c88ea0b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/boxlayoutratios.hpp"
+          },
+          "hashes": {
+            "sha-256": "1e46659d2ce4ef93aaaa323f2553ff02eea6e61a2b1ce0ca084ffba842c65b2a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/boxlayout.hpp"
+          },
+          "hashes": {
+            "sha-256": "5745dc5e882d7f05044ddb42ccfb30424567dd1fb79465cb3e0be529e88e40f2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/boxlayoutrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "140831a5bc18abaa6fa499c544dde79895bd74622fe6c70c235ce86dfdad1d57"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/horizontalwrap.hpp"
+          },
+          "hashes": {
+            "sha-256": "e733788c1aeee40f43b08fee39809ca6d4037251dc9615a8b0dd0ea2f7504042"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/knob.hpp"
+          },
+          "hashes": {
+            "sha-256": "4599cfa63ad0262a21dc643498ec95c333499f9e9e0bb36235c21390231eeb4b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/knobrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "0bf743547bec13578c2cba0e1c04701df2d21bdf52397b59c8453f828ed822d3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/menubar.hpp"
+          },
+          "hashes": {
+            "sha-256": "942f1e955607ff0bed7cbd60d256dd84766ba84e4cee76535207900ff051c87f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/menubarrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "7c029375d5bfc58fba82b8f7eb7d21701e5478f7d98d483e59bebef134437a3d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/messagebox.hpp"
+          },
+          "hashes": {
+            "sha-256": "66d2ad389ba94f01752c487fad8989b7cab036f708bbb68d30cce10213edce42"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/messageboxrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "973804e4ae88371553a45d52ac22199e651568c7337ed0b138f676071a7ae1be"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/panellistbox.hpp"
+          },
+          "hashes": {
+            "sha-256": "2c014480c121d6fda3f2a7ab8e674a4f540e650eb1fb0cea0bd3ab613e0256f1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/scrollablepanel.hpp"
+          },
+          "hashes": {
+            "sha-256": "1d739bef4eda6e31c723f9c9d4736c59458dc72f7a26b997d86d75e37c203116"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/scrollablepanelrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "a56fc334e0dd01645ce75c950317d9e432f368119f691549ea3ca9d99fab8ae1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/panellistboxrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "8bcbf2d585471190541944fac928786953557d0d785c6d666a94441faecfff81"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/picture.hpp"
+          },
+          "hashes": {
+            "sha-256": "55d494272050e68d262bf8fc26bdf619360aeb2e4e1ac5df9d589aaae13a4678"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/picturerenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "962a9fd7a6d83b2849a28b33e0de88ccbd57ccb71ba95876f76f8ea893fb3d7d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/progressbar.hpp"
+          },
+          "hashes": {
+            "sha-256": "67cb9203a40ecddcc0f0337be1c1892342ff1867388ef40096c6ecba3d5aef18"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/progressbarrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "680f12a09192681c5f50867e1c912e65487ee59317e335e63fc41cccf97701f2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/radiobuttongroup.hpp"
+          },
+          "hashes": {
+            "sha-256": "5304bfca8b1b26c022a62a1f1cf4cebf65d7d957f511916673113e38350a6bb5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/rangeslider.hpp"
+          },
+          "hashes": {
+            "sha-256": "a4ebc07e27ae895e26e10e1b5c566e3f961c8001819d1e6799dd075d6e47a1c3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/rangesliderrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "7dd864de83a101dba665a2b67e1eb4ecb9ccee26e32788c4acd1d988a4426b95"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/richtextlabel.hpp"
+          },
+          "hashes": {
+            "sha-256": "6299242f9c3e4b149a318d4c69f30be7c146a5d09557a361d5f2e742c31f5bc8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/separatorline.hpp"
+          },
+          "hashes": {
+            "sha-256": "d7282e63a4cdbf8f79b195d7883b8abb0e6499d8441adc7123c877b1a0564d85"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/separatorlinerenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "c22965ebbf675ba57cd664146e28916a49453189189f41e8c4126f897818591e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/spinbutton.hpp"
+          },
+          "hashes": {
+            "sha-256": "c1a2d9b00b2978e378fd9fa34c46f95ac04a35fc1e3b2131f31a54a31f7d3a33"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/spinbuttonrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "b829c4312beb915617faf746dba0b2c27cd5bd5f5b4dc160a712c4dbf1c61ba1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/spincontrol.hpp"
+          },
+          "hashes": {
+            "sha-256": "8ef40e568eaf47fcf372431b0951bd6ff55ed8ddeaeca4af7614d0beed462e26"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/tabs.hpp"
+          },
+          "hashes": {
+            "sha-256": "76ce3571598cfe3449f809d8efcc07250eca805f4a04d79c5e7a038f127e37c8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/tabsrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "073de1951c97e1f00b929d2a70f3947c75d858f201b80789ca04ea108a07319d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/tabcontainer.hpp"
+          },
+          "hashes": {
+            "sha-256": "d848d0b362a687ba6205c84d1e54af08cbce3aeb28e9c43e075e2ba0d78f4a91"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/textarea.hpp"
+          },
+          "hashes": {
+            "sha-256": "869373f7e2c96ba72ee9c4714e4c8ac3f0aefeee07f60c22907920dd71868b75"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/textarearenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "902f9868da045a19c48522fc02a1882a1c6a6448e0be2952f12b07eea6966137"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/togglebutton.hpp"
+          },
+          "hashes": {
+            "sha-256": "733f4937c4ffb6b8139335ba9cd11146f608030285ddfa9ad47a080219983301"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/treeview.hpp"
+          },
+          "hashes": {
+            "sha-256": "bc26fc6d291268c44c5a32fe2b1cce4186a946bad7076d7f886b3b3ff4bdf633"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/renderers/treeviewrenderer.hpp"
+          },
+          "hashes": {
+            "sha-256": "a49b56686df783745c0be51d3bb15371391f26c1dbb1a037f6a5e03eb4c220a1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/widgets/verticallayout.hpp"
+          },
+          "hashes": {
+            "sha-256": "3afd9bc501aa1afb1a99eb167505241d5bc3913a6b78b1a5ee8d270539dd8abb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/sfml-graphics.hpp"
+          },
+          "hashes": {
+            "sha-256": "2ac4830f4cd584d776be691010ad6d96f71092a7c815975514db6d1bc07cce58"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/window/sfml/backendsfml.hpp"
+          },
+          "hashes": {
+            "sha-256": "25b343053f05648ac0554d55b3ed85bd5d3f4e4bb6fd8a8212a6efbdc5087106"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/window/sfml/backendguisfml.hpp"
+          },
+          "hashes": {
+            "sha-256": "c09781c2ab9f77209be6edeb4d4a2a49d2ac27a90f28ac7cbfe592ffb15f7f22"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/sfml-graphics/backendrenderersfml.hpp"
+          },
+          "hashes": {
+            "sha-256": "3c1cabeb8c990489e10fc64b6c53478e1d8d4a3fb66c3428cb8cf972dce26970"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/sfml-graphics/backendtexturesfml.hpp"
+          },
+          "hashes": {
+            "sha-256": "93119ebececfd9dd0bc9ad7f88302a4384a49e7a33ea3b7a30b630e38456c564"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/sfml-graphics/backendrendertargetsfml.hpp"
+          },
+          "hashes": {
+            "sha-256": "0a723988abb92875f478d5333a0cee1c91494678d57fb0f98b136f2cf173a17e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/renderer/sfml-graphics/canvassfml.hpp"
+          },
+          "hashes": {
+            "sha-256": "fd7287b3a501dd6f0a2ceabe7df8e5701667f3011757b45d7d73b0668e781ee8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/dev/c++/sfml_games/platformer/platformer/platformer/vendor/tgui/include/tgui/backend/font/sfml-graphics/backendfontsfml.hpp"
+          },
+          "hashes": {
+            "sha-256": "02679fc75144b245dc4521e1ef763d0f00856397105eeae05053cc78285ee22e"
+          }
+        }
+      ]
+    }
+  ]
+}

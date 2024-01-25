@@ -1,8 +1,8 @@
 #ifndef PLAYERINPUT_H
 #define PLAYERINPUT_H
 
+class Entity;
 
-#include "Entity.h"
 class PlayerInput
 {
 

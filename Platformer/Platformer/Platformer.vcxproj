@@ -104,14 +104,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\TGUI\include;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\SFML-2.5.1\include;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\spdlog\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\TGUI\include;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\SFML-2.5.1\include;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\spdlog\include;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\tmxlite\include</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\SFML-2.5.1\lib;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\TGUI\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-system-d.lib;tgui-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\SFML-2.5.1\lib;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\TGUI\lib;D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Vendor\tmxlite\x64\DebugStatic</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-system-d.lib;tgui-d.lib;libtmxlite-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -160,6 +161,7 @@
     <ClCompile Include="PlayerInput.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
+    <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -184,16 +186,22 @@
     <ClInclude Include="IDamagable.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="MainMenuScene.h" />
+    <ClInclude Include="MapLayer.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="PlayerInput.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SoundEngine.h" />
+    <ClInclude Include="TestScene.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\rogue spritesheet calciumtrice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Platformer.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

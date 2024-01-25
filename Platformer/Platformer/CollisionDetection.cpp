@@ -5,6 +5,7 @@
 #include <iostream>
 #include "SFML/Graphics.hpp"
 #include "Actor.h"
+#include "Collider.h"
 
 namespace Physics
 {

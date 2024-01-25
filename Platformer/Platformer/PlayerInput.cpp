@@ -2,6 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "Globals.h"
 #include "Log.h"
+#include "Entity.h"
 
 PlayerInput::PlayerInput(Entity* controllingPlayer)
 {

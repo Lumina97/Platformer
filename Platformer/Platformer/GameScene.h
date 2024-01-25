@@ -1,13 +1,17 @@
 #ifndef GAMESCENE_H
 #define GAMESCENE_H
 
+#pragma once;
+
 #include "Scene.h"
-#include "PlayerInput.h"
+#include "SFML/Graphics.hpp"
 
 class World;
 class Entity;
 class ComponentManager;
 class EnemyAI;
+class PlayerInput;
+class GameGUI;
 
 class GameScene :
 	public Scene
@@ -39,7 +43,5 @@ private:
 	sf::Texture runTex;
 	sf::Texture attackTex;
 	sf::Texture deathTex;
-
-
 };
 #endif // !GAMESCENE_H

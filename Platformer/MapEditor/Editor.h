@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SFML/Graphics.hpp"
+#include "EditorGUI.h"
 
 using namespace sf;
 
@@ -15,4 +16,5 @@ private:
 	VideoMode videoMode;
 	RenderWindow window;
 	sf::View Camera;
+	EditorGUI* Gui;
 };

@@ -5,7 +5,6 @@
 
 class Actor;
 
-
 enum ComponentType
 {
 	animator = 1,

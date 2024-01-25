@@ -5,6 +5,9 @@
 #include "Math.h"
 #include "Log.h"
 #include "Debug.h"
+#include "SoundEngine.h"
+#include "GameLoop.h"
+#include "ComponentManager.h"
 
 bool Engine::Init()
 {
@@ -49,15 +52,20 @@ void Engine::Run()
 		//	sf::Time elapsedTime = elapsedClock.restart();
 		sf::Time elapsed = clock.getElapsedTime();
 		float deltaTime = (frameEnd - frameStart).asSeconds();
+		sf::Time SFDeltaTime = frameEnd - frameStart;
+
+		TIME::SFDeltaTime = SFDeltaTime;
 		TIME::DeltaTime = deltaTime;
 		TIME::currentTime = elapsed.asSeconds();
+
 		frameStart = elapsed;
 
 		//event polling
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			GLOBAL::MAINGUI->handleEvent(event);
+			if (GLOBAL::MAINGUI != nullptr)
+				GLOBAL::MAINGUI->handleEvent(event);
 
 			switch (event.type)
 			{
@@ -66,8 +74,8 @@ void Engine::Run()
 				break;
 
 			case sf::Event::KeyPressed:
-				if (event.key.code == Keyboard::Escape)				
-					window.close();				
+				if (event.key.code == Keyboard::Escape)
+					window.close();
 				break;
 			}
 		}
@@ -80,7 +88,7 @@ void Engine::Run()
 			GLOBAL::MAINGUI->draw();
 		window.display();
 		frameEnd = clock.getElapsedTime();
-		
+
 		//need to wait for event polling to end before we can delete the old gui
 		tgui::Gui* oldgui = GLOBAL::oldGui;
 		if (oldgui != nullptr)

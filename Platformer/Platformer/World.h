@@ -1,8 +1,11 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include "ComponentManager.h"
-#include "Actor.h"
+#include "SFML/Graphics.hpp"
+
+class ComponentManager;
+class Actor;
+
 
 class World
 {

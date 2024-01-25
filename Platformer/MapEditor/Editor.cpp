@@ -23,6 +23,7 @@ bool Editor::Init()
 
 	Log::Init();
 
+	Gui = new EditorGUI(&window);
 
 	if (window.isOpen())
 		return true;
@@ -71,6 +72,7 @@ void Editor::Run()
 		window.clear();
 		if (GLOBAL::MAINGUI != nullptr)
 			GLOBAL::MAINGUI->draw();
+
 		window.display();
 		frameEnd = clock.getElapsedTime();
 

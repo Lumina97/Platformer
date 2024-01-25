@@ -1,9 +1,9 @@
 #ifndef  DEBUG
 #define DEBUG
 
-#include "Globals.h"
 #include "SFML/Graphics.hpp"
 
+class Globals;
 
 namespace Debug
 {

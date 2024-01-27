@@ -7,7 +7,6 @@
 
 Actor::Actor(sf::Vector2f position, sf::Vector2f size, std::string name)
 {
-	setOrigin(size.x / 2, size.y);
 	setPosition(position);
 
 	this->size = size;

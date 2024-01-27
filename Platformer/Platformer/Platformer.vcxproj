@@ -191,7 +191,6 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="PlayerInput.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="resource1.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SoundEngine.h" />
     <ClInclude Include="TestScene.h" />

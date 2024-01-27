@@ -80,7 +80,7 @@ inline T* ComponentManager::CreateNewActor(sf::Vector2f position, sf::Vector2f s
 		actorComponents.push_back(anim);
 		animators.push_back(anim);
 	}
-
+	
 	return newActor;
 }
 
@@ -88,7 +88,6 @@ template<typename T>
 inline T* ComponentManager::CreateNewActor(sf::Vector2f position, sf::Vector2f size, std::string name)
 {
 	T* newActor = new T(position, size, name);
-	newActor->setPosition(position);
 	sceneActors.push_back(newActor);
 	return newActor;
 }

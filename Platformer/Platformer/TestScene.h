@@ -27,7 +27,7 @@ public:
 private:
     tmx::Map map;
     sf::RenderWindow* window;
-    std::vector<MapLayer*> layers;
+    std::vector<MapLayer*> mapLayers;
     ComponentManager* componentManager;
     Actor* mapActor;
 };

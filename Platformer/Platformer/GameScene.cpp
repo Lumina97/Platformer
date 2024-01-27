@@ -9,6 +9,7 @@
 #include "GameGUI.h"
 #include "EnemyAI.h"
 #include "PlayerInput.h"
+#include "Log.h"
 
 
 void GameScene::InitializeScene(ComponentManager* compManager)
@@ -20,12 +21,45 @@ void GameScene::InitializeScene(ComponentManager* compManager)
 	attackTex.loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Attack-01/Attack-01-Sheet.png");
 	deathTex.loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Dead/Dead-Sheet.png");
 
-	world = new World();
-	world->InitializeWorld(compManager);
 	InitializePlayer();
-	InitializeEnemy();
+	//InitializeEnemy();
 	input = new PlayerInput(player);
 	compManager->SetPlayerInput(input);
+
+	try
+	{
+		map.load("assets/Test.tmx");
+		mapLayers.push_back(new MapLayer(map, 1));
+
+		const auto& layers = map.getLayers();
+		for (const auto& layer : layers)
+		{
+			if (layer->getType() == tmx::Layer::Type::Object)
+			{
+				const auto& objects = layer->getLayerAs<tmx::ObjectGroup>().getObjects();
+				for (const auto& object : objects)
+				{
+					sf::Vector2f position(object.getPosition().x, object.getPosition().y);
+					sf::Vector2f size(object.getAABB().width, object.getAABB().height);
+					Actor* actor = compManager->CreateNewActor<Actor>(position, size, object.getName(), ComponentType::collider);
+				}
+			}
+
+			//if (layer->getType() == tmx::Layer::Type::Tile)
+			//{
+			//	const auto& tiles = layer->getLayerAs<tmx::TileLayer>().getTiles();
+			//	for (const auto& tile : tiles)
+			//	{
+			//
+			//	}
+			//
+			//}
+		}
+	}
+	catch (const std::exception&)
+	{
+		ENGINE_LOG_ERROR("There was an error loading the map! TestScene!");
+	}
 	isSceneLoaded = true;
 }
 
@@ -43,9 +77,10 @@ void GameScene::UpdateScene()
 {
 	if (isSceneLoaded == false) return;
 
-	world->Update();
+	GLOBAL::WINDOW->draw(*mapLayers[0]);
 	compManager->UpdateComponents();
-	if( ai != nullptr) ai->Update();
+
+	if (ai != nullptr) ai->Update();
 }
 
 void GameScene::ReloadScene()
@@ -71,7 +106,7 @@ void GameScene::InitializePlayer()
 	Animation* dead = new Animation("Dead", &deathTex, sf::IntRect(0, 0, 80, 60), 1, 0, 1, 0, 7, false);
 
 	player = compManager->CreateNewActor<Entity>(
-		sf::Vector2f((float)(GLOBAL::ScreenSize.x / 2), (float)(GLOBAL::ScreenSize.y / 2 + 200.0f)), sf::Vector2f(40, 100),
+		sf::Vector2f(0, 200.0f), sf::Vector2f(40, 100),
 		std::string("Player"), ComponentType::collider | ComponentType::animator);
 
 	if (gui == nullptr)

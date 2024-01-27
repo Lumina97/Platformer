@@ -11,21 +11,14 @@ std::vector<Scene*> GameLoop::scenes;
 
 void GameLoop::InitializeGameLoop(ComponentManager* componentManager)
 {
-	this->compManager = componentManager;
-	TestScene* test = new TestScene();
-	scenes.push_back(test);
-	test->InitializeScene(compManager);
-	CurrentScene = test;
+	this->compManager = componentManager;	
 
-
-	
-
-	//GameScene* gameScene = new GameScene();	
-	//scenes.push_back(gameScene);
-	//MainMenuScene* mainMenu = new MainMenuScene();
-	//mainMenu->InitializeScene(compManager);
-	//scenes.push_back(mainMenu);
-	//CurrentScene = mainMenu;
+	GameScene* gameScene = new GameScene();	
+	scenes.push_back(gameScene);
+	MainMenuScene* mainMenu = new MainMenuScene();
+	mainMenu->InitializeScene(compManager);
+	scenes.push_back(mainMenu);
+	CurrentScene = mainMenu;
 }
 
 void GameLoop::RunUpdateLoop()

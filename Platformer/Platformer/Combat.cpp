@@ -48,7 +48,8 @@ void Combat::Attack(int attackDirection)
 	lastAttack = TIME::currentTime;
 
 	AttackSequence++;
-	PlayAttackAnimation();
+	if (GetAnimator() != nullptr)
+		PlayAttackAnimation();
 
 	float top = parent->getPosition().y - parent->GetSize().y / 2 - attackSize.y / 2;
 	float left = parent->getPosition().x;
@@ -69,6 +70,6 @@ void Combat::Attack(int attackDirection)
 
 		Entity* entity = dynamic_cast<Entity*>(hits[i]->GetParentActor());
 		if (entity != nullptr)
-			entity->TakeDamage(damage);		
+			entity->TakeDamage(damage);
 	}
 }

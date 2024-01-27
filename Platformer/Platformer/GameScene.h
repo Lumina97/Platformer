@@ -5,6 +5,8 @@
 
 #include "Scene.h"
 #include "SFML/Graphics.hpp"
+#include "tmxlite/Map.hpp"
+#include "MapLayer.h"
 
 class World;
 class Entity;
@@ -38,6 +40,8 @@ private:
 	World* world;
 	GameGUI* gui;
 	bool isSceneLoaded;
+	tmx::Map map;
+	std::vector<MapLayer*> mapLayers;
 
 	sf::Texture idleTex;
 	sf::Texture runTex;

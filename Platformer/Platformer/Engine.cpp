@@ -46,6 +46,7 @@ void Engine::Run()
 	sf::Time frameStart = clock.getElapsedTime();;
 	sf::Time frameEnd;
 
+
 	//soundEngine->PlayMusic();
 	while (window.isOpen())
 	{
@@ -66,6 +67,17 @@ void Engine::Run()
 		{
 			if (GLOBAL::MAINGUI != nullptr)
 				GLOBAL::MAINGUI->handleEvent(event);
+
+			if (event.type == sf::Event::MouseWheelMoved)
+			{
+				float x = event.mouseWheel.delta;
+				if (x > 0)
+					x = 0.95f;
+				else 
+					x = 1.05f;
+
+				GLOBAL::CAMERA->zoom(x);
+			}
 
 			switch (event.type)
 			{

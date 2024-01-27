@@ -1,3 +1,147 @@
-﻿  Entity.cpp
+﻿  GameScene.cpp
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\GameScene.h(4,13): warning C4081: expected 'newline'; found ';'
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(287,89): warning C4244: 'argument': conversion from 'uint32_t' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(287,60): warning C4244: 'argument': conversion from 'uint32_t' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(293,101): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(293,171): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(294,120): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(294,101): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(294,204): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(294,185): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(296,120): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(296,101): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(296,204): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(296,185): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(297,106): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(297,176): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(342,22): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(528,25): warning C4244: 'initializing': conversion from 'float' to 'uint32_t', possible loss of data
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(529,25): warning C4244: 'initializing': conversion from 'float' to 'uint32_t', possible loss of data
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(530,76): warning C4244: '=': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=unsigned int
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\MapLayer.h(531,76): warning C4244: '=': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=unsigned int
+          ]
 D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\Entity.h(4,11): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Platformer.vcxproj -> D:\Dev\C++\SFML_Games\Platformer\Platformer\x64\Debug\Platformer.exe

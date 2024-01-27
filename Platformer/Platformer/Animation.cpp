@@ -32,7 +32,6 @@ Animation::Animation(std::string name, sf::Texture* spriteAtlas, sf::IntRect spr
 		position.left = x * position.width;
 		position.top = y * position.height;
 		sprite->setTextureRect(position);
-
 		sprites.push_back(sprite);
 
 		if (++x - columnStart >= columns)

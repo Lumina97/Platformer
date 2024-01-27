@@ -52,8 +52,8 @@ void Animator::UpdateComponent()
 		if (isFlipped) scale.x *= -1.0f;
 		sprite.setScale(scale);
 
-		//sf::Vector2f size(sprite.getGlobalBounds().width, sprite.getGlobalBounds().height);
-		//Debug::DrawDebugBox(sprite.getPosition(), origin,sprite.getRotation(),size,sf::Color::Transparent,sf::Color::White,1.0f, scaleAmount);
+		sf::Vector2f size(sprite.getGlobalBounds().width, sprite.getGlobalBounds().height);
+		Debug::DrawDebugBox(sprite.getPosition(), origin,sprite.getRotation(),size,sf::Color::Transparent,sf::Color::Green,1.0f, scaleAmount);
 		GLOBAL::WINDOW->draw(sprite);
 
 		//check if animation was done playing and if an animation was Queued

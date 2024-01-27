@@ -10,7 +10,7 @@
 #include "EnemyAI.h"
 #include "PlayerInput.h"
 #include "Log.h"
-
+#include "Player.h"
 
 void GameScene::InitializeScene(ComponentManager* compManager)
 {
@@ -21,17 +21,32 @@ void GameScene::InitializeScene(ComponentManager* compManager)
 	attackTex.loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Attack-01/Attack-01-Sheet.png");
 	deathTex.loadFromFile("./Resources/Legacy-Fantasy - High Forest 2.3/Character/Dead/Dead-Sheet.png");
 
+	idle = new Animation("Idle", &idleTex, sf::IntRect(0, 0, 64, 80), 4, 0, 4, 0, 0);
+	run = new Animation("Run", &runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
+	attack1 = new Animation("Attack1", &attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0, false);
+	attack2 = new Animation("Attack2", &attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4, false);
+	death = new Animation("Death", &deathTex, sf::IntRect(0, 0, 80, 60), 8, 0, 8, 0, 0, false);
+	dead = new Animation("Dead", &deathTex, sf::IntRect(0, 0, 80, 60), 1, 0, 1, 0, 7, false);
+
+	player = compManager->CreateNewActor<Player>(
+		sf::Vector2f(0, 200.0f), sf::Vector2f(16, 32),
+		std::string("Player"), ComponentType::collider | ComponentType::animator);
 	InitializePlayer();
-	//InitializeEnemy();
 	input = new PlayerInput(player);
 	compManager->SetPlayerInput(input);
 
 	try
 	{
-		map.load("assets/Test.tmx");
-		mapLayers.push_back(new MapLayer(map, 1));
+		map.load("assets/Scene_Gameplay.tmx");
 
 		const auto& layers = map.getLayers();
+
+		for (int i = 0; i < layers.size(); i++)
+		{
+			if (layers[i]->getType() != tmx::Layer::Type::Object)
+				mapLayers.push_back(new MapLayer(map, i));
+		}
+
 		for (const auto& layer : layers)
 		{
 			if (layer->getType() == tmx::Layer::Type::Object)
@@ -44,16 +59,6 @@ void GameScene::InitializeScene(ComponentManager* compManager)
 					Actor* actor = compManager->CreateNewActor<Actor>(position, size, object.getName(), ComponentType::collider);
 				}
 			}
-
-			//if (layer->getType() == tmx::Layer::Type::Tile)
-			//{
-			//	const auto& tiles = layer->getLayerAs<tmx::TileLayer>().getTiles();
-			//	for (const auto& tile : tiles)
-			//	{
-			//
-			//	}
-			//
-			//}
 		}
 	}
 	catch (const std::exception&)
@@ -66,7 +71,7 @@ void GameScene::InitializeScene(ComponentManager* compManager)
 void GameScene::UnloadScene()
 {
 	isSceneLoaded = false;
-	ComponentManager::Destroy(player);
+	ComponentManager::Destroy((Actor*)player);
 	ComponentManager::Destroy(enemy);
 	delete(world);
 	delete(input);
@@ -77,7 +82,10 @@ void GameScene::UpdateScene()
 {
 	if (isSceneLoaded == false) return;
 
-	GLOBAL::WINDOW->draw(*mapLayers[0]);
+	for (auto a : mapLayers)
+	{
+		GLOBAL::WINDOW->draw(*a);
+	}
 	compManager->UpdateComponents();
 
 	if (ai != nullptr) ai->Update();
@@ -98,17 +106,6 @@ GameScene::~GameScene()
 
 void GameScene::InitializePlayer()
 {
-	Animation* idle = new Animation("Idle", &idleTex, sf::IntRect(0, 0, 64, 80), 4, 0, 4, 0, 0);
-	Animation* run = new Animation("Run", &runTex, sf::IntRect(0, 0, 80, 80), 8, 0, 8, 0, 0);
-	Animation* attack1 = new Animation("Attack1", &attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 0, false);
-	Animation* attack2 = new Animation("Attack2", &attackTex, sf::IntRect(0, 0, 96, 80), 4, 0, 4, 0, 4, false);
-	Animation* death = new Animation("Death", &deathTex, sf::IntRect(0, 0, 80, 60), 8, 0, 8, 0, 0, false);
-	Animation* dead = new Animation("Dead", &deathTex, sf::IntRect(0, 0, 80, 60), 1, 0, 1, 0, 7, false);
-
-	player = compManager->CreateNewActor<Entity>(
-		sf::Vector2f(0, 200.0f), sf::Vector2f(40, 100),
-		std::string("Player"), ComponentType::collider | ComponentType::animator);
-
 	if (gui == nullptr)
 		gui = new GameGUI();
 

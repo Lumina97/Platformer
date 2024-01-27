@@ -9,11 +9,13 @@
 #include "MapLayer.h"
 
 class World;
+class Player;
 class Entity;
 class ComponentManager;
 class EnemyAI;
 class PlayerInput;
 class GameGUI;
+class Animation;
 
 class GameScene :
 	public Scene
@@ -32,7 +34,7 @@ private:
 	void InitializeEnemy();
 
 private:
-	Entity* player;
+	Player* player;
 	Entity* enemy;
 	EnemyAI* ai;
 	PlayerInput* input;
@@ -47,5 +49,12 @@ private:
 	sf::Texture runTex;
 	sf::Texture attackTex;
 	sf::Texture deathTex;
+
+	Animation* idle;
+	Animation* run;
+	Animation* attack1;
+	Animation* attack2;
+	Animation* death;
+	Animation* dead;
 };
 #endif // !GAMESCENE_H

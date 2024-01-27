@@ -9,8 +9,8 @@ class Combat;
 class GameGUI;
 class Health;
 
-class Entity : public Actor 
-{	
+class Entity : public Actor
+{
 public:
 	Entity(sf::Vector2f position, sf::Vector2f size, std::string name)
 		: Actor(position, size, name) {
@@ -21,20 +21,20 @@ public:
 	// Inherited via Actor
 	virtual void UpdateActor() override;
 	virtual sf::FloatRect GetNextBounds() override;
-	float GetMovementSpeed();
-	void SetMovementSpeed(float speed);
-	void SetWantsToJump(bool value);
-	bool GetWantsToJump();
-	void SetInputVector(sf::Vector2f input);
-	sf::Vector2f GetInputVector();
-	sf::Vector2f GetVelocity();
-	void SetGUI(GameGUI* gui);
-	void Dash();
-	void Attack();
-	void TakeDamage(float amount);
-	void OnDeath();
+	virtual float GetMovementSpeed();
+	virtual void SetMovementSpeed(float speed);
+	virtual void SetWantsToJump(bool value);
+	virtual bool GetWantsToJump();
+	virtual void SetInputVector(sf::Vector2f input);
+	virtual sf::Vector2f GetInputVector();
+	virtual sf::Vector2f GetVelocity();
+	virtual void SetGUI(GameGUI* gui);
+	virtual void Dash();
+	virtual void Attack();
+	virtual void TakeDamage(float amount);
+	virtual void OnDeath();
 
-private:	
+protected:
 	void CalculateVerticalMovement();
 	void ApplyMovement();
 	void Init();
@@ -42,13 +42,13 @@ private:
 	Animator* GetAnimator();
 	void CheckNextMoveCollisions();
 
-private:
+protected:
 	float movementSpeed;
 	float jumpForce;
 	float desiredMoveSpeed;
 	float verticalSpeed;
 	float dashSpeed;
-	bool wasGrounded;	
+	bool wasGrounded;
 	bool wantsToJump;
 	bool isGrounded;
 	bool isDashing;
@@ -60,11 +60,11 @@ private:
 	float TakeDamageCooldown;
 	float lastDamageTaken;
 
-private:
+protected:
 	Physics::CollisionDirection isCollision;
 	sf::Vector2f velocity;
 	sf::Vector2f dashDirection;
-	sf::Vector2f InputVector;	
+	sf::Vector2f InputVector;
 	Physics::Collider* collider;
 	Animator* anim;
 	Combat* combat;

@@ -5,20 +5,21 @@
 #include <iostream>
 #include "SFML/Graphics.hpp"
 #include "Actor.h"
+#include "Collider.h"
 
 namespace Physics
 {
 	std::vector<Physics::Collider*> CollisionDetection::colliders;
 
-	sf::FloatRect CollisionDetection::WillCollideInDirection(Physics::Collider* collider)
+	std::vector<sf::FloatRect> CollisionDetection::WillCollideInDirection(Physics::Collider* collider)
 	{
-		sf::FloatRect collisionRect(-1, -1, -1, -1);
+		std::vector<sf::FloatRect> collisions;
 		for (int i = 0; i < colliders.size(); i++)
 		{
 			if (CheckCollisions(collider, colliders[i]))
-				collisionRect = colliders[i]->GetBounds();
+				collisions.push_back(colliders[i]->GetBounds());
 		}
-		return collisionRect;
+		return collisions;
 	}
 
 	void CollisionDetection::UpdateCollision()
@@ -27,7 +28,10 @@ namespace Physics
 
 		for (int c = 0; c < colliders.size(); c++)
 		{
-			if (colliders[c] != nullptr && colliders[c]->GetHasMoved())
+			if (colliders[c]->GetIsActive() == false)
+				continue;
+
+			if (colliders[c] != nullptr ) //&& colliders[c]->GetHasMoved())
 			{
 				for (int i = 0; i < colliders.size(); i++)
 				{
@@ -96,6 +100,42 @@ namespace Physics
 		return Physics::CollisionDirection::none;
 	}
 
+	Physics::CollisionDirection CollisionDetection::GetOverlapAmount(const sf::FloatRect& collider, const sf::FloatRect& other)
+	{
+		// Calculate the overlap between the player and obstacle
+		float xOverlap = std::min(collider.left + collider.width, other.left + other.width) -
+			std::max(collider.left, other.left);
+
+		float yOverlap = std::min(collider.top + collider.height, other.top + other.height) -
+			std::max(collider.top, other.top);
+
+
+		// Determine the smallest axis of overlap
+		if (xOverlap < yOverlap)
+		{
+			// Adjust player's position horizontally
+			if (collider.left < other.left) {
+				return Physics::CollisionDirection::right;
+			}
+			else {
+				return Physics::CollisionDirection::left;
+			}
+		}
+		else {
+			// Adjust player's position vertically
+			if (collider.top < other.top)
+			{
+				return Physics::CollisionDirection::top;
+			}
+			else
+			{
+				return Physics::CollisionDirection::bottom;
+			}
+		}
+
+		return Physics::CollisionDirection::none;
+	}
+
 	void CollisionDetection::ResolveCollision(Physics::Collider* collider, Physics::Collider* other)
 	{
 		Actor* actor = collider->GetParentActor();
@@ -147,7 +187,7 @@ namespace Physics
 			return false;
 		}
 
-		if (collider == nullptr || other == nullptr) return false;
+		if (collider == nullptr || other == nullptr || other->GetIsActive() == false) return false;
 
 		Actor* actor = collider->GetParentActor();
 		sf::FloatRect colliderBounds;
@@ -202,6 +242,8 @@ namespace Physics
 		{
 			for (int i = 0; i < colliders.size(); i++)
 			{
+				if (colliders[i]->GetIsActive() == false) continue;
+
 				if (i == c) continue;
 
 				if (testCollision.intersects(colliders[i]->GetBounds()))

@@ -1,4 +1,5 @@
 #include "ActorRenderer.h"
+#include "Actor.h"
 #include "Collider.h"
 #include "Animator.h"
 #include "Globals.h"

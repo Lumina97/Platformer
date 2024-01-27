@@ -1,0 +1,77 @@
+Group.Grp_MainMenu {
+    Size = (800, 600);
+
+    Renderer {
+    }
+
+    Picture.IMG_Background {
+        Size = (1920, 1080);
+
+        Renderer {
+            Texture = "../gradient Background.png" Smooth;
+            TransparentTexture = false;
+        }
+    }
+
+    Button.B_Play {
+        Position = (350, 220);
+        Size = (120, 48);
+        Text = PLAY;
+        TextSize = 32;
+
+        Renderer {
+            BackgroundColor = #C8C8C8;
+            BackgroundColorDisabled = #E6E6E6;
+            BackgroundColorDown = #2D2D2D;
+            BackgroundColorHover = white;
+            BorderColor = #3C3C3C;
+            BorderColorDisabled = #7D7D7D;
+            BorderColorDown = black;
+            BorderColorFocused = #1E1EB4;
+            BorderColorHover = black;
+            Borders = (1, 1, 1, 1);
+            TextColor = #3C3C3C;
+            TextColorDisabled = #7D7D7D;
+            TextColorDown = black;
+            TextColorHover = black;
+            Texture = None;
+            TextureDisabled = None;
+            TextureDown = None;
+            TextureDownFocused = None;
+            TextureDownHover = None;
+            TextureFocused = None;
+            TextureHover = None;
+        }
+    }
+
+    Button.B_Exit {
+        Position = (350, 290);
+        Size = (120, 48);
+        Text = EXIT;
+        TextSize = 32;
+
+        Renderer {
+            BackgroundColor = #C8C8C8;
+            BackgroundColorDisabled = #E6E6E6;
+            BackgroundColorDown = #2D2D2D;
+            BackgroundColorHover = white;
+            BorderColor = #3C3C3C;
+            BorderColorDisabled = #7D7D7D;
+            BorderColorDown = black;
+            BorderColorFocused = #1E1EB4;
+            BorderColorHover = black;
+            Borders = (1, 1, 1, 1);
+            TextColor = #3C3C3C;
+            TextColorDisabled = #7D7D7D;
+            TextColorDown = black;
+            TextColorHover = black;
+            Texture = None;
+            TextureDisabled = None;
+            TextureDown = None;
+            TextureDownFocused = None;
+            TextureDownHover = None;
+            TextureFocused = None;
+            TextureHover = None;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 #include "ComponentManager.h"
+#include "PlayerInput.h"
 
 
 std::vector<Actor*> ComponentManager::sceneActors;
@@ -23,7 +24,8 @@ void ComponentManager::UpdateComponents()
 	if (input != nullptr) input->Update();
 
 	//collision
-	if (collisionDetection != nullptr) collisionDetection->UpdateCollision();
+	if (collisionDetection != nullptr)
+		collisionDetection->UpdateCollision();
 
 	//update actors
 	for (int i = 0; i < sceneActors.size(); i++)

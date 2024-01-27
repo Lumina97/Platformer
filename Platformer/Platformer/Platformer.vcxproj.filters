@@ -57,9 +57,6 @@
     <ClCompile Include="Engine.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="SoundEngine.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
@@ -120,6 +117,9 @@
     <ClCompile Include="EnemyAI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GUI.h">
@@ -141,9 +141,6 @@
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Math.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderer.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -209,10 +206,21 @@
     <ClInclude Include="EnemyAI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MapLayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\rogue spritesheet calciumtrice.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Platformer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

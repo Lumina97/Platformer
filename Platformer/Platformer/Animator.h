@@ -1,8 +1,13 @@
 #ifndef ANIMATOR_H
 #define ANIMATOR_H
+
+#pragma once
+
+
 #include "Component.h"
-#include "Animation.h"
 #include "SFML/Graphics.hpp"
+
+class Animation;
 
 class Animator : public Component
 {

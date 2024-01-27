@@ -1,8 +1,11 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include "ComponentManager.h"
-#include "Actor.h"
+#include "SFML/Graphics.hpp"
+
+class ComponentManager;
+class Actor;
+
 
 class World
 {
@@ -14,7 +17,7 @@ public:
 private:
 	void InitializeGround();
 	void InitializeBackGround();
-	void CreatePlatform(sf::Vector2f position, float length);
+	void CreatePlatform(sf::Vector2f position, float length, float height = 1.0f);
 
 private:
 	ComponentManager* componentManager;

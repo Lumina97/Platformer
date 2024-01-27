@@ -5,6 +5,9 @@
 #include "Math.h"
 #include "Log.h"
 #include "Debug.h"
+#include "SoundEngine.h"
+#include "GameLoop.h"
+#include "ComponentManager.h"
 
 bool Engine::Init()
 {
@@ -43,21 +46,38 @@ void Engine::Run()
 	sf::Time frameStart = clock.getElapsedTime();;
 	sf::Time frameEnd;
 
+
 	//soundEngine->PlayMusic();
 	while (window.isOpen())
 	{
 		//	sf::Time elapsedTime = elapsedClock.restart();
 		sf::Time elapsed = clock.getElapsedTime();
 		float deltaTime = (frameEnd - frameStart).asSeconds();
+		sf::Time SFDeltaTime = frameEnd - frameStart;
+
+		TIME::SFDeltaTime = SFDeltaTime;
 		TIME::DeltaTime = deltaTime;
 		TIME::currentTime = elapsed.asSeconds();
+
 		frameStart = elapsed;
 
 		//event polling
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			GLOBAL::MAINGUI->handleEvent(event);
+			if (GLOBAL::MAINGUI != nullptr)
+				GLOBAL::MAINGUI->handleEvent(event);
+
+			if (event.type == sf::Event::MouseWheelMoved)
+			{
+				float x = event.mouseWheel.delta;
+				if (x > 0)
+					x = 0.95f;
+				else 
+					x = 1.05f;
+
+				GLOBAL::CAMERA->zoom(x);
+			}
 
 			switch (event.type)
 			{
@@ -66,8 +86,8 @@ void Engine::Run()
 				break;
 
 			case sf::Event::KeyPressed:
-				if (event.key.code == Keyboard::Escape)				
-					window.close();				
+				if (event.key.code == Keyboard::Escape)
+					window.close();
 				break;
 			}
 		}
@@ -80,7 +100,7 @@ void Engine::Run()
 			GLOBAL::MAINGUI->draw();
 		window.display();
 		frameEnd = clock.getElapsedTime();
-		
+
 		//need to wait for event polling to end before we can delete the old gui
 		tgui::Gui* oldgui = GLOBAL::oldGui;
 		if (oldgui != nullptr)

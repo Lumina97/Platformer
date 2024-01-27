@@ -1,0 +1,4 @@
+D:/Dev/C++/tmxlite/tmxlite/Build/CMakeFiles/tmxlite.dir
+D:/Dev/C++/tmxlite/tmxlite/Build/CMakeFiles/INSTALL.dir
+D:/Dev/C++/tmxlite/tmxlite/Build/CMakeFiles/ALL_BUILD.dir
+D:/Dev/C++/tmxlite/tmxlite/Build/CMakeFiles/ZERO_CHECK.dir

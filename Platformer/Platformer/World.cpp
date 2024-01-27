@@ -3,6 +3,9 @@
 #include "Globals.h"
 #include "Debug.h"
 #include "Log.h"
+#include "ComponentManager.h"
+#include "Actor.h"
+
 using namespace sf;
 
 World::~World()
@@ -37,19 +40,7 @@ void World::InitializeGround()
 	Vector2f position = Vector2f(GLOBAL::ScreenSize.x / 2, GLOBAL::ScreenSize.y);
 	Vector2f size = Vector2f(2000, 80);
 
-	CreatePlatform(position, 3000);
-
-	//position.y -= 200;
-	//position.x -= 600;
-	//CreatePlatform(position, 570);
-	//
-	//position.y -= 200;
-	//position.x += 500;
-	//CreatePlatform(position, 570);
-	//
-	//position.y += 200;
-	//position.x += 900;
-	//CreatePlatform(position, 280);
+	CreatePlatform(position, 32);
 }
 
 void World::InitializeBackGround()
@@ -69,9 +60,9 @@ void World::InitializeBackGround()
 		GLOBAL::CAMERA->getSize().y / background->getLocalBounds().height);
 }
 
-void World::CreatePlatform(sf::Vector2f position, float length)
+void World::CreatePlatform(sf::Vector2f position, float length, float height)
 {
-	Vector2f size = Vector2f(length, 80);
+	Vector2f size = Vector2f(length, height);
 	std::string name = "platform" + std::to_string(platformIndex);
 
 	Actor* platform = componentManager->CreateNewActor<Actor>(position, size, name,
@@ -81,7 +72,7 @@ void World::CreatePlatform(sf::Vector2f position, float length)
 
 	ActorRenderer* renderer = platform->GetComponent<ActorRenderer>();	
 
-	float spriteSizeX = 26;
+	float spriteSizeX = 32;
 	int iterations = size.x / spriteSizeX;
 	iterations++;
 	for (int i = 0; i < iterations; i++)

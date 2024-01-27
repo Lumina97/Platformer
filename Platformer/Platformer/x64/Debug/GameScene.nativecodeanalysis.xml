@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>Component.h</FILENAME>
+      <LINE>22</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Component::type' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@@QEAA@XZ</DECORATED>
+    <FUNCLINE>22</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Component::type</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>World.h</FILENAME>
+      <LINE>33</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'World::componentManager' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>World::{ctor}</FUNCTION>
+    <DECORATED>??0World@@QEAA@XZ</DECORATED>
+    <FUNCLINE>33</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>World::componentManager</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>World.h</FILENAME>
+      <LINE>33</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'World::platformIndex' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>World::{ctor}</FUNCTION>
+    <DECORATED>??0World@@QEAA@XZ</DECORATED>
+    <FUNCLINE>33</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>World::platformIndex</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Dev\C++\SFML_Games\Platformer\Platformer\Platformer\</FILEPATH>
+      <FILENAME>World.h</FILENAME>
+      <LINE>33</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'World::background' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>World::{ctor}</FUNCTION>
+    <DECORATED>??0World@@QEAA@XZ</DECORATED>
+    <FUNCLINE>33</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>World::background</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

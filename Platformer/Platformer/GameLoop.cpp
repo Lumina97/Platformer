@@ -1,6 +1,9 @@
 #include "GameLoop.h"
 #include "GameScene.h"
 #include "MainMenuScene.h"
+#include "Scene.h"
+#include "ComponentManager.h"
+#include "TestScene.h"
 
 Scene* GameLoop::CurrentScene = nullptr;
 ComponentManager* GameLoop::compManager = nullptr;
@@ -8,7 +11,8 @@ std::vector<Scene*> GameLoop::scenes;
 
 void GameLoop::InitializeGameLoop(ComponentManager* componentManager)
 {
-	this->compManager = componentManager;
+	this->compManager = componentManager;	
+
 	GameScene* gameScene = new GameScene();	
 	scenes.push_back(gameScene);
 	MainMenuScene* mainMenu = new MainMenuScene();

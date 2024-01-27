@@ -1,11 +1,18 @@
 #ifndef COLLISIONDETECTION_H
 #define COLLISIONDETECTION_H
 
+#pragma once
+
 #include <vector>
-#include "Collider.h"
 #include "SFML/graphics.hpp"
+
+
+
 namespace Physics
 {
+	class Collider;
+	enum  CollisionDirection : char;
+
 	class CollisionDetection
 	{
 	public:
@@ -14,8 +21,9 @@ namespace Physics
 		void AddCollider(Collider* collider);
 		static void RemoveCollider(Collider* collider);
 
-		static sf::FloatRect WillCollideInDirection(Collider* collider);
+		static std::vector<sf::FloatRect> WillCollideInDirection(Collider* collider);
 		static Physics::CollisionDirection GetOverlapAmount(const sf::FloatRect& collider, const sf::FloatRect& other, float& overlap);
+		static Physics::CollisionDirection GetOverlapAmount(const sf::FloatRect& collider, const sf::FloatRect& other);
 		static std::vector<Collider*> BoxCastAll(sf::Vector2f position, float rotation, sf::Vector2f size);
 		static Collider* BoxCast(sf::Vector2f position, float rotation, sf::Vector2f size);
 
@@ -28,8 +36,6 @@ namespace Physics
 
 	private:
 		static std::vector<Physics::Collider*> colliders;
-
-
 	};
 }
 

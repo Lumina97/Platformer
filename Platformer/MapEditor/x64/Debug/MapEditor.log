@@ -1,0 +1,45 @@
+﻿  Editor.cpp
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(11,22): warning C4244: '*=': conversion from 'float' to 'unsigned int', possible loss of data
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(12,21): warning C4244: '*=': conversion from 'float' to 'unsigned int', possible loss of data
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(16,70): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.cpp(16,48): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  EditorGUI.cpp
+  Log.cpp
+  MapEditor.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  MapEditor.vcxproj -> D:\Dev\C++\SFML_Games\Platformer\Platformer\x64\Debug\MapEditor.exe
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\core.h(418): warning C6285: (<non-zero constant> || <non-zero constant>) is always a non-zero constant.  Did you intend to use the bitwise-and operator?
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1554): warning C26451: Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1554): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format-inl.h(1154): warning C26450: Arithmetic overflow: '*' operation causes overflow at compile time. Use a wider type to store the operands (io.1).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format-inl.h(1186): warning C26450: Arithmetic overflow: '*' operation causes overflow at compile time. Use a wider type to store the operands (io.1).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format-inl.h(1207): warning C26450: Arithmetic overflow: '*' operation causes overflow at compile time. Use a wider type to store the operands (io.1).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\core.h(2353): warning C26451: Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\core.h(721): warning C26437: Do not slice (es.63).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\pattern_formatter-inl.h(1431): warning C26800: Use of a moved from object: ''user_chars'' (lifetime.1).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(2768): warning C26498: The function 'fmt::v9::detail::num_bits<unsigned __int64>' is constexpr, mark variable 'shift' constexpr if compile-time evaluation is desired (con.5).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(3252): warning C26498: The function 'fmt::v9::detail::exponent_mask<float>' is constexpr, mark variable 'mask' constexpr if compile-time evaluation is desired (con.5).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format-inl.h(1281): warning C26498: The function 'fmt::v9::detail::num_significand_bits<float>' is constexpr, mark variable 'significand_mask' constexpr if compile-time evaluation is desired (con.5).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(3128): warning C26451: Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(3128): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(2369): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(2437): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(2454): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(2454): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1449): warning C26498: The function 'fmt::v9::detail::num_significand_bits<double>' is constexpr, mark variable 'offset' constexpr if compile-time evaluation is desired (con.5).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1409): warning C26498: The function 'fmt::v9::detail::num_significand_bits<float>' is constexpr, mark variable 'num_float_significand_bits' constexpr if compile-time evaluation is desired (con.5).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1163): warning C26495: Variable 'fmt::v9::detail::thousands_sep_result<char>::thousands_sep' is uninitialized. Always initialize a member variable (type.6).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1914): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1889): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(1897): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Vendor\spdlog\include\spdlog\fmt\bundled\format.h(2300): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+D:\Dev\C++\SFML_Games\Platformer\Platformer\MapEditor\Editor.h(20): warning C26495: Variable 'Editor::Gui' is uninitialized. Always initialize a member variable (type.6).

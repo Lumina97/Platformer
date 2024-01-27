@@ -1,6 +1,9 @@
 #ifndef ANIMATION_H
 #define ANIMATION_H
+
+#pragma once
 #include "SFML/Graphics.hpp"
+
 
 class Animation
 {

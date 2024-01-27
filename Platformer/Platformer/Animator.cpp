@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Debug.h"
 #include "Globals.h"
+#include "Animation.h"
 
 Animator::Animator(Actor* parentActor)
 {
@@ -11,7 +12,7 @@ Animator::Animator(Actor* parentActor)
 	animations = {};
 	animationQ = {};
 	currentAnimation = -1;
-	animationFPSTarget = 7;
+	animationFPSTarget = 8.5f;
 }
 
 Animator::~Animator()

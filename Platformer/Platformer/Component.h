@@ -5,7 +5,6 @@
 
 class Actor;
 
-
 enum ComponentType
 {
 	animator = 1,
@@ -28,12 +27,15 @@ public:
 	bool GetHasMoved();
 	Actor* GetParentActor();
 	ComponentType GetComponentType();
-
+	void SetActive(bool isActive);
+	bool GetIsActive();
 
 protected:
 	ComponentType type;
 	Actor* parentActor = nullptr;
 	bool hasMoved = false;
+	bool activeState = true;
+
 
 };
 

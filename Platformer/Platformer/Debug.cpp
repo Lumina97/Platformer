@@ -1,10 +1,9 @@
 #include "Debug.h"
 #include "Log.h"
+#include "Globals.h"
 
 namespace Debug
 {
-
-
 	void DrawDebugBox(sf::RectangleShape* shape)
 	{
 		if (GLOBAL::WINDOW == nullptr) return;

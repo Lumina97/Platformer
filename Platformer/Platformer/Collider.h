@@ -9,7 +9,7 @@ namespace Physics
 	///Which way the tested collider is colliding
 	///if player is tested and colliding with floor
 	/// == bottom
-	enum CollisionDirection {
+	enum CollisionDirection : char {
 		none = 0,
 		top = 1,
 		bottom = 2,

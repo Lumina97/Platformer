@@ -1,9 +1,11 @@
 #ifndef  GAMELOOP_H
 #define GAMELOOP_H
 
-#include "Scene.h"
 #include <vector>
-#include "ComponentManager.h"
+
+
+class Scene;
+class ComponentManager;
 
 class GameLoop
 {

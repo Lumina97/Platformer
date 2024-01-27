@@ -1,12 +1,13 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Actor.h"
-#include "Collider.h"
-#include "Animator.h"
-#include "Combat.h"
-#include "Health.h"
-#include "GameGUI.h"
+#include  "Actor.h";
+
+class Collider;
+class Animator;
+class Combat;
+class GameGUI;
+class Health;
 
 class Entity : public Actor 
 {	

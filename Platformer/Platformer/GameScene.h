@@ -1,13 +1,19 @@
 #ifndef GAMESCENE_H
 #define GAMESCENE_H
 
+#pragma once;
+
 #include "Scene.h"
-#include "PlayerInput.h"
+#include "SFML/Graphics.hpp"
+#include "tmxlite/Map.hpp"
+#include "MapLayer.h"
 
 class World;
 class Entity;
 class ComponentManager;
 class EnemyAI;
+class PlayerInput;
+class GameGUI;
 
 class GameScene :
 	public Scene
@@ -34,12 +40,12 @@ private:
 	World* world;
 	GameGUI* gui;
 	bool isSceneLoaded;
+	tmx::Map map;
+	std::vector<MapLayer*> mapLayers;
 
 	sf::Texture idleTex;
 	sf::Texture runTex;
 	sf::Texture attackTex;
 	sf::Texture deathTex;
-
-
 };
 #endif // !GAMESCENE_H
